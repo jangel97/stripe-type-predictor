@@ -1,0 +1,5533 @@
+{
+  "entity_types": {
+    "Account": "A Stripe connected account",
+    "AccountLink": "A link for onboarding a connected account",
+    "AccountSession": "A session for embedded account management",
+    "ApplePay": "A Stripe apple pay resource",
+    "ApplePayDomain": "A verified Apple Pay domain",
+    "ApplicationFee": "A fee collected from a connected account",
+    "AppsSecret": "An app secret for Stripe Apps",
+    "Balance": "The account balance (available, pending funds)",
+    "BalanceSettings": "A Stripe balance settings resource",
+    "BalanceTransaction": "A transaction that affected the balance",
+    "BankAccount": "A bank account payment method",
+    "Billing": "A Stripe billing resource",
+    "BillingAlert": "A billing usage alert",
+    "BillingCreditBalanceSummary": "A Stripe billing credit balance summary resource",
+    "BillingCreditBalanceTransaction": "A credit balance transaction",
+    "BillingCreditGrant": "A credit grant for billing",
+    "BillingMeter": "A usage meter for billing",
+    "BillingMeterEvent": "A usage event recorded by a meter",
+    "BillingMeterEventAdjustment": "An adjustment to a meter event",
+    "BillingMeterEventSummary": "A summary of meter events",
+    "BillingPortal": "A Stripe billing portal resource",
+    "BillingPortalConfiguration": "A customer billing portal configuration",
+    "BillingPortalSession": "A customer billing portal session",
+    "Capability": "A capability of a connected account",
+    "Card": "A card payment method",
+    "CashBalance": "A customer's cash balance",
+    "Charge": "A credit card charge",
+    "Checkout": "A Stripe checkout resource",
+    "CheckoutSession": "A Checkout session for collecting payments",
+    "Climate": "A Stripe climate resource",
+    "ClimateOrder": "A carbon removal order",
+    "ClimateProduct": "A carbon removal product",
+    "ClimateSupplier": "A carbon removal supplier",
+    "Configuration": "A Stripe configuration resource",
+    "ConfirmationToken": "A confirmation token for payment",
+    "Coupon": "A discount coupon",
+    "CreditNote": "A credit note on an invoice",
+    "CreditNoteLineItem": "A Stripe credit note line item resource",
+    "Customer": "A Stripe customer",
+    "CustomerBalanceTransaction": "A transaction on a customer's balance",
+    "CustomerCashBalanceTransaction": "A Stripe customer cash balance transaction resource",
+    "CustomerSession": "A Stripe customer session resource",
+    "Discount": "A discount applied to a customer or subscription",
+    "Dispute": "A charge dispute (chargeback)",
+    "Entitlements": "A Stripe entitlements resource",
+    "EntitlementsActiveEntitlement": "An active product entitlement",
+    "EntitlementsFeature": "A product feature for entitlements",
+    "EphemeralKey": "A short-lived API key for client-side operations",
+    "Event": "A webhook event",
+    "ExchangeRate": "A currency exchange rate",
+    "ExternalAccount": "An external account (bank or card) on a connected account",
+    "FeeRefund": "A refund of an application fee",
+    "File": "An uploaded file (identity documents, disputes, etc.)",
+    "FileLink": "A shareable link to a file",
+    "FinancialConnections": "A Stripe financial connections resource",
+    "FinancialConnectionsAccount": "A linked financial account",
+    "FinancialConnectionsAccountOwner": "A Stripe financial connections account owner resource",
+    "FinancialConnectionsSession": "A session for linking financial accounts",
+    "FinancialConnectionsTransaction": "A transaction from a linked account",
+    "Forwarding": "A Stripe forwarding resource",
+    "ForwardingRequest": "A forwarded API request",
+    "FundingInstructions": "A Stripe funding instructions resource",
+    "Identity": "A Stripe identity resource",
+    "IdentityVerificationReport": "An identity verification report",
+    "IdentityVerificationSession": "An identity verification session",
+    "Invoice": "An invoice for a customer",
+    "InvoicePayment": "A Stripe invoice payment resource",
+    "InvoiceRenderingTemplate": "A template for rendering invoices",
+    "Invoiceitem": "A Stripe invoiceitem resource",
+    "Issuing": "A Stripe issuing resource",
+    "IssuingAuthorization": "An Issuing card authorization",
+    "IssuingCard": "An Issuing card",
+    "IssuingCardholder": "An Issuing cardholder",
+    "IssuingDispute": "An Issuing dispute",
+    "IssuingPersonalizationDesign": "An Issuing card personalization design",
+    "IssuingPhysicalBundle": "An Issuing physical card bundle",
+    "IssuingSettlement": "An Issuing settlement",
+    "IssuingToken": "An Issuing digital wallet token",
+    "IssuingTransaction": "An Issuing transaction",
+    "Item": "A subscription item",
+    "LineItem": "A line item (quote or invoice)",
+    "LinkAccountSession": "A Stripe link account session resource",
+    "LinkedAccount": "A Stripe linked account resource",
+    "Location": "A Stripe location resource",
+    "LoginLink": "A login link for a connected account",
+    "Mandate": "A mandate for recurring payments",
+    "PaymentAttemptRecord": "A Stripe payment attempt record resource",
+    "PaymentIntent": "A payment intent (tracks payment lifecycle)",
+    "PaymentIntentAmountDetailsLineItem": "A Stripe payment intent amount details line item resource",
+    "PaymentLink": "A payment link for collecting payments",
+    "PaymentMethod": "A payment method (card, bank, etc.)",
+    "PaymentMethodConfiguration": "A payment method configuration",
+    "PaymentMethodDomain": "A domain for payment method display",
+    "PaymentRecord": "A record of a payment",
+    "PaymentSource": "A payment source (card, bank account)",
+    "Payout": "A payout to an external account",
+    "Pdf": "A Stripe pdf resource",
+    "Person": "A person associated with a connected account",
+    "Plan": "A subscription plan (legacy, see Price)",
+    "Price": "A price for a product",
+    "Product": "A product or service",
+    "ProductFeature": "A feature of a product",
+    "PromotionCode": "A promotion code for a coupon",
+    "Quote": "A quote for a customer",
+    "Radar": "A Stripe radar resource",
+    "RadarEarlyFraudWarning": "An early fraud warning from Radar",
+    "RadarPaymentEvaluation": "A Stripe radar payment evaluation resource",
+    "RadarValueList": "A Radar value list for fraud rules",
+    "RadarValueListItem": "An item in a Radar value list",
+    "Reader": "A Stripe reader resource",
+    "Refund": "A refund of a charge",
+    "Reporting": "A Stripe reporting resource",
+    "ReportingReportRun": "A report run",
+    "ReportingReportType": "A type of report available",
+    "Review": "A review of a payment",
+    "ScheduledQueryRun": "A scheduled Sigma query run",
+    "SetupAttempt": "An attempt to set up a payment method",
+    "SetupIntent": "A setup intent for saving payment methods",
+    "ShippingRate": "A shipping rate",
+    "Sigma": "A Stripe sigma resource",
+    "SigmaSigmaApiQuery": "A Stripe sigma sigma api query resource",
+    "Source": "A payment source (legacy)",
+    "SourceMandateNotification": "A Stripe source mandate notification resource",
+    "SourceTransaction": "A transaction on a source",
+    "Subscription": "A recurring subscription",
+    "SubscriptionItem": "An item in a subscription",
+    "SubscriptionSchedule": "A subscription schedule",
+    "Tax": "A Stripe tax resource",
+    "TaxAssociation": "A Stripe tax association resource",
+    "TaxCalculation": "A tax calculation",
+    "TaxCalculationLineItem": "A line item in a tax calculation",
+    "TaxCode": "A Stripe tax code resource",
+    "TaxId": "A tax ID for a customer",
+    "TaxRate": "A tax rate",
+    "TaxRegistration": "A tax registration",
+    "TaxSettings": "Tax settings for the account",
+    "TaxTransaction": "A tax transaction",
+    "TaxTransactionLineItem": "A line item in a tax transaction",
+    "Terminal": "A Stripe terminal resource",
+    "TerminalConfiguration": "A Terminal reader configuration",
+    "TerminalConnectionToken": "A Terminal connection token",
+    "TerminalLocation": "A Terminal reader location",
+    "TerminalOnboardingLink": "A Stripe terminal onboarding link resource",
+    "TerminalReader": "A Terminal card reader device",
+    "TerminalRefund": "A Stripe terminal refund resource",
+    "Token": "A single-use token representing payment details",
+    "Topup": "A top-up of the Stripe balance",
+    "Transfer": "A transfer to a connected account",
+    "TransferReversal": "A reversal of a transfer",
+    "Treasury": "A Stripe treasury resource",
+    "TreasuryCreditReversal": "A Treasury credit reversal",
+    "TreasuryDebitReversal": "A Treasury debit reversal",
+    "TreasuryFinancialAccount": "A Treasury financial account",
+    "TreasuryFinancialAccountFeatures": "Features of a Treasury financial account",
+    "TreasuryInboundTransfer": "A Treasury inbound transfer",
+    "TreasuryOutboundPayment": "A Treasury outbound payment",
+    "TreasuryOutboundTransfer": "A Treasury outbound transfer",
+    "TreasuryReceivedCredit": "A Treasury received credit",
+    "TreasuryReceivedDebit": "A Treasury received debit",
+    "TreasuryTransaction": "A Treasury transaction",
+    "TreasuryTransactionEntry": "A Treasury transaction entry",
+    "WebhookEndpoint": "A webhook endpoint for receiving events",
+    "Platform": "The Stripe platform root (starting point for listing resources)"
+  },
+  "tools": [
+    {
+      "name": "GetAccount",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Account"
+      ],
+      "description": "Retrieve account"
+    },
+    {
+      "name": "PostAccountLinks",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "AccountLink"
+      ],
+      "description": "Create an account link"
+    },
+    {
+      "name": "PostAccountSessions",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "AccountSession"
+      ],
+      "description": "Create an Account Session"
+    },
+    {
+      "name": "GetAccounts",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Account"
+      ],
+      "description": "List all connected accounts"
+    },
+    {
+      "name": "PostAccounts",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Account"
+      ],
+      "description": "<p>With <a href=\"/docs/connect\">Connect</a>, you can create Stripe accounts for your users.\nTo do this, you\u2019ll first nee"
+    },
+    {
+      "name": "DeleteAccountsAccount",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete an account"
+    },
+    {
+      "name": "GetAccountsAccount",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "Account"
+      ],
+      "description": "Retrieve account"
+    },
+    {
+      "name": "PostAccountsAccount",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "Account"
+      ],
+      "description": "Update an account"
+    },
+    {
+      "name": "PostAccountsAccountBankAccounts",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "ExternalAccount"
+      ],
+      "description": "Create an external account"
+    },
+    {
+      "name": "DeleteAccountsAccountBankAccountsId",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete an external account"
+    },
+    {
+      "name": "GetAccountsAccountBankAccountsId",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "ExternalAccount"
+      ],
+      "description": "Retrieve an external account"
+    },
+    {
+      "name": "PostAccountsAccountBankAccountsId",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "ExternalAccount"
+      ],
+      "description": "<p>Updates the metadata, account holder name, account holder type of a bank account belonging to\na connected account and"
+    },
+    {
+      "name": "GetAccountsAccountCapabilities",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "Capability"
+      ],
+      "description": "List all account capabilities"
+    },
+    {
+      "name": "GetAccountsAccountCapabilitiesCapability",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "Capability"
+      ],
+      "description": "Retrieve an Account Capability"
+    },
+    {
+      "name": "PostAccountsAccountCapabilitiesCapability",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "Capability"
+      ],
+      "description": "Update an Account Capability"
+    },
+    {
+      "name": "GetAccountsAccountExternalAccounts",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "ExternalAccount"
+      ],
+      "description": "List all external accounts"
+    },
+    {
+      "name": "PostAccountsAccountExternalAccounts",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "ExternalAccount"
+      ],
+      "description": "Create an external account"
+    },
+    {
+      "name": "DeleteAccountsAccountExternalAccountsId",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete an external account"
+    },
+    {
+      "name": "GetAccountsAccountExternalAccountsId",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "ExternalAccount"
+      ],
+      "description": "Retrieve an external account"
+    },
+    {
+      "name": "PostAccountsAccountExternalAccountsId",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "ExternalAccount"
+      ],
+      "description": "<p>Updates the metadata, account holder name, account holder type of a bank account belonging to\na connected account and"
+    },
+    {
+      "name": "PostAccountsAccountLoginLinks",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "LoginLink"
+      ],
+      "description": "Create a login link"
+    },
+    {
+      "name": "GetAccountsAccountPeople",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "Person"
+      ],
+      "description": "List all persons"
+    },
+    {
+      "name": "PostAccountsAccountPeople",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "Person"
+      ],
+      "description": "Create a person"
+    },
+    {
+      "name": "DeleteAccountsAccountPeoplePerson",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete a person"
+    },
+    {
+      "name": "GetAccountsAccountPeoplePerson",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "Person"
+      ],
+      "description": "Retrieve a person"
+    },
+    {
+      "name": "PostAccountsAccountPeoplePerson",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "Person"
+      ],
+      "description": "Update a person"
+    },
+    {
+      "name": "GetAccountsAccountPersons",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "Person"
+      ],
+      "description": "List all persons"
+    },
+    {
+      "name": "PostAccountsAccountPersons",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "Person"
+      ],
+      "description": "Create a person"
+    },
+    {
+      "name": "DeleteAccountsAccountPersonsPerson",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete a person"
+    },
+    {
+      "name": "GetAccountsAccountPersonsPerson",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "Person"
+      ],
+      "description": "Retrieve a person"
+    },
+    {
+      "name": "PostAccountsAccountPersonsPerson",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "Person"
+      ],
+      "description": "Update a person"
+    },
+    {
+      "name": "PostAccountsAccountReject",
+      "input_types": [
+        "Account"
+      ],
+      "output_types": [
+        "Account"
+      ],
+      "description": "Reject an account"
+    },
+    {
+      "name": "GetApplePayDomains",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "ApplePayDomain"
+      ],
+      "description": "<p>List apple pay domains.</p>"
+    },
+    {
+      "name": "PostApplePayDomains",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "ApplePayDomain"
+      ],
+      "description": "<p>Create an apple pay domain.</p>"
+    },
+    {
+      "name": "DeleteApplePayDomainsDomain",
+      "input_types": [
+        "ApplePay"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "<p>Delete an apple pay domain.</p>"
+    },
+    {
+      "name": "GetApplePayDomainsDomain",
+      "input_types": [
+        "ApplePay"
+      ],
+      "output_types": [
+        "ApplePayDomain"
+      ],
+      "description": "<p>Retrieve an apple pay domain.</p>"
+    },
+    {
+      "name": "GetApplicationFees",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "ApplicationFee"
+      ],
+      "description": "List all application fees"
+    },
+    {
+      "name": "GetApplicationFeesFeeRefundsId",
+      "input_types": [
+        "ApplicationFee"
+      ],
+      "output_types": [
+        "FeeRefund"
+      ],
+      "description": "Retrieve an application fee refund"
+    },
+    {
+      "name": "PostApplicationFeesFeeRefundsId",
+      "input_types": [
+        "ApplicationFee"
+      ],
+      "output_types": [
+        "FeeRefund"
+      ],
+      "description": "Update an application fee refund"
+    },
+    {
+      "name": "GetApplicationFeesId",
+      "input_types": [
+        "ApplicationFee"
+      ],
+      "output_types": [
+        "ApplicationFee"
+      ],
+      "description": "Retrieve an application fee"
+    },
+    {
+      "name": "PostApplicationFeesIdRefund",
+      "input_types": [
+        "ApplicationFee"
+      ],
+      "output_types": [
+        "ApplicationFee"
+      ],
+      "description": ""
+    },
+    {
+      "name": "GetApplicationFeesIdRefunds",
+      "input_types": [
+        "ApplicationFee"
+      ],
+      "output_types": [
+        "FeeRefund"
+      ],
+      "description": "List all application fee refunds"
+    },
+    {
+      "name": "PostApplicationFeesIdRefunds",
+      "input_types": [
+        "ApplicationFee"
+      ],
+      "output_types": [
+        "FeeRefund"
+      ],
+      "description": "Create an application fee refund"
+    },
+    {
+      "name": "GetAppsSecrets",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "AppsSecret"
+      ],
+      "description": "List secrets"
+    },
+    {
+      "name": "PostAppsSecrets",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "AppsSecret"
+      ],
+      "description": "Set a Secret"
+    },
+    {
+      "name": "PostAppsSecretsDelete",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "AppsSecret"
+      ],
+      "description": "Delete a Secret"
+    },
+    {
+      "name": "GetAppsSecretsFind",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "AppsSecret"
+      ],
+      "description": "Find a Secret"
+    },
+    {
+      "name": "GetBalance",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Balance"
+      ],
+      "description": "Retrieve balance"
+    },
+    {
+      "name": "GetBalanceHistory",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "BalanceTransaction"
+      ],
+      "description": "List all balance transactions"
+    },
+    {
+      "name": "GetBalanceHistoryId",
+      "input_types": [
+        "Balance"
+      ],
+      "output_types": [
+        "BalanceTransaction"
+      ],
+      "description": "Retrieve a balance transaction"
+    },
+    {
+      "name": "GetBalanceSettings",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "BalanceSettings"
+      ],
+      "description": "Retrieve balance settings"
+    },
+    {
+      "name": "PostBalanceSettings",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "BalanceSettings"
+      ],
+      "description": "Update balance settings"
+    },
+    {
+      "name": "GetBalanceTransactions",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "BalanceTransaction"
+      ],
+      "description": "List all balance transactions"
+    },
+    {
+      "name": "GetBalanceTransactionsId",
+      "input_types": [
+        "BalanceTransaction"
+      ],
+      "output_types": [
+        "BalanceTransaction"
+      ],
+      "description": "Retrieve a balance transaction"
+    },
+    {
+      "name": "GetBillingAlerts",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "BillingAlert"
+      ],
+      "description": "List billing alerts"
+    },
+    {
+      "name": "PostBillingAlerts",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "BillingAlert"
+      ],
+      "description": "Create a billing alert"
+    },
+    {
+      "name": "GetBillingAlertsId",
+      "input_types": [
+        "Billing"
+      ],
+      "output_types": [
+        "BillingAlert"
+      ],
+      "description": "Retrieve a billing alert"
+    },
+    {
+      "name": "PostBillingAlertsIdActivate",
+      "input_types": [
+        "Billing"
+      ],
+      "output_types": [
+        "BillingAlert"
+      ],
+      "description": "Activate a billing alert"
+    },
+    {
+      "name": "PostBillingAlertsIdArchive",
+      "input_types": [
+        "Billing"
+      ],
+      "output_types": [
+        "BillingAlert"
+      ],
+      "description": "Archive a billing alert"
+    },
+    {
+      "name": "PostBillingAlertsIdDeactivate",
+      "input_types": [
+        "Billing"
+      ],
+      "output_types": [
+        "BillingAlert"
+      ],
+      "description": "Deactivate a billing alert"
+    },
+    {
+      "name": "GetBillingCreditBalanceSummary",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "BillingCreditBalanceSummary"
+      ],
+      "description": "Retrieve the credit balance summary for a customer"
+    },
+    {
+      "name": "GetBillingCreditBalanceTransactions",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "BillingCreditBalanceTransaction"
+      ],
+      "description": "List credit balance transactions"
+    },
+    {
+      "name": "GetBillingCreditBalanceTransactionsId",
+      "input_types": [
+        "Billing"
+      ],
+      "output_types": [
+        "BillingCreditBalanceTransaction"
+      ],
+      "description": "Retrieve a credit balance transaction"
+    },
+    {
+      "name": "GetBillingCreditGrants",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "BillingCreditGrant"
+      ],
+      "description": "List credit grants"
+    },
+    {
+      "name": "PostBillingCreditGrants",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "BillingCreditGrant"
+      ],
+      "description": "Create a credit grant"
+    },
+    {
+      "name": "GetBillingCreditGrantsId",
+      "input_types": [
+        "Billing"
+      ],
+      "output_types": [
+        "BillingCreditGrant"
+      ],
+      "description": "Retrieve a credit grant"
+    },
+    {
+      "name": "PostBillingCreditGrantsId",
+      "input_types": [
+        "Billing"
+      ],
+      "output_types": [
+        "BillingCreditGrant"
+      ],
+      "description": "Update a credit grant"
+    },
+    {
+      "name": "PostBillingCreditGrantsIdExpire",
+      "input_types": [
+        "Billing"
+      ],
+      "output_types": [
+        "BillingCreditGrant"
+      ],
+      "description": "Expire a credit grant"
+    },
+    {
+      "name": "PostBillingCreditGrantsIdVoid",
+      "input_types": [
+        "Billing"
+      ],
+      "output_types": [
+        "BillingCreditGrant"
+      ],
+      "description": "Void a credit grant"
+    },
+    {
+      "name": "PostBillingMeterEventAdjustments",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "BillingMeterEventAdjustment"
+      ],
+      "description": "Create a billing meter event adjustment"
+    },
+    {
+      "name": "PostBillingMeterEvents",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "BillingMeterEvent"
+      ],
+      "description": "Create a billing meter event"
+    },
+    {
+      "name": "GetBillingMeters",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "BillingMeter"
+      ],
+      "description": "List billing meters"
+    },
+    {
+      "name": "PostBillingMeters",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "BillingMeter"
+      ],
+      "description": "Create a billing meter"
+    },
+    {
+      "name": "GetBillingMetersId",
+      "input_types": [
+        "Billing"
+      ],
+      "output_types": [
+        "BillingMeter"
+      ],
+      "description": "Retrieve a billing meter"
+    },
+    {
+      "name": "PostBillingMetersId",
+      "input_types": [
+        "Billing"
+      ],
+      "output_types": [
+        "BillingMeter"
+      ],
+      "description": "Update a billing meter"
+    },
+    {
+      "name": "PostBillingMetersIdDeactivate",
+      "input_types": [
+        "Billing"
+      ],
+      "output_types": [
+        "BillingMeter"
+      ],
+      "description": "Deactivate a billing meter"
+    },
+    {
+      "name": "GetBillingMetersIdEventSummaries",
+      "input_types": [
+        "Billing"
+      ],
+      "output_types": [
+        "BillingMeterEventSummary"
+      ],
+      "description": "List billing meter event summaries"
+    },
+    {
+      "name": "PostBillingMetersIdReactivate",
+      "input_types": [
+        "Billing"
+      ],
+      "output_types": [
+        "BillingMeter"
+      ],
+      "description": "Reactivate a billing meter"
+    },
+    {
+      "name": "GetBillingPortalConfigurations",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "BillingPortalConfiguration"
+      ],
+      "description": "List portal configurations"
+    },
+    {
+      "name": "PostBillingPortalConfigurations",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "BillingPortalConfiguration"
+      ],
+      "description": "Create a portal configuration"
+    },
+    {
+      "name": "GetBillingPortalConfigurationsConfiguration",
+      "input_types": [
+        "BillingPortal"
+      ],
+      "output_types": [
+        "BillingPortalConfiguration"
+      ],
+      "description": "Retrieve a portal configuration"
+    },
+    {
+      "name": "PostBillingPortalConfigurationsConfiguration",
+      "input_types": [
+        "BillingPortal"
+      ],
+      "output_types": [
+        "BillingPortalConfiguration"
+      ],
+      "description": "Update a portal configuration"
+    },
+    {
+      "name": "PostBillingPortalSessions",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "BillingPortalSession"
+      ],
+      "description": "Create a portal session"
+    },
+    {
+      "name": "GetCharges",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Charge"
+      ],
+      "description": "List all charges"
+    },
+    {
+      "name": "PostCharges",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Charge"
+      ],
+      "description": "<p>This method is no longer recommended\u2014use the <a href=\"/docs/api/payment_intents\">Payment Intents API</a>\nto initiate "
+    },
+    {
+      "name": "GetChargesCharge",
+      "input_types": [
+        "Charge"
+      ],
+      "output_types": [
+        "Charge"
+      ],
+      "description": "Retrieve a charge"
+    },
+    {
+      "name": "PostChargesCharge",
+      "input_types": [
+        "Charge"
+      ],
+      "output_types": [
+        "Charge"
+      ],
+      "description": "Update a charge"
+    },
+    {
+      "name": "PostChargesChargeCapture",
+      "input_types": [
+        "Charge"
+      ],
+      "output_types": [
+        "Charge"
+      ],
+      "description": "Capture a payment"
+    },
+    {
+      "name": "GetChargesChargeDispute",
+      "input_types": [
+        "Charge"
+      ],
+      "output_types": [
+        "Dispute"
+      ],
+      "description": "<p>Retrieve a dispute for a specified charge.</p>"
+    },
+    {
+      "name": "PostChargesChargeDispute",
+      "input_types": [
+        "Charge"
+      ],
+      "output_types": [
+        "Dispute"
+      ],
+      "description": ""
+    },
+    {
+      "name": "PostChargesChargeDisputeClose",
+      "input_types": [
+        "Charge"
+      ],
+      "output_types": [
+        "Dispute"
+      ],
+      "description": ""
+    },
+    {
+      "name": "PostChargesChargeRefund",
+      "input_types": [
+        "Charge"
+      ],
+      "output_types": [
+        "Charge"
+      ],
+      "description": "Create a refund"
+    },
+    {
+      "name": "GetChargesChargeRefunds",
+      "input_types": [
+        "Charge"
+      ],
+      "output_types": [
+        "Refund"
+      ],
+      "description": "List all refunds"
+    },
+    {
+      "name": "PostChargesChargeRefunds",
+      "input_types": [
+        "Charge"
+      ],
+      "output_types": [
+        "Refund"
+      ],
+      "description": "Create customer balance refund"
+    },
+    {
+      "name": "GetChargesChargeRefundsRefund",
+      "input_types": [
+        "Charge"
+      ],
+      "output_types": [
+        "Refund"
+      ],
+      "description": "<p>Retrieves the details of an existing refund.</p>"
+    },
+    {
+      "name": "PostChargesChargeRefundsRefund",
+      "input_types": [
+        "Charge"
+      ],
+      "output_types": [
+        "Refund"
+      ],
+      "description": "<p>Update a specified refund.</p>"
+    },
+    {
+      "name": "GetCheckoutSessions",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "CheckoutSession"
+      ],
+      "description": "List all Checkout Sessions"
+    },
+    {
+      "name": "PostCheckoutSessions",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "CheckoutSession"
+      ],
+      "description": "Create a Checkout Session"
+    },
+    {
+      "name": "GetCheckoutSessionsSession",
+      "input_types": [
+        "Checkout"
+      ],
+      "output_types": [
+        "CheckoutSession"
+      ],
+      "description": "Retrieve a Checkout Session"
+    },
+    {
+      "name": "PostCheckoutSessionsSession",
+      "input_types": [
+        "Checkout"
+      ],
+      "output_types": [
+        "CheckoutSession"
+      ],
+      "description": "Update a Checkout Session"
+    },
+    {
+      "name": "PostCheckoutSessionsSessionExpire",
+      "input_types": [
+        "Checkout"
+      ],
+      "output_types": [
+        "CheckoutSession"
+      ],
+      "description": "Expire a Checkout Session"
+    },
+    {
+      "name": "GetCheckoutSessionsSessionLineItems",
+      "input_types": [
+        "Checkout"
+      ],
+      "output_types": [
+        "Item"
+      ],
+      "description": "Retrieve a Checkout Session's line items"
+    },
+    {
+      "name": "GetClimateOrders",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "ClimateOrder"
+      ],
+      "description": "List orders"
+    },
+    {
+      "name": "PostClimateOrders",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "ClimateOrder"
+      ],
+      "description": "Create an order"
+    },
+    {
+      "name": "GetClimateOrdersOrder",
+      "input_types": [
+        "Climate"
+      ],
+      "output_types": [
+        "ClimateOrder"
+      ],
+      "description": "Retrieve an order"
+    },
+    {
+      "name": "PostClimateOrdersOrder",
+      "input_types": [
+        "Climate"
+      ],
+      "output_types": [
+        "ClimateOrder"
+      ],
+      "description": "Update an order"
+    },
+    {
+      "name": "PostClimateOrdersOrderCancel",
+      "input_types": [
+        "Climate"
+      ],
+      "output_types": [
+        "ClimateOrder"
+      ],
+      "description": "Cancel an order"
+    },
+    {
+      "name": "GetClimateProducts",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "ClimateProduct"
+      ],
+      "description": "List products"
+    },
+    {
+      "name": "GetClimateProductsProduct",
+      "input_types": [
+        "Climate"
+      ],
+      "output_types": [
+        "ClimateProduct"
+      ],
+      "description": "Retrieve a product"
+    },
+    {
+      "name": "GetClimateSuppliers",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "ClimateSupplier"
+      ],
+      "description": "List suppliers"
+    },
+    {
+      "name": "GetClimateSuppliersSupplier",
+      "input_types": [
+        "Climate"
+      ],
+      "output_types": [
+        "ClimateSupplier"
+      ],
+      "description": "Retrieve a supplier"
+    },
+    {
+      "name": "GetConfirmationTokensConfirmationToken",
+      "input_types": [
+        "ConfirmationToken"
+      ],
+      "output_types": [
+        "ConfirmationToken"
+      ],
+      "description": "Retrieve a ConfirmationToken"
+    },
+    {
+      "name": "GetCountrySpecs",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "CountrySpec"
+      ],
+      "description": "List Country Specs"
+    },
+    {
+      "name": "GetCountrySpecsCountry",
+      "input_types": [
+        "CountrySpec"
+      ],
+      "output_types": [
+        "CountrySpec"
+      ],
+      "description": "Retrieve a Country Spec"
+    },
+    {
+      "name": "GetCoupons",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Coupon"
+      ],
+      "description": "List all coupons"
+    },
+    {
+      "name": "PostCoupons",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Coupon"
+      ],
+      "description": "Create a coupon"
+    },
+    {
+      "name": "DeleteCouponsCoupon",
+      "input_types": [
+        "Coupon"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete a coupon"
+    },
+    {
+      "name": "GetCouponsCoupon",
+      "input_types": [
+        "Coupon"
+      ],
+      "output_types": [
+        "Coupon"
+      ],
+      "description": "Retrieve a coupon"
+    },
+    {
+      "name": "PostCouponsCoupon",
+      "input_types": [
+        "Coupon"
+      ],
+      "output_types": [
+        "Coupon"
+      ],
+      "description": "Update a coupon"
+    },
+    {
+      "name": "GetCreditNotes",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "CreditNote"
+      ],
+      "description": "List all credit notes"
+    },
+    {
+      "name": "PostCreditNotes",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "CreditNote"
+      ],
+      "description": "Create a credit note"
+    },
+    {
+      "name": "GetCreditNotesPreview",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "CreditNote"
+      ],
+      "description": "Preview a credit note"
+    },
+    {
+      "name": "GetCreditNotesPreviewLines",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "CreditNoteLineItem"
+      ],
+      "description": "Retrieve a credit note preview's line items"
+    },
+    {
+      "name": "GetCreditNotesCreditNoteLines",
+      "input_types": [
+        "CreditNote"
+      ],
+      "output_types": [
+        "CreditNoteLineItem"
+      ],
+      "description": "Retrieve a credit note's line items"
+    },
+    {
+      "name": "GetCreditNotesId",
+      "input_types": [
+        "CreditNote"
+      ],
+      "output_types": [
+        "CreditNote"
+      ],
+      "description": "Retrieve a credit note"
+    },
+    {
+      "name": "PostCreditNotesId",
+      "input_types": [
+        "CreditNote"
+      ],
+      "output_types": [
+        "CreditNote"
+      ],
+      "description": "Update a credit note"
+    },
+    {
+      "name": "PostCreditNotesIdVoid",
+      "input_types": [
+        "CreditNote"
+      ],
+      "output_types": [
+        "CreditNote"
+      ],
+      "description": "Void a credit note"
+    },
+    {
+      "name": "PostCustomerSessions",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "CustomerSession"
+      ],
+      "description": "Create a Customer Session"
+    },
+    {
+      "name": "GetCustomers",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Customer"
+      ],
+      "description": "List all customers"
+    },
+    {
+      "name": "PostCustomers",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Customer"
+      ],
+      "description": "Create a customer"
+    },
+    {
+      "name": "DeleteCustomersCustomer",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete a customer"
+    },
+    {
+      "name": "GetCustomersCustomer",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "Customer"
+      ],
+      "description": "Retrieve a customer"
+    },
+    {
+      "name": "PostCustomersCustomer",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "Customer"
+      ],
+      "description": "Update a customer"
+    },
+    {
+      "name": "GetCustomersCustomerBalanceTransactions",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "CustomerBalanceTransaction"
+      ],
+      "description": "List customer balance transactions"
+    },
+    {
+      "name": "PostCustomersCustomerBalanceTransactions",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "CustomerBalanceTransaction"
+      ],
+      "description": "Create a customer balance transaction"
+    },
+    {
+      "name": "GetCustomersCustomerBalanceTransactionsTransaction",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "CustomerBalanceTransaction"
+      ],
+      "description": "Retrieve a customer balance transaction"
+    },
+    {
+      "name": "PostCustomersCustomerBalanceTransactionsTransaction",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "CustomerBalanceTransaction"
+      ],
+      "description": "Update a customer credit balance transaction"
+    },
+    {
+      "name": "GetCustomersCustomerBankAccounts",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "BankAccount"
+      ],
+      "description": "List all bank accounts"
+    },
+    {
+      "name": "PostCustomersCustomerBankAccounts",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "PaymentSource"
+      ],
+      "description": "Create a card"
+    },
+    {
+      "name": "DeleteCustomersCustomerBankAccountsId",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "BankAccount"
+      ],
+      "description": "Delete a customer source"
+    },
+    {
+      "name": "GetCustomersCustomerBankAccountsId",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "BankAccount"
+      ],
+      "description": "Retrieve a bank account"
+    },
+    {
+      "name": "PostCustomersCustomerBankAccountsId",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "BankAccount"
+      ],
+      "description": "<p>Update a specified source for a given customer.</p>"
+    },
+    {
+      "name": "PostCustomersCustomerBankAccountsIdVerify",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "BankAccount"
+      ],
+      "description": "Verify a bank account"
+    },
+    {
+      "name": "GetCustomersCustomerCards",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "Card"
+      ],
+      "description": "List all cards"
+    },
+    {
+      "name": "PostCustomersCustomerCards",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "PaymentSource"
+      ],
+      "description": "Create a card"
+    },
+    {
+      "name": "DeleteCustomersCustomerCardsId",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "Card"
+      ],
+      "description": "Delete a customer source"
+    },
+    {
+      "name": "GetCustomersCustomerCardsId",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "Card"
+      ],
+      "description": "Retrieve a card"
+    },
+    {
+      "name": "PostCustomersCustomerCardsId",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "Card"
+      ],
+      "description": "<p>Update a specified source for a given customer.</p>"
+    },
+    {
+      "name": "GetCustomersCustomerCashBalance",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "CashBalance"
+      ],
+      "description": "Retrieve a cash balance"
+    },
+    {
+      "name": "PostCustomersCustomerCashBalance",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "CashBalance"
+      ],
+      "description": "Update a cash balance's settings"
+    },
+    {
+      "name": "GetCustomersCustomerCashBalanceTransactions",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "CustomerCashBalanceTransaction"
+      ],
+      "description": "List cash balance transactions"
+    },
+    {
+      "name": "GetCustomersCustomerCashBalanceTransactionsTransaction",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "CustomerCashBalanceTransaction"
+      ],
+      "description": "Retrieve a cash balance transaction"
+    },
+    {
+      "name": "DeleteCustomersCustomerDiscount",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete a customer discount"
+    },
+    {
+      "name": "GetCustomersCustomerDiscount",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "Discount"
+      ],
+      "description": ""
+    },
+    {
+      "name": "PostCustomersCustomerFundingInstructions",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "FundingInstructions"
+      ],
+      "description": "Create or retrieve funding instructions for a customer cash balance"
+    },
+    {
+      "name": "GetCustomersCustomerPaymentMethods",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "PaymentMethod"
+      ],
+      "description": "List a Customer's PaymentMethods"
+    },
+    {
+      "name": "GetCustomersCustomerPaymentMethodsPaymentMethod",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "PaymentMethod"
+      ],
+      "description": "Retrieve a Customer's PaymentMethod"
+    },
+    {
+      "name": "GetCustomersCustomerSources",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "Source"
+      ],
+      "description": "<p>List sources for a specified customer.</p>"
+    },
+    {
+      "name": "PostCustomersCustomerSources",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "PaymentSource"
+      ],
+      "description": "Create a card"
+    },
+    {
+      "name": "DeleteCustomersCustomerSourcesId",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "Source"
+      ],
+      "description": "Delete a customer source"
+    },
+    {
+      "name": "GetCustomersCustomerSourcesId",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "PaymentSource"
+      ],
+      "description": "<p>Retrieve a specified source for a given customer.</p>"
+    },
+    {
+      "name": "PostCustomersCustomerSourcesId",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "Source"
+      ],
+      "description": "<p>Update a specified source for a given customer.</p>"
+    },
+    {
+      "name": "PostCustomersCustomerSourcesIdVerify",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "BankAccount"
+      ],
+      "description": "Verify a bank account"
+    },
+    {
+      "name": "GetCustomersCustomerSubscriptions",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "Subscription"
+      ],
+      "description": "List active subscriptions"
+    },
+    {
+      "name": "PostCustomersCustomerSubscriptions",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "Subscription"
+      ],
+      "description": "Create a subscription"
+    },
+    {
+      "name": "DeleteCustomersCustomerSubscriptionsSubscriptionExposedId",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "Subscription"
+      ],
+      "description": "Cancel a subscription"
+    },
+    {
+      "name": "GetCustomersCustomerSubscriptionsSubscriptionExposedId",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "Subscription"
+      ],
+      "description": "Retrieve a subscription"
+    },
+    {
+      "name": "PostCustomersCustomerSubscriptionsSubscriptionExposedId",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "Subscription"
+      ],
+      "description": "Update a subscription on a customer"
+    },
+    {
+      "name": "DeleteCustomersCustomerSubscriptionsSubscriptionExposedIdDiscount",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete a customer discount"
+    },
+    {
+      "name": "GetCustomersCustomerSubscriptionsSubscriptionExposedIdDiscount",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "Discount"
+      ],
+      "description": ""
+    },
+    {
+      "name": "GetCustomersCustomerTaxIds",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "TaxId"
+      ],
+      "description": "List all Customer tax IDs"
+    },
+    {
+      "name": "PostCustomersCustomerTaxIds",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "TaxId"
+      ],
+      "description": "Create a Customer tax ID"
+    },
+    {
+      "name": "DeleteCustomersCustomerTaxIdsId",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete a Customer tax ID"
+    },
+    {
+      "name": "GetCustomersCustomerTaxIdsId",
+      "input_types": [
+        "Customer"
+      ],
+      "output_types": [
+        "TaxId"
+      ],
+      "description": "Retrieve a Customer tax ID"
+    },
+    {
+      "name": "GetDisputes",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Dispute"
+      ],
+      "description": "List all disputes"
+    },
+    {
+      "name": "GetDisputesDispute",
+      "input_types": [
+        "Dispute"
+      ],
+      "output_types": [
+        "Dispute"
+      ],
+      "description": "Retrieve a dispute"
+    },
+    {
+      "name": "PostDisputesDispute",
+      "input_types": [
+        "Dispute"
+      ],
+      "output_types": [
+        "Dispute"
+      ],
+      "description": "Update a dispute"
+    },
+    {
+      "name": "PostDisputesDisputeClose",
+      "input_types": [
+        "Dispute"
+      ],
+      "output_types": [
+        "Dispute"
+      ],
+      "description": "Close a dispute"
+    },
+    {
+      "name": "GetEntitlementsActiveEntitlements",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "EntitlementsActiveEntitlement"
+      ],
+      "description": "List all active entitlements"
+    },
+    {
+      "name": "GetEntitlementsActiveEntitlementsId",
+      "input_types": [
+        "Entitlements"
+      ],
+      "output_types": [
+        "EntitlementsActiveEntitlement"
+      ],
+      "description": "Retrieve an active entitlement"
+    },
+    {
+      "name": "GetEntitlementsFeatures",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "EntitlementsFeature"
+      ],
+      "description": "List all features"
+    },
+    {
+      "name": "PostEntitlementsFeatures",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "EntitlementsFeature"
+      ],
+      "description": "Create a feature"
+    },
+    {
+      "name": "GetEntitlementsFeaturesId",
+      "input_types": [
+        "Entitlements"
+      ],
+      "output_types": [
+        "EntitlementsFeature"
+      ],
+      "description": "Retrieve a feature"
+    },
+    {
+      "name": "PostEntitlementsFeaturesId",
+      "input_types": [
+        "Entitlements"
+      ],
+      "output_types": [
+        "EntitlementsFeature"
+      ],
+      "description": "Updates a feature"
+    },
+    {
+      "name": "PostEphemeralKeys",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "EphemeralKey"
+      ],
+      "description": "Create an ephemeral key"
+    },
+    {
+      "name": "DeleteEphemeralKeysKey",
+      "input_types": [
+        "EphemeralKey"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Immediately invalidate an ephemeral key"
+    },
+    {
+      "name": "GetEvents",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Event"
+      ],
+      "description": "List all events"
+    },
+    {
+      "name": "GetEventsId",
+      "input_types": [
+        "Event"
+      ],
+      "output_types": [
+        "Event"
+      ],
+      "description": "Retrieve an event"
+    },
+    {
+      "name": "GetExchangeRates",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "ExchangeRate"
+      ],
+      "description": "List all exchange rates"
+    },
+    {
+      "name": "GetExchangeRatesRateId",
+      "input_types": [
+        "ExchangeRate"
+      ],
+      "output_types": [
+        "ExchangeRate"
+      ],
+      "description": "Retrieve an exchange rate"
+    },
+    {
+      "name": "PostExternalAccountsId",
+      "input_types": [
+        "ExternalAccount"
+      ],
+      "output_types": [
+        "ExternalAccount"
+      ],
+      "description": "<p>Updates the metadata, account holder name, account holder type of a bank account belonging to\na connected account and"
+    },
+    {
+      "name": "GetFileLinks",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "FileLink"
+      ],
+      "description": "List all file links"
+    },
+    {
+      "name": "PostFileLinks",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "FileLink"
+      ],
+      "description": "Create a file link"
+    },
+    {
+      "name": "GetFileLinksLink",
+      "input_types": [
+        "FileLink"
+      ],
+      "output_types": [
+        "FileLink"
+      ],
+      "description": "Retrieve a file link"
+    },
+    {
+      "name": "PostFileLinksLink",
+      "input_types": [
+        "FileLink"
+      ],
+      "output_types": [
+        "FileLink"
+      ],
+      "description": "Update a file link"
+    },
+    {
+      "name": "GetFiles",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "File"
+      ],
+      "description": "List all files"
+    },
+    {
+      "name": "PostFiles",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "File"
+      ],
+      "description": "Create a file"
+    },
+    {
+      "name": "GetFilesFile",
+      "input_types": [
+        "File"
+      ],
+      "output_types": [
+        "File"
+      ],
+      "description": "Retrieve a file"
+    },
+    {
+      "name": "GetFinancialConnectionsAccounts",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "FinancialConnectionsAccount"
+      ],
+      "description": "List Accounts"
+    },
+    {
+      "name": "GetFinancialConnectionsAccountsAccount",
+      "input_types": [
+        "FinancialConnections"
+      ],
+      "output_types": [
+        "FinancialConnectionsAccount"
+      ],
+      "description": "Retrieve an Account"
+    },
+    {
+      "name": "PostFinancialConnectionsAccountsAccountDisconnect",
+      "input_types": [
+        "FinancialConnections"
+      ],
+      "output_types": [
+        "FinancialConnectionsAccount"
+      ],
+      "description": "Disconnect an Account"
+    },
+    {
+      "name": "GetFinancialConnectionsAccountsAccountOwners",
+      "input_types": [
+        "FinancialConnections"
+      ],
+      "output_types": [
+        "FinancialConnectionsAccountOwner"
+      ],
+      "description": "List Account Owners"
+    },
+    {
+      "name": "PostFinancialConnectionsAccountsAccountRefresh",
+      "input_types": [
+        "FinancialConnections"
+      ],
+      "output_types": [
+        "FinancialConnectionsAccount"
+      ],
+      "description": "Refresh Account data"
+    },
+    {
+      "name": "PostFinancialConnectionsAccountsAccountSubscribe",
+      "input_types": [
+        "FinancialConnections"
+      ],
+      "output_types": [
+        "FinancialConnectionsAccount"
+      ],
+      "description": "Subscribe to data refreshes for an Account"
+    },
+    {
+      "name": "PostFinancialConnectionsAccountsAccountUnsubscribe",
+      "input_types": [
+        "FinancialConnections"
+      ],
+      "output_types": [
+        "FinancialConnectionsAccount"
+      ],
+      "description": "Unsubscribe from data refreshes for an Account"
+    },
+    {
+      "name": "PostFinancialConnectionsSessions",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "FinancialConnectionsSession"
+      ],
+      "description": "Create a Session"
+    },
+    {
+      "name": "GetFinancialConnectionsSessionsSession",
+      "input_types": [
+        "FinancialConnections"
+      ],
+      "output_types": [
+        "FinancialConnectionsSession"
+      ],
+      "description": "Retrieve a Session"
+    },
+    {
+      "name": "GetFinancialConnectionsTransactions",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "FinancialConnectionsTransaction"
+      ],
+      "description": "List Transactions"
+    },
+    {
+      "name": "GetFinancialConnectionsTransactionsTransaction",
+      "input_types": [
+        "FinancialConnections"
+      ],
+      "output_types": [
+        "FinancialConnectionsTransaction"
+      ],
+      "description": "Retrieve a Transaction"
+    },
+    {
+      "name": "GetForwardingRequests",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "ForwardingRequest"
+      ],
+      "description": "List all ForwardingRequests"
+    },
+    {
+      "name": "PostForwardingRequests",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "ForwardingRequest"
+      ],
+      "description": "Create a ForwardingRequest"
+    },
+    {
+      "name": "GetForwardingRequestsId",
+      "input_types": [
+        "Forwarding"
+      ],
+      "output_types": [
+        "ForwardingRequest"
+      ],
+      "description": "Retrieve a ForwardingRequest"
+    },
+    {
+      "name": "GetIdentityVerificationReports",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "IdentityVerificationReport"
+      ],
+      "description": "List VerificationReports"
+    },
+    {
+      "name": "GetIdentityVerificationReportsReport",
+      "input_types": [
+        "Identity"
+      ],
+      "output_types": [
+        "IdentityVerificationReport"
+      ],
+      "description": "Retrieve a VerificationReport"
+    },
+    {
+      "name": "GetIdentityVerificationSessions",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "IdentityVerificationSession"
+      ],
+      "description": "List VerificationSessions"
+    },
+    {
+      "name": "PostIdentityVerificationSessions",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "IdentityVerificationSession"
+      ],
+      "description": "Create a VerificationSession"
+    },
+    {
+      "name": "GetIdentityVerificationSessionsSession",
+      "input_types": [
+        "Identity"
+      ],
+      "output_types": [
+        "IdentityVerificationSession"
+      ],
+      "description": "Retrieve a VerificationSession"
+    },
+    {
+      "name": "PostIdentityVerificationSessionsSession",
+      "input_types": [
+        "Identity"
+      ],
+      "output_types": [
+        "IdentityVerificationSession"
+      ],
+      "description": "Update a VerificationSession"
+    },
+    {
+      "name": "PostIdentityVerificationSessionsSessionCancel",
+      "input_types": [
+        "Identity"
+      ],
+      "output_types": [
+        "IdentityVerificationSession"
+      ],
+      "description": "Cancel a VerificationSession"
+    },
+    {
+      "name": "PostIdentityVerificationSessionsSessionRedact",
+      "input_types": [
+        "Identity"
+      ],
+      "output_types": [
+        "IdentityVerificationSession"
+      ],
+      "description": "Redact a VerificationSession"
+    },
+    {
+      "name": "GetInvoicePayments",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "InvoicePayment"
+      ],
+      "description": "List all payments for an invoice"
+    },
+    {
+      "name": "GetInvoicePaymentsInvoicePayment",
+      "input_types": [
+        "InvoicePayment"
+      ],
+      "output_types": [
+        "InvoicePayment"
+      ],
+      "description": "Retrieve an InvoicePayment"
+    },
+    {
+      "name": "GetInvoiceRenderingTemplates",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "InvoiceRenderingTemplate"
+      ],
+      "description": "List all invoice rendering templates"
+    },
+    {
+      "name": "GetInvoiceRenderingTemplatesTemplate",
+      "input_types": [
+        "InvoiceRenderingTemplate"
+      ],
+      "output_types": [
+        "InvoiceRenderingTemplate"
+      ],
+      "description": "Retrieve an invoice rendering template"
+    },
+    {
+      "name": "PostInvoiceRenderingTemplatesTemplateArchive",
+      "input_types": [
+        "InvoiceRenderingTemplate"
+      ],
+      "output_types": [
+        "InvoiceRenderingTemplate"
+      ],
+      "description": "Archive an invoice rendering template"
+    },
+    {
+      "name": "PostInvoiceRenderingTemplatesTemplateUnarchive",
+      "input_types": [
+        "InvoiceRenderingTemplate"
+      ],
+      "output_types": [
+        "InvoiceRenderingTemplate"
+      ],
+      "description": "Unarchive an invoice rendering template"
+    },
+    {
+      "name": "GetInvoiceitems",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Invoiceitem"
+      ],
+      "description": "List all invoice items"
+    },
+    {
+      "name": "PostInvoiceitems",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Invoiceitem"
+      ],
+      "description": "Create an invoice item"
+    },
+    {
+      "name": "DeleteInvoiceitemsInvoiceitem",
+      "input_types": [
+        "Invoiceitem"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete an invoice item"
+    },
+    {
+      "name": "GetInvoiceitemsInvoiceitem",
+      "input_types": [
+        "Invoiceitem"
+      ],
+      "output_types": [
+        "Invoiceitem"
+      ],
+      "description": "Retrieve an invoice item"
+    },
+    {
+      "name": "PostInvoiceitemsInvoiceitem",
+      "input_types": [
+        "Invoiceitem"
+      ],
+      "output_types": [
+        "Invoiceitem"
+      ],
+      "description": "Update an invoice item"
+    },
+    {
+      "name": "GetInvoices",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Invoice"
+      ],
+      "description": "List all invoices"
+    },
+    {
+      "name": "PostInvoices",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Invoice"
+      ],
+      "description": "Create an invoice"
+    },
+    {
+      "name": "PostInvoicesCreatePreview",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Invoice"
+      ],
+      "description": "Create a preview invoice"
+    },
+    {
+      "name": "DeleteInvoicesInvoice",
+      "input_types": [
+        "Invoice"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete a draft invoice"
+    },
+    {
+      "name": "GetInvoicesInvoice",
+      "input_types": [
+        "Invoice"
+      ],
+      "output_types": [
+        "Invoice"
+      ],
+      "description": "Retrieve an invoice"
+    },
+    {
+      "name": "PostInvoicesInvoice",
+      "input_types": [
+        "Invoice"
+      ],
+      "output_types": [
+        "Invoice"
+      ],
+      "description": "Update an invoice"
+    },
+    {
+      "name": "PostInvoicesInvoiceAddLines",
+      "input_types": [
+        "Invoice"
+      ],
+      "output_types": [
+        "Invoice"
+      ],
+      "description": "Bulk add invoice line items"
+    },
+    {
+      "name": "PostInvoicesInvoiceAttachPayment",
+      "input_types": [
+        "Invoice"
+      ],
+      "output_types": [
+        "Invoice"
+      ],
+      "description": "Attach a payment to an Invoice"
+    },
+    {
+      "name": "PostInvoicesInvoiceFinalize",
+      "input_types": [
+        "Invoice"
+      ],
+      "output_types": [
+        "Invoice"
+      ],
+      "description": "Finalize an invoice"
+    },
+    {
+      "name": "GetInvoicesInvoiceLines",
+      "input_types": [
+        "Invoice"
+      ],
+      "output_types": [
+        "LineItem"
+      ],
+      "description": "Retrieve an invoice's line items"
+    },
+    {
+      "name": "PostInvoicesInvoiceLinesLineItemId",
+      "input_types": [
+        "Invoice"
+      ],
+      "output_types": [
+        "LineItem"
+      ],
+      "description": "Update an invoice's line item"
+    },
+    {
+      "name": "PostInvoicesInvoiceMarkUncollectible",
+      "input_types": [
+        "Invoice"
+      ],
+      "output_types": [
+        "Invoice"
+      ],
+      "description": "Mark an invoice as uncollectible"
+    },
+    {
+      "name": "PostInvoicesInvoicePay",
+      "input_types": [
+        "Invoice"
+      ],
+      "output_types": [
+        "Invoice"
+      ],
+      "description": "Pay an invoice"
+    },
+    {
+      "name": "PostInvoicesInvoiceRemoveLines",
+      "input_types": [
+        "Invoice"
+      ],
+      "output_types": [
+        "Invoice"
+      ],
+      "description": "Bulk remove invoice line items"
+    },
+    {
+      "name": "PostInvoicesInvoiceSend",
+      "input_types": [
+        "Invoice"
+      ],
+      "output_types": [
+        "Invoice"
+      ],
+      "description": "Send an invoice for manual payment"
+    },
+    {
+      "name": "PostInvoicesInvoiceUpdateLines",
+      "input_types": [
+        "Invoice"
+      ],
+      "output_types": [
+        "Invoice"
+      ],
+      "description": "Bulk update invoice line items"
+    },
+    {
+      "name": "PostInvoicesInvoiceVoid",
+      "input_types": [
+        "Invoice"
+      ],
+      "output_types": [
+        "Invoice"
+      ],
+      "description": "Void an invoice"
+    },
+    {
+      "name": "GetIssuingAuthorizations",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "IssuingAuthorization"
+      ],
+      "description": "List all authorizations"
+    },
+    {
+      "name": "GetIssuingAuthorizationsAuthorization",
+      "input_types": [
+        "Issuing"
+      ],
+      "output_types": [
+        "IssuingAuthorization"
+      ],
+      "description": "Retrieve an authorization"
+    },
+    {
+      "name": "PostIssuingAuthorizationsAuthorization",
+      "input_types": [
+        "Issuing"
+      ],
+      "output_types": [
+        "IssuingAuthorization"
+      ],
+      "description": "Update an authorization"
+    },
+    {
+      "name": "PostIssuingAuthorizationsAuthorizationApprove",
+      "input_types": [
+        "Issuing"
+      ],
+      "output_types": [
+        "IssuingAuthorization"
+      ],
+      "description": "Approve an authorization"
+    },
+    {
+      "name": "PostIssuingAuthorizationsAuthorizationDecline",
+      "input_types": [
+        "Issuing"
+      ],
+      "output_types": [
+        "IssuingAuthorization"
+      ],
+      "description": "Decline an authorization"
+    },
+    {
+      "name": "GetIssuingCardholders",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "IssuingCardholder"
+      ],
+      "description": "List all cardholders"
+    },
+    {
+      "name": "PostIssuingCardholders",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "IssuingCardholder"
+      ],
+      "description": "Create a cardholder"
+    },
+    {
+      "name": "GetIssuingCardholdersCardholder",
+      "input_types": [
+        "Issuing"
+      ],
+      "output_types": [
+        "IssuingCardholder"
+      ],
+      "description": "Retrieve a cardholder"
+    },
+    {
+      "name": "PostIssuingCardholdersCardholder",
+      "input_types": [
+        "Issuing"
+      ],
+      "output_types": [
+        "IssuingCardholder"
+      ],
+      "description": "Update a cardholder"
+    },
+    {
+      "name": "GetIssuingCards",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "IssuingCard"
+      ],
+      "description": "List all cards"
+    },
+    {
+      "name": "PostIssuingCards",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "IssuingCard"
+      ],
+      "description": "Create a card"
+    },
+    {
+      "name": "GetIssuingCardsCard",
+      "input_types": [
+        "Issuing"
+      ],
+      "output_types": [
+        "IssuingCard"
+      ],
+      "description": "Retrieve a card"
+    },
+    {
+      "name": "PostIssuingCardsCard",
+      "input_types": [
+        "Issuing"
+      ],
+      "output_types": [
+        "IssuingCard"
+      ],
+      "description": "Update a card"
+    },
+    {
+      "name": "GetIssuingDisputes",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "IssuingDispute"
+      ],
+      "description": "List all disputes"
+    },
+    {
+      "name": "PostIssuingDisputes",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "IssuingDispute"
+      ],
+      "description": "Create a dispute"
+    },
+    {
+      "name": "GetIssuingDisputesDispute",
+      "input_types": [
+        "Issuing"
+      ],
+      "output_types": [
+        "IssuingDispute"
+      ],
+      "description": "Retrieve a dispute"
+    },
+    {
+      "name": "PostIssuingDisputesDispute",
+      "input_types": [
+        "Issuing"
+      ],
+      "output_types": [
+        "IssuingDispute"
+      ],
+      "description": "Update a dispute"
+    },
+    {
+      "name": "PostIssuingDisputesDisputeSubmit",
+      "input_types": [
+        "Issuing"
+      ],
+      "output_types": [
+        "IssuingDispute"
+      ],
+      "description": "Submit a dispute"
+    },
+    {
+      "name": "GetIssuingPersonalizationDesigns",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "IssuingPersonalizationDesign"
+      ],
+      "description": "List all personalization designs"
+    },
+    {
+      "name": "PostIssuingPersonalizationDesigns",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "IssuingPersonalizationDesign"
+      ],
+      "description": "Create a personalization design"
+    },
+    {
+      "name": "GetIssuingPersonalizationDesignsPersonalizationDesign",
+      "input_types": [
+        "Issuing"
+      ],
+      "output_types": [
+        "IssuingPersonalizationDesign"
+      ],
+      "description": "Retrieve a personalization design"
+    },
+    {
+      "name": "PostIssuingPersonalizationDesignsPersonalizationDesign",
+      "input_types": [
+        "Issuing"
+      ],
+      "output_types": [
+        "IssuingPersonalizationDesign"
+      ],
+      "description": "Update a personalization design"
+    },
+    {
+      "name": "GetIssuingPhysicalBundles",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "IssuingPhysicalBundle"
+      ],
+      "description": "List all physical bundles"
+    },
+    {
+      "name": "GetIssuingPhysicalBundlesPhysicalBundle",
+      "input_types": [
+        "Issuing"
+      ],
+      "output_types": [
+        "IssuingPhysicalBundle"
+      ],
+      "description": "Retrieve a physical bundle"
+    },
+    {
+      "name": "GetIssuingSettlementsSettlement",
+      "input_types": [
+        "Issuing"
+      ],
+      "output_types": [
+        "IssuingSettlement"
+      ],
+      "description": "Retrieve a settlement"
+    },
+    {
+      "name": "PostIssuingSettlementsSettlement",
+      "input_types": [
+        "Issuing"
+      ],
+      "output_types": [
+        "IssuingSettlement"
+      ],
+      "description": "Update a settlement"
+    },
+    {
+      "name": "GetIssuingTokens",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "IssuingToken"
+      ],
+      "description": "List all issuing tokens for card"
+    },
+    {
+      "name": "GetIssuingTokensToken",
+      "input_types": [
+        "Issuing"
+      ],
+      "output_types": [
+        "IssuingToken"
+      ],
+      "description": "Retrieve an issuing token"
+    },
+    {
+      "name": "PostIssuingTokensToken",
+      "input_types": [
+        "Issuing"
+      ],
+      "output_types": [
+        "IssuingToken"
+      ],
+      "description": "Update a token status"
+    },
+    {
+      "name": "GetIssuingTransactions",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "IssuingTransaction"
+      ],
+      "description": "List all transactions"
+    },
+    {
+      "name": "GetIssuingTransactionsTransaction",
+      "input_types": [
+        "Issuing"
+      ],
+      "output_types": [
+        "IssuingTransaction"
+      ],
+      "description": "Retrieve a transaction"
+    },
+    {
+      "name": "PostIssuingTransactionsTransaction",
+      "input_types": [
+        "Issuing"
+      ],
+      "output_types": [
+        "IssuingTransaction"
+      ],
+      "description": "Update a transaction"
+    },
+    {
+      "name": "PostLinkAccountSessions",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "FinancialConnectionsSession"
+      ],
+      "description": "Create a Session"
+    },
+    {
+      "name": "GetLinkAccountSessionsSession",
+      "input_types": [
+        "LinkAccountSession"
+      ],
+      "output_types": [
+        "FinancialConnectionsSession"
+      ],
+      "description": "Retrieve a Session"
+    },
+    {
+      "name": "GetLinkedAccounts",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "FinancialConnectionsAccount"
+      ],
+      "description": "List Accounts"
+    },
+    {
+      "name": "GetLinkedAccountsAccount",
+      "input_types": [
+        "LinkedAccount"
+      ],
+      "output_types": [
+        "FinancialConnectionsAccount"
+      ],
+      "description": "Retrieve an Account"
+    },
+    {
+      "name": "PostLinkedAccountsAccountDisconnect",
+      "input_types": [
+        "LinkedAccount"
+      ],
+      "output_types": [
+        "FinancialConnectionsAccount"
+      ],
+      "description": "Disconnect an Account"
+    },
+    {
+      "name": "GetLinkedAccountsAccountOwners",
+      "input_types": [
+        "LinkedAccount"
+      ],
+      "output_types": [
+        "FinancialConnectionsAccountOwner"
+      ],
+      "description": "List Account Owners"
+    },
+    {
+      "name": "PostLinkedAccountsAccountRefresh",
+      "input_types": [
+        "LinkedAccount"
+      ],
+      "output_types": [
+        "FinancialConnectionsAccount"
+      ],
+      "description": "Refresh Account data"
+    },
+    {
+      "name": "GetMandatesMandate",
+      "input_types": [
+        "Mandate"
+      ],
+      "output_types": [
+        "Mandate"
+      ],
+      "description": "Retrieve a Mandate"
+    },
+    {
+      "name": "GetPaymentAttemptRecords",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "PaymentAttemptRecord"
+      ],
+      "description": "List Payment Attempt Records"
+    },
+    {
+      "name": "GetPaymentAttemptRecordsId",
+      "input_types": [
+        "PaymentAttemptRecord"
+      ],
+      "output_types": [
+        "PaymentAttemptRecord"
+      ],
+      "description": "Retrieve a Payment Attempt Record"
+    },
+    {
+      "name": "GetPaymentIntents",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "PaymentIntent"
+      ],
+      "description": "List all PaymentIntents"
+    },
+    {
+      "name": "PostPaymentIntents",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "PaymentIntent"
+      ],
+      "description": "Create a PaymentIntent"
+    },
+    {
+      "name": "GetPaymentIntentsIntent",
+      "input_types": [
+        "PaymentIntent"
+      ],
+      "output_types": [
+        "PaymentIntent"
+      ],
+      "description": "Retrieve a PaymentIntent"
+    },
+    {
+      "name": "PostPaymentIntentsIntent",
+      "input_types": [
+        "PaymentIntent"
+      ],
+      "output_types": [
+        "PaymentIntent"
+      ],
+      "description": "Update a PaymentIntent"
+    },
+    {
+      "name": "GetPaymentIntentsIntentAmountDetailsLineItems",
+      "input_types": [
+        "PaymentIntent"
+      ],
+      "output_types": [
+        "PaymentIntentAmountDetailsLineItem"
+      ],
+      "description": "List all PaymentIntent LineItems"
+    },
+    {
+      "name": "PostPaymentIntentsIntentApplyCustomerBalance",
+      "input_types": [
+        "PaymentIntent"
+      ],
+      "output_types": [
+        "PaymentIntent"
+      ],
+      "description": "Reconcile a customer_balance PaymentIntent"
+    },
+    {
+      "name": "PostPaymentIntentsIntentCancel",
+      "input_types": [
+        "PaymentIntent"
+      ],
+      "output_types": [
+        "PaymentIntent"
+      ],
+      "description": "Cancel a PaymentIntent"
+    },
+    {
+      "name": "PostPaymentIntentsIntentCapture",
+      "input_types": [
+        "PaymentIntent"
+      ],
+      "output_types": [
+        "PaymentIntent"
+      ],
+      "description": "Capture a PaymentIntent"
+    },
+    {
+      "name": "PostPaymentIntentsIntentConfirm",
+      "input_types": [
+        "PaymentIntent"
+      ],
+      "output_types": [
+        "PaymentIntent"
+      ],
+      "description": "Confirm a PaymentIntent"
+    },
+    {
+      "name": "PostPaymentIntentsIntentIncrementAuthorization",
+      "input_types": [
+        "PaymentIntent"
+      ],
+      "output_types": [
+        "PaymentIntent"
+      ],
+      "description": "Increment an authorization"
+    },
+    {
+      "name": "PostPaymentIntentsIntentVerifyMicrodeposits",
+      "input_types": [
+        "PaymentIntent"
+      ],
+      "output_types": [
+        "PaymentIntent"
+      ],
+      "description": "Verify microdeposits on a PaymentIntent"
+    },
+    {
+      "name": "GetPaymentLinks",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "PaymentLink"
+      ],
+      "description": "List all payment links"
+    },
+    {
+      "name": "PostPaymentLinks",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "PaymentLink"
+      ],
+      "description": "Create a payment link"
+    },
+    {
+      "name": "GetPaymentLinksPaymentLink",
+      "input_types": [
+        "PaymentLink"
+      ],
+      "output_types": [
+        "PaymentLink"
+      ],
+      "description": "Retrieve payment link"
+    },
+    {
+      "name": "PostPaymentLinksPaymentLink",
+      "input_types": [
+        "PaymentLink"
+      ],
+      "output_types": [
+        "PaymentLink"
+      ],
+      "description": "Update a payment link"
+    },
+    {
+      "name": "GetPaymentLinksPaymentLinkLineItems",
+      "input_types": [
+        "PaymentLink"
+      ],
+      "output_types": [
+        "Item"
+      ],
+      "description": "Retrieve a payment link's line items"
+    },
+    {
+      "name": "GetPaymentMethodConfigurations",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "PaymentMethodConfiguration"
+      ],
+      "description": "List payment method configurations"
+    },
+    {
+      "name": "PostPaymentMethodConfigurations",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "PaymentMethodConfiguration"
+      ],
+      "description": "Create a payment method configuration"
+    },
+    {
+      "name": "GetPaymentMethodConfigurationsConfiguration",
+      "input_types": [
+        "PaymentMethodConfiguration"
+      ],
+      "output_types": [
+        "PaymentMethodConfiguration"
+      ],
+      "description": "Retrieve payment method configuration"
+    },
+    {
+      "name": "PostPaymentMethodConfigurationsConfiguration",
+      "input_types": [
+        "PaymentMethodConfiguration"
+      ],
+      "output_types": [
+        "PaymentMethodConfiguration"
+      ],
+      "description": "Update payment method configuration"
+    },
+    {
+      "name": "GetPaymentMethodDomains",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "PaymentMethodDomain"
+      ],
+      "description": "List payment method domains"
+    },
+    {
+      "name": "PostPaymentMethodDomains",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "PaymentMethodDomain"
+      ],
+      "description": "Create a payment method domain"
+    },
+    {
+      "name": "GetPaymentMethodDomainsPaymentMethodDomain",
+      "input_types": [
+        "PaymentMethodDomain"
+      ],
+      "output_types": [
+        "PaymentMethodDomain"
+      ],
+      "description": "Retrieve a payment method domain"
+    },
+    {
+      "name": "PostPaymentMethodDomainsPaymentMethodDomain",
+      "input_types": [
+        "PaymentMethodDomain"
+      ],
+      "output_types": [
+        "PaymentMethodDomain"
+      ],
+      "description": "Update a payment method domain"
+    },
+    {
+      "name": "PostPaymentMethodDomainsPaymentMethodDomainValidate",
+      "input_types": [
+        "PaymentMethodDomain"
+      ],
+      "output_types": [
+        "PaymentMethodDomain"
+      ],
+      "description": "Validate an existing payment method domain"
+    },
+    {
+      "name": "GetPaymentMethods",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "PaymentMethod"
+      ],
+      "description": "List PaymentMethods"
+    },
+    {
+      "name": "PostPaymentMethods",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "PaymentMethod"
+      ],
+      "description": "Shares a PaymentMethod"
+    },
+    {
+      "name": "GetPaymentMethodsPaymentMethod",
+      "input_types": [
+        "PaymentMethod"
+      ],
+      "output_types": [
+        "PaymentMethod"
+      ],
+      "description": "Retrieve a PaymentMethod"
+    },
+    {
+      "name": "PostPaymentMethodsPaymentMethod",
+      "input_types": [
+        "PaymentMethod"
+      ],
+      "output_types": [
+        "PaymentMethod"
+      ],
+      "description": "Update a PaymentMethod"
+    },
+    {
+      "name": "PostPaymentMethodsPaymentMethodAttach",
+      "input_types": [
+        "PaymentMethod"
+      ],
+      "output_types": [
+        "PaymentMethod"
+      ],
+      "description": "Attach a PaymentMethod to a Customer"
+    },
+    {
+      "name": "PostPaymentMethodsPaymentMethodDetach",
+      "input_types": [
+        "PaymentMethod"
+      ],
+      "output_types": [
+        "PaymentMethod"
+      ],
+      "description": "Detach a PaymentMethod from a Customer"
+    },
+    {
+      "name": "PostPaymentRecordsReportPayment",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "PaymentRecord"
+      ],
+      "description": "Report a payment"
+    },
+    {
+      "name": "GetPaymentRecordsId",
+      "input_types": [
+        "PaymentRecord"
+      ],
+      "output_types": [
+        "PaymentRecord"
+      ],
+      "description": "Retrieve a Payment Record"
+    },
+    {
+      "name": "PostPaymentRecordsIdReportPaymentAttempt",
+      "input_types": [
+        "PaymentRecord"
+      ],
+      "output_types": [
+        "PaymentRecord"
+      ],
+      "description": "Report a payment attempt"
+    },
+    {
+      "name": "PostPaymentRecordsIdReportPaymentAttemptCanceled",
+      "input_types": [
+        "PaymentRecord"
+      ],
+      "output_types": [
+        "PaymentRecord"
+      ],
+      "description": "Report payment attempt canceled"
+    },
+    {
+      "name": "PostPaymentRecordsIdReportPaymentAttemptFailed",
+      "input_types": [
+        "PaymentRecord"
+      ],
+      "output_types": [
+        "PaymentRecord"
+      ],
+      "description": "Report payment attempt failed"
+    },
+    {
+      "name": "PostPaymentRecordsIdReportPaymentAttemptGuaranteed",
+      "input_types": [
+        "PaymentRecord"
+      ],
+      "output_types": [
+        "PaymentRecord"
+      ],
+      "description": "Report payment attempt guaranteed"
+    },
+    {
+      "name": "PostPaymentRecordsIdReportPaymentAttemptInformational",
+      "input_types": [
+        "PaymentRecord"
+      ],
+      "output_types": [
+        "PaymentRecord"
+      ],
+      "description": "Report payment attempt informational"
+    },
+    {
+      "name": "PostPaymentRecordsIdReportRefund",
+      "input_types": [
+        "PaymentRecord"
+      ],
+      "output_types": [
+        "PaymentRecord"
+      ],
+      "description": "Report a refund"
+    },
+    {
+      "name": "GetPayouts",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Payout"
+      ],
+      "description": "List all payouts"
+    },
+    {
+      "name": "PostPayouts",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Payout"
+      ],
+      "description": "Create a payout"
+    },
+    {
+      "name": "GetPayoutsPayout",
+      "input_types": [
+        "Payout"
+      ],
+      "output_types": [
+        "Payout"
+      ],
+      "description": "Retrieve a payout"
+    },
+    {
+      "name": "PostPayoutsPayout",
+      "input_types": [
+        "Payout"
+      ],
+      "output_types": [
+        "Payout"
+      ],
+      "description": "Update a payout"
+    },
+    {
+      "name": "PostPayoutsPayoutCancel",
+      "input_types": [
+        "Payout"
+      ],
+      "output_types": [
+        "Payout"
+      ],
+      "description": "Cancel a payout"
+    },
+    {
+      "name": "PostPayoutsPayoutReverse",
+      "input_types": [
+        "Payout"
+      ],
+      "output_types": [
+        "Payout"
+      ],
+      "description": "Reverse a payout"
+    },
+    {
+      "name": "GetPlans",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Plan"
+      ],
+      "description": "List all plans"
+    },
+    {
+      "name": "PostPlans",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Plan"
+      ],
+      "description": "Create a plan"
+    },
+    {
+      "name": "DeletePlansPlan",
+      "input_types": [
+        "Plan"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete a plan"
+    },
+    {
+      "name": "GetPlansPlan",
+      "input_types": [
+        "Plan"
+      ],
+      "output_types": [
+        "Plan"
+      ],
+      "description": "Retrieve a plan"
+    },
+    {
+      "name": "PostPlansPlan",
+      "input_types": [
+        "Plan"
+      ],
+      "output_types": [
+        "Plan"
+      ],
+      "description": "Update a plan"
+    },
+    {
+      "name": "GetPrices",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Price"
+      ],
+      "description": "List all prices"
+    },
+    {
+      "name": "PostPrices",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Price"
+      ],
+      "description": "Create a price"
+    },
+    {
+      "name": "GetPricesPrice",
+      "input_types": [
+        "Price"
+      ],
+      "output_types": [
+        "Price"
+      ],
+      "description": "Retrieve a price"
+    },
+    {
+      "name": "PostPricesPrice",
+      "input_types": [
+        "Price"
+      ],
+      "output_types": [
+        "Price"
+      ],
+      "description": "Update a price"
+    },
+    {
+      "name": "GetProducts",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Product"
+      ],
+      "description": "List all products"
+    },
+    {
+      "name": "PostProducts",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Product"
+      ],
+      "description": "Create a product"
+    },
+    {
+      "name": "DeleteProductsId",
+      "input_types": [
+        "Product"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete a product"
+    },
+    {
+      "name": "GetProductsId",
+      "input_types": [
+        "Product"
+      ],
+      "output_types": [
+        "Product"
+      ],
+      "description": "Retrieve a product"
+    },
+    {
+      "name": "PostProductsId",
+      "input_types": [
+        "Product"
+      ],
+      "output_types": [
+        "Product"
+      ],
+      "description": "Update a product"
+    },
+    {
+      "name": "GetProductsProductFeatures",
+      "input_types": [
+        "Product"
+      ],
+      "output_types": [
+        "ProductFeature"
+      ],
+      "description": "List all features attached to a product"
+    },
+    {
+      "name": "PostProductsProductFeatures",
+      "input_types": [
+        "Product"
+      ],
+      "output_types": [
+        "ProductFeature"
+      ],
+      "description": "Attach a feature to a product"
+    },
+    {
+      "name": "DeleteProductsProductFeaturesId",
+      "input_types": [
+        "Product"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Remove a feature from a product"
+    },
+    {
+      "name": "GetProductsProductFeaturesId",
+      "input_types": [
+        "Product"
+      ],
+      "output_types": [
+        "ProductFeature"
+      ],
+      "description": "Retrieve a product_feature"
+    },
+    {
+      "name": "GetPromotionCodes",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "PromotionCode"
+      ],
+      "description": "List all promotion codes"
+    },
+    {
+      "name": "PostPromotionCodes",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "PromotionCode"
+      ],
+      "description": "Create a promotion code"
+    },
+    {
+      "name": "GetPromotionCodesPromotionCode",
+      "input_types": [
+        "PromotionCode"
+      ],
+      "output_types": [
+        "PromotionCode"
+      ],
+      "description": "Retrieve a promotion code"
+    },
+    {
+      "name": "PostPromotionCodesPromotionCode",
+      "input_types": [
+        "PromotionCode"
+      ],
+      "output_types": [
+        "PromotionCode"
+      ],
+      "description": "Update a promotion code"
+    },
+    {
+      "name": "GetQuotes",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Quote"
+      ],
+      "description": "List all quotes"
+    },
+    {
+      "name": "PostQuotes",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Quote"
+      ],
+      "description": "Create a quote"
+    },
+    {
+      "name": "GetQuotesQuote",
+      "input_types": [
+        "Quote"
+      ],
+      "output_types": [
+        "Quote"
+      ],
+      "description": "Retrieve a quote"
+    },
+    {
+      "name": "PostQuotesQuote",
+      "input_types": [
+        "Quote"
+      ],
+      "output_types": [
+        "Quote"
+      ],
+      "description": "Update a quote"
+    },
+    {
+      "name": "PostQuotesQuoteAccept",
+      "input_types": [
+        "Quote"
+      ],
+      "output_types": [
+        "Quote"
+      ],
+      "description": "Accept a quote"
+    },
+    {
+      "name": "PostQuotesQuoteCancel",
+      "input_types": [
+        "Quote"
+      ],
+      "output_types": [
+        "Quote"
+      ],
+      "description": "Cancel a quote"
+    },
+    {
+      "name": "GetQuotesQuoteComputedUpfrontLineItems",
+      "input_types": [
+        "Quote"
+      ],
+      "output_types": [
+        "Item"
+      ],
+      "description": "Retrieve a quote's upfront line items"
+    },
+    {
+      "name": "PostQuotesQuoteFinalize",
+      "input_types": [
+        "Quote"
+      ],
+      "output_types": [
+        "Quote"
+      ],
+      "description": "Finalize a quote"
+    },
+    {
+      "name": "GetQuotesQuoteLineItems",
+      "input_types": [
+        "Quote"
+      ],
+      "output_types": [
+        "Item"
+      ],
+      "description": "Retrieve a quote's line items"
+    },
+    {
+      "name": "GetQuotesQuotePdf",
+      "input_types": [
+        "Quote"
+      ],
+      "output_types": [
+        "Pdf"
+      ],
+      "description": "Download quote PDF"
+    },
+    {
+      "name": "GetRadarEarlyFraudWarnings",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "RadarEarlyFraudWarning"
+      ],
+      "description": "List all early fraud warnings"
+    },
+    {
+      "name": "GetRadarEarlyFraudWarningsEarlyFraudWarning",
+      "input_types": [
+        "Radar"
+      ],
+      "output_types": [
+        "RadarEarlyFraudWarning"
+      ],
+      "description": "Retrieve an early fraud warning"
+    },
+    {
+      "name": "PostRadarPaymentEvaluations",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "RadarPaymentEvaluation"
+      ],
+      "description": "Create a Payment Evaluation"
+    },
+    {
+      "name": "GetRadarValueListItems",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "RadarValueListItem"
+      ],
+      "description": "List all value list items"
+    },
+    {
+      "name": "PostRadarValueListItems",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "RadarValueListItem"
+      ],
+      "description": "Create a value list item"
+    },
+    {
+      "name": "DeleteRadarValueListItemsItem",
+      "input_types": [
+        "Radar"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete a value list item"
+    },
+    {
+      "name": "GetRadarValueListItemsItem",
+      "input_types": [
+        "Radar"
+      ],
+      "output_types": [
+        "RadarValueListItem"
+      ],
+      "description": "Retrieve a value list item"
+    },
+    {
+      "name": "GetRadarValueLists",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "RadarValueList"
+      ],
+      "description": "List all value lists"
+    },
+    {
+      "name": "PostRadarValueLists",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "RadarValueList"
+      ],
+      "description": "Create a value list"
+    },
+    {
+      "name": "DeleteRadarValueListsValueList",
+      "input_types": [
+        "Radar"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete a value list"
+    },
+    {
+      "name": "GetRadarValueListsValueList",
+      "input_types": [
+        "Radar"
+      ],
+      "output_types": [
+        "RadarValueList"
+      ],
+      "description": "Retrieve a value list"
+    },
+    {
+      "name": "PostRadarValueListsValueList",
+      "input_types": [
+        "Radar"
+      ],
+      "output_types": [
+        "RadarValueList"
+      ],
+      "description": "Update a value list"
+    },
+    {
+      "name": "GetRefunds",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Refund"
+      ],
+      "description": "List all refunds"
+    },
+    {
+      "name": "PostRefunds",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Refund"
+      ],
+      "description": "Create customer balance refund"
+    },
+    {
+      "name": "GetRefundsRefund",
+      "input_types": [
+        "Refund"
+      ],
+      "output_types": [
+        "Refund"
+      ],
+      "description": "Retrieve a refund"
+    },
+    {
+      "name": "PostRefundsRefund",
+      "input_types": [
+        "Refund"
+      ],
+      "output_types": [
+        "Refund"
+      ],
+      "description": "Update a refund"
+    },
+    {
+      "name": "PostRefundsRefundCancel",
+      "input_types": [
+        "Refund"
+      ],
+      "output_types": [
+        "Refund"
+      ],
+      "description": "Cancel a refund"
+    },
+    {
+      "name": "GetReportingReportRuns",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "ReportingReportRun"
+      ],
+      "description": "List all Report Runs"
+    },
+    {
+      "name": "PostReportingReportRuns",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "ReportingReportRun"
+      ],
+      "description": "Create a Report Run"
+    },
+    {
+      "name": "GetReportingReportRunsReportRun",
+      "input_types": [
+        "Reporting"
+      ],
+      "output_types": [
+        "ReportingReportRun"
+      ],
+      "description": "Retrieve a Report Run"
+    },
+    {
+      "name": "GetReportingReportTypes",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "ReportingReportType"
+      ],
+      "description": "List all Report Types"
+    },
+    {
+      "name": "GetReportingReportTypesReportType",
+      "input_types": [
+        "Reporting"
+      ],
+      "output_types": [
+        "ReportingReportType"
+      ],
+      "description": "Retrieve a Report Type"
+    },
+    {
+      "name": "GetReviews",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Review"
+      ],
+      "description": "List all open reviews"
+    },
+    {
+      "name": "GetReviewsReview",
+      "input_types": [
+        "Review"
+      ],
+      "output_types": [
+        "Review"
+      ],
+      "description": "Retrieve a review"
+    },
+    {
+      "name": "PostReviewsReviewApprove",
+      "input_types": [
+        "Review"
+      ],
+      "output_types": [
+        "Review"
+      ],
+      "description": "Approve a review"
+    },
+    {
+      "name": "GetSetupAttempts",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "SetupAttempt"
+      ],
+      "description": "List all SetupAttempts"
+    },
+    {
+      "name": "GetSetupIntents",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "SetupIntent"
+      ],
+      "description": "List all SetupIntents"
+    },
+    {
+      "name": "PostSetupIntents",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "SetupIntent"
+      ],
+      "description": "Create a SetupIntent"
+    },
+    {
+      "name": "GetSetupIntentsIntent",
+      "input_types": [
+        "SetupIntent"
+      ],
+      "output_types": [
+        "SetupIntent"
+      ],
+      "description": "Retrieve a SetupIntent"
+    },
+    {
+      "name": "PostSetupIntentsIntent",
+      "input_types": [
+        "SetupIntent"
+      ],
+      "output_types": [
+        "SetupIntent"
+      ],
+      "description": "Update a SetupIntent"
+    },
+    {
+      "name": "PostSetupIntentsIntentCancel",
+      "input_types": [
+        "SetupIntent"
+      ],
+      "output_types": [
+        "SetupIntent"
+      ],
+      "description": "Cancel a SetupIntent"
+    },
+    {
+      "name": "PostSetupIntentsIntentConfirm",
+      "input_types": [
+        "SetupIntent"
+      ],
+      "output_types": [
+        "SetupIntent"
+      ],
+      "description": "Confirm a SetupIntent"
+    },
+    {
+      "name": "PostSetupIntentsIntentVerifyMicrodeposits",
+      "input_types": [
+        "SetupIntent"
+      ],
+      "output_types": [
+        "SetupIntent"
+      ],
+      "description": "Verify microdeposits on a SetupIntent"
+    },
+    {
+      "name": "GetShippingRates",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "ShippingRate"
+      ],
+      "description": "List all shipping rates"
+    },
+    {
+      "name": "PostShippingRates",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "ShippingRate"
+      ],
+      "description": "Create a shipping rate"
+    },
+    {
+      "name": "GetShippingRatesShippingRateToken",
+      "input_types": [
+        "ShippingRate"
+      ],
+      "output_types": [
+        "ShippingRate"
+      ],
+      "description": "Retrieve a shipping rate"
+    },
+    {
+      "name": "PostShippingRatesShippingRateToken",
+      "input_types": [
+        "ShippingRate"
+      ],
+      "output_types": [
+        "ShippingRate"
+      ],
+      "description": "Update a shipping rate"
+    },
+    {
+      "name": "PostSigmaSavedQueriesId",
+      "input_types": [
+        "Sigma"
+      ],
+      "output_types": [
+        "SigmaSigmaApiQuery"
+      ],
+      "description": "Update an existing Sigma Query"
+    },
+    {
+      "name": "GetSigmaScheduledQueryRuns",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "ScheduledQueryRun"
+      ],
+      "description": "List all scheduled query runs"
+    },
+    {
+      "name": "GetSigmaScheduledQueryRunsScheduledQueryRun",
+      "input_types": [
+        "Sigma"
+      ],
+      "output_types": [
+        "ScheduledQueryRun"
+      ],
+      "description": "Retrieve a scheduled query run"
+    },
+    {
+      "name": "PostSources",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Source"
+      ],
+      "description": "Shares a source"
+    },
+    {
+      "name": "GetSourcesSource",
+      "input_types": [
+        "Source"
+      ],
+      "output_types": [
+        "Source"
+      ],
+      "description": "Retrieve a source"
+    },
+    {
+      "name": "PostSourcesSource",
+      "input_types": [
+        "Source"
+      ],
+      "output_types": [
+        "Source"
+      ],
+      "description": "Update a source"
+    },
+    {
+      "name": "GetSourcesSourceMandateNotificationsMandateNotification",
+      "input_types": [
+        "Source"
+      ],
+      "output_types": [
+        "SourceMandateNotification"
+      ],
+      "description": "Retrieve a Source MandateNotification"
+    },
+    {
+      "name": "GetSourcesSourceSourceTransactions",
+      "input_types": [
+        "Source"
+      ],
+      "output_types": [
+        "SourceTransaction"
+      ],
+      "description": "<p>List source transactions for a given source.</p>"
+    },
+    {
+      "name": "GetSourcesSourceSourceTransactionsSourceTransaction",
+      "input_types": [
+        "Source"
+      ],
+      "output_types": [
+        "SourceTransaction"
+      ],
+      "description": "Retrieve a source transaction"
+    },
+    {
+      "name": "PostSourcesSourceVerify",
+      "input_types": [
+        "Source"
+      ],
+      "output_types": [
+        "Source"
+      ],
+      "description": "<p>Verify a given source.</p>"
+    },
+    {
+      "name": "GetSubscriptionItems",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "SubscriptionItem"
+      ],
+      "description": "List all subscription items"
+    },
+    {
+      "name": "PostSubscriptionItems",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "SubscriptionItem"
+      ],
+      "description": "Create a subscription item"
+    },
+    {
+      "name": "DeleteSubscriptionItemsItem",
+      "input_types": [
+        "SubscriptionItem"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete a subscription item"
+    },
+    {
+      "name": "GetSubscriptionItemsItem",
+      "input_types": [
+        "SubscriptionItem"
+      ],
+      "output_types": [
+        "SubscriptionItem"
+      ],
+      "description": "Retrieve a subscription item"
+    },
+    {
+      "name": "PostSubscriptionItemsItem",
+      "input_types": [
+        "SubscriptionItem"
+      ],
+      "output_types": [
+        "SubscriptionItem"
+      ],
+      "description": "Update a subscription item"
+    },
+    {
+      "name": "GetSubscriptionSchedules",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "SubscriptionSchedule"
+      ],
+      "description": "List all schedules"
+    },
+    {
+      "name": "PostSubscriptionSchedules",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "SubscriptionSchedule"
+      ],
+      "description": "Create a schedule"
+    },
+    {
+      "name": "GetSubscriptionSchedulesSchedule",
+      "input_types": [
+        "SubscriptionSchedule"
+      ],
+      "output_types": [
+        "SubscriptionSchedule"
+      ],
+      "description": "Retrieve a schedule"
+    },
+    {
+      "name": "PostSubscriptionSchedulesSchedule",
+      "input_types": [
+        "SubscriptionSchedule"
+      ],
+      "output_types": [
+        "SubscriptionSchedule"
+      ],
+      "description": "Update a schedule"
+    },
+    {
+      "name": "PostSubscriptionSchedulesScheduleCancel",
+      "input_types": [
+        "SubscriptionSchedule"
+      ],
+      "output_types": [
+        "SubscriptionSchedule"
+      ],
+      "description": "Cancel a schedule"
+    },
+    {
+      "name": "PostSubscriptionSchedulesScheduleRelease",
+      "input_types": [
+        "SubscriptionSchedule"
+      ],
+      "output_types": [
+        "SubscriptionSchedule"
+      ],
+      "description": "Release a schedule"
+    },
+    {
+      "name": "GetSubscriptions",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Subscription"
+      ],
+      "description": "List subscriptions"
+    },
+    {
+      "name": "PostSubscriptions",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Subscription"
+      ],
+      "description": "Create a subscription"
+    },
+    {
+      "name": "DeleteSubscriptionsSubscriptionExposedId",
+      "input_types": [
+        "Subscription"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Cancel a subscription"
+    },
+    {
+      "name": "GetSubscriptionsSubscriptionExposedId",
+      "input_types": [
+        "Subscription"
+      ],
+      "output_types": [
+        "Subscription"
+      ],
+      "description": "Retrieve a subscription"
+    },
+    {
+      "name": "PostSubscriptionsSubscriptionExposedId",
+      "input_types": [
+        "Subscription"
+      ],
+      "output_types": [
+        "Subscription"
+      ],
+      "description": "Update a subscription"
+    },
+    {
+      "name": "DeleteSubscriptionsSubscriptionExposedIdDiscount",
+      "input_types": [
+        "Subscription"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete a subscription discount"
+    },
+    {
+      "name": "PostSubscriptionsSubscriptionMigrate",
+      "input_types": [
+        "Subscription"
+      ],
+      "output_types": [
+        "Subscription"
+      ],
+      "description": "Migrate a subscription"
+    },
+    {
+      "name": "PostSubscriptionsSubscriptionResume",
+      "input_types": [
+        "Subscription"
+      ],
+      "output_types": [
+        "Subscription"
+      ],
+      "description": "Resume a subscription"
+    },
+    {
+      "name": "GetTaxAssociationsFind",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TaxAssociation"
+      ],
+      "description": "Find a Tax Association"
+    },
+    {
+      "name": "PostTaxCalculations",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TaxCalculation"
+      ],
+      "description": "Create a Calculation"
+    },
+    {
+      "name": "GetTaxCalculationsCalculation",
+      "input_types": [
+        "Tax"
+      ],
+      "output_types": [
+        "TaxCalculation"
+      ],
+      "description": "Retrieve a Calculation"
+    },
+    {
+      "name": "GetTaxCalculationsCalculationLineItems",
+      "input_types": [
+        "Tax"
+      ],
+      "output_types": [
+        "TaxCalculationLineItem"
+      ],
+      "description": "Retrieve a Calculation's line items"
+    },
+    {
+      "name": "GetTaxRegistrations",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TaxRegistration"
+      ],
+      "description": "List registrations"
+    },
+    {
+      "name": "PostTaxRegistrations",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TaxRegistration"
+      ],
+      "description": "Create a registration"
+    },
+    {
+      "name": "GetTaxRegistrationsId",
+      "input_types": [
+        "Tax"
+      ],
+      "output_types": [
+        "TaxRegistration"
+      ],
+      "description": "Retrieve a registration"
+    },
+    {
+      "name": "PostTaxRegistrationsId",
+      "input_types": [
+        "Tax"
+      ],
+      "output_types": [
+        "TaxRegistration"
+      ],
+      "description": "Update a registration"
+    },
+    {
+      "name": "GetTaxSettings",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TaxSettings"
+      ],
+      "description": "Retrieve settings"
+    },
+    {
+      "name": "PostTaxSettings",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TaxSettings"
+      ],
+      "description": "Update settings"
+    },
+    {
+      "name": "PostTaxTransactionsCreateFromCalculation",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TaxTransaction"
+      ],
+      "description": "Create a Transaction from a Calculation"
+    },
+    {
+      "name": "PostTaxTransactionsCreateReversal",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TaxTransaction"
+      ],
+      "description": "Create a reversal Transaction"
+    },
+    {
+      "name": "GetTaxTransactionsTransaction",
+      "input_types": [
+        "Tax"
+      ],
+      "output_types": [
+        "TaxTransaction"
+      ],
+      "description": "Retrieve a Transaction"
+    },
+    {
+      "name": "GetTaxTransactionsTransactionLineItems",
+      "input_types": [
+        "Tax"
+      ],
+      "output_types": [
+        "TaxTransactionLineItem"
+      ],
+      "description": "Retrieve a Transaction's line items"
+    },
+    {
+      "name": "GetTaxCodes",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TaxCode"
+      ],
+      "description": "List all tax codes"
+    },
+    {
+      "name": "GetTaxCodesId",
+      "input_types": [
+        "TaxCode"
+      ],
+      "output_types": [
+        "TaxCode"
+      ],
+      "description": "Retrieve a tax code"
+    },
+    {
+      "name": "GetTaxIds",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TaxId"
+      ],
+      "description": "List all tax IDs"
+    },
+    {
+      "name": "PostTaxIds",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TaxId"
+      ],
+      "description": "Create a tax ID"
+    },
+    {
+      "name": "DeleteTaxIdsId",
+      "input_types": [
+        "TaxId"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete a tax ID"
+    },
+    {
+      "name": "GetTaxIdsId",
+      "input_types": [
+        "TaxId"
+      ],
+      "output_types": [
+        "TaxId"
+      ],
+      "description": "Retrieve a tax ID"
+    },
+    {
+      "name": "GetTaxRates",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TaxRate"
+      ],
+      "description": "List all tax rates"
+    },
+    {
+      "name": "PostTaxRates",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TaxRate"
+      ],
+      "description": "Create a tax rate"
+    },
+    {
+      "name": "GetTaxRatesTaxRate",
+      "input_types": [
+        "TaxRate"
+      ],
+      "output_types": [
+        "TaxRate"
+      ],
+      "description": "Retrieve a tax rate"
+    },
+    {
+      "name": "PostTaxRatesTaxRate",
+      "input_types": [
+        "TaxRate"
+      ],
+      "output_types": [
+        "TaxRate"
+      ],
+      "description": "Update a tax rate"
+    },
+    {
+      "name": "GetTerminalConfigurations",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TerminalConfiguration"
+      ],
+      "description": "List all Configurations"
+    },
+    {
+      "name": "PostTerminalConfigurations",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TerminalConfiguration"
+      ],
+      "description": "Create a Configuration"
+    },
+    {
+      "name": "DeleteTerminalConfigurationsConfiguration",
+      "input_types": [
+        "Terminal"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete a Configuration"
+    },
+    {
+      "name": "GetTerminalConfigurationsConfiguration",
+      "input_types": [
+        "Terminal"
+      ],
+      "output_types": [
+        "Configuration"
+      ],
+      "description": "Retrieve a Configuration"
+    },
+    {
+      "name": "PostTerminalConfigurationsConfiguration",
+      "input_types": [
+        "Terminal"
+      ],
+      "output_types": [
+        "Configuration"
+      ],
+      "description": "Update a Configuration"
+    },
+    {
+      "name": "PostTerminalConnectionTokens",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TerminalConnectionToken"
+      ],
+      "description": "Create a Connection Token"
+    },
+    {
+      "name": "GetTerminalLocations",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TerminalLocation"
+      ],
+      "description": "List all Locations"
+    },
+    {
+      "name": "PostTerminalLocations",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TerminalLocation"
+      ],
+      "description": "Create a Location"
+    },
+    {
+      "name": "DeleteTerminalLocationsLocation",
+      "input_types": [
+        "Terminal"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete a Location"
+    },
+    {
+      "name": "GetTerminalLocationsLocation",
+      "input_types": [
+        "Terminal"
+      ],
+      "output_types": [
+        "Location"
+      ],
+      "description": "Retrieve a Location"
+    },
+    {
+      "name": "PostTerminalLocationsLocation",
+      "input_types": [
+        "Terminal"
+      ],
+      "output_types": [
+        "Location"
+      ],
+      "description": "Update a Location"
+    },
+    {
+      "name": "PostTerminalOnboardingLinks",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TerminalOnboardingLink"
+      ],
+      "description": "Create an Onboarding Link"
+    },
+    {
+      "name": "GetTerminalReaders",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TerminalReader"
+      ],
+      "description": "List all Readers"
+    },
+    {
+      "name": "PostTerminalReaders",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TerminalReader"
+      ],
+      "description": "Create a Reader"
+    },
+    {
+      "name": "DeleteTerminalReadersReader",
+      "input_types": [
+        "Terminal"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete a Reader"
+    },
+    {
+      "name": "GetTerminalReadersReader",
+      "input_types": [
+        "Terminal"
+      ],
+      "output_types": [
+        "Reader"
+      ],
+      "description": "Retrieve a Reader"
+    },
+    {
+      "name": "PostTerminalReadersReader",
+      "input_types": [
+        "Terminal"
+      ],
+      "output_types": [
+        "Reader"
+      ],
+      "description": "Update a Reader"
+    },
+    {
+      "name": "PostTerminalReadersReaderCancelAction",
+      "input_types": [
+        "Terminal"
+      ],
+      "output_types": [
+        "TerminalReader"
+      ],
+      "description": "Cancel the current reader action"
+    },
+    {
+      "name": "PostTerminalReadersReaderCollectInputs",
+      "input_types": [
+        "Terminal"
+      ],
+      "output_types": [
+        "TerminalReader"
+      ],
+      "description": "Collect inputs using a Reader"
+    },
+    {
+      "name": "PostTerminalReadersReaderCollectPaymentMethod",
+      "input_types": [
+        "Terminal"
+      ],
+      "output_types": [
+        "TerminalReader"
+      ],
+      "description": "Hand off a PaymentIntent to a Reader and collect card details"
+    },
+    {
+      "name": "PostTerminalReadersReaderConfirmPaymentIntent",
+      "input_types": [
+        "Terminal"
+      ],
+      "output_types": [
+        "TerminalReader"
+      ],
+      "description": "Confirm a PaymentIntent on the Reader"
+    },
+    {
+      "name": "PostTerminalReadersReaderProcessPaymentIntent",
+      "input_types": [
+        "Terminal"
+      ],
+      "output_types": [
+        "TerminalReader"
+      ],
+      "description": "Hand-off a PaymentIntent to a Reader"
+    },
+    {
+      "name": "PostTerminalReadersReaderProcessSetupIntent",
+      "input_types": [
+        "Terminal"
+      ],
+      "output_types": [
+        "TerminalReader"
+      ],
+      "description": "Hand-off a SetupIntent to a Reader"
+    },
+    {
+      "name": "PostTerminalReadersReaderRefundPayment",
+      "input_types": [
+        "Terminal"
+      ],
+      "output_types": [
+        "TerminalReader"
+      ],
+      "description": "Refund a Charge or a PaymentIntent in-person"
+    },
+    {
+      "name": "PostTerminalReadersReaderSetReaderDisplay",
+      "input_types": [
+        "Terminal"
+      ],
+      "output_types": [
+        "TerminalReader"
+      ],
+      "description": "Set reader display"
+    },
+    {
+      "name": "PostTerminalRefunds",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TerminalRefund"
+      ],
+      "description": "Create a refund using a Terminal-supported device."
+    },
+    {
+      "name": "PostTokens",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Token"
+      ],
+      "description": "Create a CVC update token"
+    },
+    {
+      "name": "GetTokensToken",
+      "input_types": [
+        "Token"
+      ],
+      "output_types": [
+        "Token"
+      ],
+      "description": "Retrieve a token"
+    },
+    {
+      "name": "GetTopups",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Topup"
+      ],
+      "description": "List all top-ups"
+    },
+    {
+      "name": "PostTopups",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Topup"
+      ],
+      "description": "Create a top-up"
+    },
+    {
+      "name": "GetTopupsTopup",
+      "input_types": [
+        "Topup"
+      ],
+      "output_types": [
+        "Topup"
+      ],
+      "description": "Retrieve a top-up"
+    },
+    {
+      "name": "PostTopupsTopup",
+      "input_types": [
+        "Topup"
+      ],
+      "output_types": [
+        "Topup"
+      ],
+      "description": "Update a top-up"
+    },
+    {
+      "name": "PostTopupsTopupCancel",
+      "input_types": [
+        "Topup"
+      ],
+      "output_types": [
+        "Topup"
+      ],
+      "description": "Cancel a top-up"
+    },
+    {
+      "name": "GetTransfers",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Transfer"
+      ],
+      "description": "List all transfers"
+    },
+    {
+      "name": "PostTransfers",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "Transfer"
+      ],
+      "description": "Create a transfer"
+    },
+    {
+      "name": "GetTransfersIdReversals",
+      "input_types": [
+        "Transfer"
+      ],
+      "output_types": [
+        "TransferReversal"
+      ],
+      "description": "List all reversals"
+    },
+    {
+      "name": "PostTransfersIdReversals",
+      "input_types": [
+        "Transfer"
+      ],
+      "output_types": [
+        "TransferReversal"
+      ],
+      "description": "Create a transfer reversal"
+    },
+    {
+      "name": "GetTransfersTransfer",
+      "input_types": [
+        "Transfer"
+      ],
+      "output_types": [
+        "Transfer"
+      ],
+      "description": "Retrieve a transfer"
+    },
+    {
+      "name": "PostTransfersTransfer",
+      "input_types": [
+        "Transfer"
+      ],
+      "output_types": [
+        "Transfer"
+      ],
+      "description": "Update a transfer"
+    },
+    {
+      "name": "GetTransfersTransferReversalsId",
+      "input_types": [
+        "Transfer"
+      ],
+      "output_types": [
+        "TransferReversal"
+      ],
+      "description": "Retrieve a reversal"
+    },
+    {
+      "name": "PostTransfersTransferReversalsId",
+      "input_types": [
+        "Transfer"
+      ],
+      "output_types": [
+        "TransferReversal"
+      ],
+      "description": "Update a reversal"
+    },
+    {
+      "name": "GetTreasuryCreditReversals",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TreasuryCreditReversal"
+      ],
+      "description": "List all CreditReversals"
+    },
+    {
+      "name": "PostTreasuryCreditReversals",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TreasuryCreditReversal"
+      ],
+      "description": "Create a CreditReversal"
+    },
+    {
+      "name": "GetTreasuryCreditReversalsCreditReversal",
+      "input_types": [
+        "Treasury"
+      ],
+      "output_types": [
+        "TreasuryCreditReversal"
+      ],
+      "description": "Retrieve a CreditReversal"
+    },
+    {
+      "name": "GetTreasuryDebitReversals",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TreasuryDebitReversal"
+      ],
+      "description": "List all DebitReversals"
+    },
+    {
+      "name": "PostTreasuryDebitReversals",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TreasuryDebitReversal"
+      ],
+      "description": "Create a DebitReversal"
+    },
+    {
+      "name": "GetTreasuryDebitReversalsDebitReversal",
+      "input_types": [
+        "Treasury"
+      ],
+      "output_types": [
+        "TreasuryDebitReversal"
+      ],
+      "description": "Retrieve a DebitReversal"
+    },
+    {
+      "name": "GetTreasuryFinancialAccounts",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TreasuryFinancialAccount"
+      ],
+      "description": "List all FinancialAccounts"
+    },
+    {
+      "name": "PostTreasuryFinancialAccounts",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TreasuryFinancialAccount"
+      ],
+      "description": "Create a FinancialAccount"
+    },
+    {
+      "name": "GetTreasuryFinancialAccountsFinancialAccount",
+      "input_types": [
+        "Treasury"
+      ],
+      "output_types": [
+        "TreasuryFinancialAccount"
+      ],
+      "description": "Retrieve a FinancialAccount"
+    },
+    {
+      "name": "PostTreasuryFinancialAccountsFinancialAccount",
+      "input_types": [
+        "Treasury"
+      ],
+      "output_types": [
+        "TreasuryFinancialAccount"
+      ],
+      "description": "Update a FinancialAccount"
+    },
+    {
+      "name": "PostTreasuryFinancialAccountsFinancialAccountClose",
+      "input_types": [
+        "Treasury"
+      ],
+      "output_types": [
+        "TreasuryFinancialAccount"
+      ],
+      "description": "Close a FinancialAccount"
+    },
+    {
+      "name": "GetTreasuryFinancialAccountsFinancialAccountFeatures",
+      "input_types": [
+        "Treasury"
+      ],
+      "output_types": [
+        "TreasuryFinancialAccountFeatures"
+      ],
+      "description": "Retrieve FinancialAccount Features"
+    },
+    {
+      "name": "PostTreasuryFinancialAccountsFinancialAccountFeatures",
+      "input_types": [
+        "Treasury"
+      ],
+      "output_types": [
+        "TreasuryFinancialAccountFeatures"
+      ],
+      "description": "Update FinancialAccount Features"
+    },
+    {
+      "name": "GetTreasuryInboundTransfers",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TreasuryInboundTransfer"
+      ],
+      "description": "List all InboundTransfers"
+    },
+    {
+      "name": "PostTreasuryInboundTransfers",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TreasuryInboundTransfer"
+      ],
+      "description": "Create an InboundTransfer"
+    },
+    {
+      "name": "GetTreasuryInboundTransfersId",
+      "input_types": [
+        "Treasury"
+      ],
+      "output_types": [
+        "TreasuryInboundTransfer"
+      ],
+      "description": "Retrieve an InboundTransfer"
+    },
+    {
+      "name": "PostTreasuryInboundTransfersInboundTransferCancel",
+      "input_types": [
+        "Treasury"
+      ],
+      "output_types": [
+        "TreasuryInboundTransfer"
+      ],
+      "description": "Cancel an InboundTransfer"
+    },
+    {
+      "name": "GetTreasuryOutboundPayments",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TreasuryOutboundPayment"
+      ],
+      "description": "List all OutboundPayments"
+    },
+    {
+      "name": "PostTreasuryOutboundPayments",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TreasuryOutboundPayment"
+      ],
+      "description": "Create an OutboundPayment"
+    },
+    {
+      "name": "GetTreasuryOutboundPaymentsId",
+      "input_types": [
+        "Treasury"
+      ],
+      "output_types": [
+        "TreasuryOutboundPayment"
+      ],
+      "description": "Retrieve an OutboundPayment"
+    },
+    {
+      "name": "PostTreasuryOutboundPaymentsIdCancel",
+      "input_types": [
+        "Treasury"
+      ],
+      "output_types": [
+        "TreasuryOutboundPayment"
+      ],
+      "description": "Cancel an OutboundPayment"
+    },
+    {
+      "name": "GetTreasuryOutboundTransfers",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TreasuryOutboundTransfer"
+      ],
+      "description": "List all OutboundTransfers"
+    },
+    {
+      "name": "PostTreasuryOutboundTransfers",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TreasuryOutboundTransfer"
+      ],
+      "description": "Create an OutboundTransfer"
+    },
+    {
+      "name": "GetTreasuryOutboundTransfersOutboundTransfer",
+      "input_types": [
+        "Treasury"
+      ],
+      "output_types": [
+        "TreasuryOutboundTransfer"
+      ],
+      "description": "Retrieve an OutboundTransfer"
+    },
+    {
+      "name": "PostTreasuryOutboundTransfersOutboundTransferCancel",
+      "input_types": [
+        "Treasury"
+      ],
+      "output_types": [
+        "TreasuryOutboundTransfer"
+      ],
+      "description": "Cancel an OutboundTransfer"
+    },
+    {
+      "name": "GetTreasuryReceivedCredits",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TreasuryReceivedCredit"
+      ],
+      "description": "List all ReceivedCredits"
+    },
+    {
+      "name": "GetTreasuryReceivedCreditsId",
+      "input_types": [
+        "Treasury"
+      ],
+      "output_types": [
+        "TreasuryReceivedCredit"
+      ],
+      "description": "Retrieve a ReceivedCredit"
+    },
+    {
+      "name": "GetTreasuryReceivedDebits",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TreasuryReceivedDebit"
+      ],
+      "description": "List all ReceivedDebits"
+    },
+    {
+      "name": "GetTreasuryReceivedDebitsId",
+      "input_types": [
+        "Treasury"
+      ],
+      "output_types": [
+        "TreasuryReceivedDebit"
+      ],
+      "description": "Retrieve a ReceivedDebit"
+    },
+    {
+      "name": "GetTreasuryTransactionEntries",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TreasuryTransactionEntry"
+      ],
+      "description": "List all TransactionEntries"
+    },
+    {
+      "name": "GetTreasuryTransactionEntriesId",
+      "input_types": [
+        "Treasury"
+      ],
+      "output_types": [
+        "TreasuryTransactionEntry"
+      ],
+      "description": "Retrieve a TransactionEntry"
+    },
+    {
+      "name": "GetTreasuryTransactions",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "TreasuryTransaction"
+      ],
+      "description": "List all Transactions"
+    },
+    {
+      "name": "GetTreasuryTransactionsId",
+      "input_types": [
+        "Treasury"
+      ],
+      "output_types": [
+        "TreasuryTransaction"
+      ],
+      "description": "Retrieve a Transaction"
+    },
+    {
+      "name": "GetWebhookEndpoints",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "WebhookEndpoint"
+      ],
+      "description": "List all webhook endpoints"
+    },
+    {
+      "name": "PostWebhookEndpoints",
+      "input_types": [
+        "Platform"
+      ],
+      "output_types": [
+        "WebhookEndpoint"
+      ],
+      "description": "Create a webhook endpoint"
+    },
+    {
+      "name": "DeleteWebhookEndpointsWebhookEndpoint",
+      "input_types": [
+        "WebhookEndpoint"
+      ],
+      "output_types": [
+        "DeletionResult"
+      ],
+      "description": "Delete a webhook endpoint"
+    },
+    {
+      "name": "GetWebhookEndpointsWebhookEndpoint",
+      "input_types": [
+        "WebhookEndpoint"
+      ],
+      "output_types": [
+        "WebhookEndpoint"
+      ],
+      "description": "Retrieve a webhook endpoint"
+    },
+    {
+      "name": "PostWebhookEndpointsWebhookEndpoint",
+      "input_types": [
+        "WebhookEndpoint"
+      ],
+      "output_types": [
+        "WebhookEndpoint"
+      ],
+      "description": "Update a webhook endpoint"
+    }
+  ],
+  "stats": {
+    "total_tools": 536,
+    "entity_type_count": 163
+  }
+}
