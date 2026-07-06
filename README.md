@@ -8,12 +8,24 @@ A frozen sentence encoder (all-MiniLM-L6-v2, 22M params) with a lightweight MLP 
 
 Evaluated with 5-fold stratified cross-validation on 3,385 training examples, tested on 42 fixed held-out queries. Stratification by source type ensures minority entity types appear in every fold.
 
-| Strategy | Precision | Recall | F1 |
-|---|---|---|---|
-| Function calling | 0.66 | 0.93 | 0.76 |
-| Text baseline | 0.85 | 0.76 | 0.79 |
-| Zero-shot TCR | 0.82 | 0.69 | 0.74 |
-| **Encoder TCR** | **0.91 +/- 0.02** | **0.91 +/- 0.02** | **0.91 +/- 0.02** |
+Four strategies are compared:
+
+- **Function calling** — All 536 tools are passed as structured function definitions. The model uses its native tool-calling mechanism to select which functions to invoke.
+- **Text baseline** — All 536 tools are listed as plain text in the system prompt (`- ToolName: (InputType) → (OutputType)`). The model responds with a JSON array of tool names.
+- **Zero-shot TCR** — Instead of tools, the model receives the 163 entity type names and predicts a source and target type. BFS graph search then resolves the types to a tool chain.
+- **Encoder TCR** — Same as zero-shot TCR (type prediction + graph search), but type prediction is done by the trained 182K-parameter encoder instead of prompting an LLM.
+
+For all strategies, precision, recall, and F1 are computed by comparing the predicted tool set against the expected tool set using set intersection. For TCR strategies (zero-shot and encoder), the model predicts two things — a source type and a target type — and both must be correct for the tool chain to resolve correctly. On Stripe, R_wrong=0: if either type prediction is wrong, the resolved tool chain is completely wrong (P=0, R=0 for that query).
+
+| Strategy | Model | Precision | Recall | F1 |
+|---|---|---|---|---|
+| Function calling | Gemini 2.5 Pro | 0.40 | 0.40 | 0.40 |
+| Function calling | Haiku 4.5 | 0.66 | 0.93 | 0.76 |
+| Zero-shot TCR | Gemini 2.5 Pro | 0.36 | 0.36 | 0.36 |
+| Zero-shot TCR | Haiku 4.5 | 0.82 | 0.69 | 0.74 |
+| Text baseline | Haiku 4.5 | 0.85 | 0.76 | 0.79 |
+| Text baseline | Gemini 2.5 Pro | 0.80 | 0.86 | 0.82 |
+| **Encoder TCR** | **182K params** | **0.91 +/- 0.02** | **0.91 +/- 0.02** | **0.91 +/- 0.02** |
 
 Per-category (mean across 5 folds):
 
@@ -24,6 +36,16 @@ Per-category (mean across 5 folds):
 | synonym | 7 | 1.00 | 1.00 | 1.00 |
 | multihop | 7 | 0.87 | 0.89 | 0.88 |
 | ambiguous | 3 | 0.53 | 0.53 | 0.53 |
+
+### Gemini 2.5 Pro comparison
+
+Gemini 2.5 Pro — a frontier model — was evaluated on the same 42 queries across all three strategies:
+
+- **Function calling (F1=0.40)**: With 536 tools as function definitions, Gemini returns empty tool calls for most queries. The tool catalog overwhelms the model.
+- **Text baseline (F1=0.82)**: Gemini's best strategy. It correctly selects tools when given the full catalog as text, but over-selects on synonym and ambiguous queries (returning multiple tools where one is expected).
+- **Zero-shot TCR (F1=0.36)**: Gemini cannot infer `Platform` as a source type. It predicts `Customer→Customer`, `Refund→Refund`, `Dispute→Dispute` instead of `Platform→X` for listing queries. However, it achieves perfect scores on multihop queries (1.00) where source types are explicit.
+
+The 182K-parameter encoder beats Gemini 2.5 Pro on every strategy. The zero-shot TCR failure is especially telling: Gemini gets 0% on noisy and 0% on Platform-source queries because it has no domain-specific knowledge of how Stripe's type graph is structured. The encoder learned this from 3,388 template-generated examples.
 
 ### Confidence threshold analysis
 
@@ -100,10 +122,10 @@ Training: 200 epochs per fold, cosine LR schedule (1e-3 -> 1e-5), sqrt-scaled cl
 
 ## Conclusion
 
-Stripe is the hardest domain for Typed Composition Search: zero-shot TCR (F1=0.74) loses to both text-based selection (0.79) and native function calling (0.76). A lightweight encoder with ~182K trainable parameters reverses this result, achieving F1=0.91 +/- 0.02 — a 12-point improvement over the best baseline.
+Stripe is the hardest domain for Typed Composition Search: zero-shot TCR (F1=0.74) loses to both text-based selection (0.79) and native function calling (0.76). A lightweight encoder with ~182K trainable parameters reverses this result, achieving F1=0.91 +/- 0.02.
+
+The Gemini 2.5 Pro comparison illustrates why reformulation matters more than model scale. With 536 tools, function calling yields F1=0.40 and zero-shot type prediction yields F1=0.36 — not because the model is weak, but because the task as formulated is hard: selecting from hundreds of tools or inferring domain-specific type relationships without training examples. Gemini's best strategy (text-based selection, F1=0.82) confirms that a frontier model can partially compensate, but once the routing problem is reformulated as type prediction over a smaller label space, a domain-specific classifier becomes more effective than prompting a frontier model.
 
 The key insight is that type prediction is the bottleneck, not graph search. On Stripe, R_wrong=0: every type prediction error produces a completely wrong tool chain, with no graceful degradation. This means recall is entirely determined by type prediction accuracy, and improving the predictor directly improves end-to-end routing. The confidence analysis confirms the model is well-calibrated — at a 0.90 threshold it achieves perfect F1 on 60% of queries, making selective prediction viable for safety-critical deployments.
 
-Because the decomposition cleanly separates type prediction from graph search, the semantic component is modular and independently improvable: template-generated training data (no LLM augmentation) and a frozen sentence encoder are sufficient to reach state-of-the-art performance on a production-scale API with 536 tools and 163 entity types.
-
-More broadly, these results suggest that tool routing need not be learned end-to-end by increasingly specialized foundation models. Once routing is decomposed into semantic type prediction and deterministic graph search, the learned component becomes a compact supervised classifier that can be trained independently for each domain. This opens the possibility of an ecosystem of lightweight, open-weight routing models that complement general-purpose LLMs rather than replacing them.
+More broadly, these results suggest that tool routing need not be learned end-to-end by increasingly capable foundation models. Once routing is decomposed into semantic type prediction and deterministic graph search, the learned component becomes a compact supervised classifier that can be trained independently for each domain. This opens the possibility of an ecosystem of lightweight, open-weight routing models that complement general-purpose LLMs rather than replacing them.
