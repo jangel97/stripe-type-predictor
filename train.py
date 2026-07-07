@@ -131,7 +131,7 @@ def bfs_path(adj: dict, src: str, tgt: str) -> list[str] | None:
     queue = [(src, [])]
     while queue:
         node, path = queue.pop(0)
-        for next_type, tool_name in adj.get(node, []):
+        for next_type, tool_name in sorted(adj.get(node, []), key=lambda x: x[1]):
             if next_type == tgt:
                 return path + [tool_name]
             if next_type not in visited:
