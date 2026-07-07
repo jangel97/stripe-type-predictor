@@ -2,6 +2,8 @@
 
 Learned entity type prediction for Typed Composition Search (TCS), demonstrated on the Stripe API (536 tools, 163 entity types).
 
+Our approach assumes that the target domain admits a typed entity abstraction, where tools can be represented as transformations between entity types. Under this assumption, tool routing can be reformulated as predicting source and target entity types followed by graph search over the typed composition graph.
+
 A frozen sentence encoder (all-MiniLM-L6-v2, 22M params) with a lightweight MLP head (~182K trainable parameters) predicts source and target entity types from natural language queries. BFS graph search then resolves the predicted types to tool chains.
 
 ## Results
