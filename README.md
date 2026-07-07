@@ -159,6 +159,21 @@ Each head outputs 163 logits (one per entity type). Argmax selects the predicted
 
 Training: 200 epochs per fold, cosine LR schedule (1e-3 -> 1e-5), sqrt-scaled class weights for source/target imbalance. Best model (by test F1) is saved.
 
+## Comparison with AAP
+
+This is a companion repo to [aap-type-predictor](https://github.com/jangel97/aap-type-predictor), which demonstrates the same architecture on the Ansible Automation Platform (1,060 tools, 79 entity types). Together they show that Typed Composition Search generalizes across domains:
+
+| | Stripe | AAP |
+|---|---|---|
+| Tools | 536 | 1,060 |
+| Entity types | 163 | 79 |
+| Training examples | 3,787 | 10,065 |
+| Encoder F1 | 0.842 | 0.852 |
+| Gemini FS-TCR F1 | 0.836 | 0.822 |
+| Encoder params | 281K | 475K |
+
+The encoder beats Gemini 2.5 Pro with few-shot prompting on both domains. As the tool count doubles (536 -> 1,060), Gemini's function calling degrades sharply (0.353 -> 0.333) while the encoder maintains high accuracy. The type prediction reformulation reduces the search space from thousands of tools to tens of entity types, making the problem tractable for a lightweight classifier.
+
 ## Conclusion
 
 A 281K-parameter classifier built on a frozen 110M-param sentence encoder matches Gemini 2.5 Pro (estimated ~300B+ params) with few-shot prompting on Stripe tool routing (F1=0.842 vs 0.836), while being ~1000x smaller, running locally with sub-millisecond inference, and requiring no API key.
