@@ -58,6 +58,29 @@ The model's confidence (min of source and target softmax max) is well-calibrated
 | 0.80 | 76% | 0.97 | 0.97 | 0.97 |
 | 0.90 | 60% | 1.00 | 1.00 | 1.00 |
 
+### Entity pruning
+
+Type prediction acts as a pruning step: predicting the source type alone eliminates most tools from consideration before graph search begins.
+
+| Source type | Tools reachable | Pruned |
+|---|---|---|
+| Balance, Event, Token, ... (16 types) | 1 | 99.8% |
+| FileLink, Price, ShippingRate, ... (12 types) | 2 | 99.6% |
+| Coupon, Dispute, Refund, ... (12 types) | 3 | 99.4% |
+| Checkout, CreditNote, Payout, ... (6 types) | 4 | 99.3% |
+| Transfer | 6 | 98.9% |
+| Product | 7 | 98.7% |
+| Charge | 11 | 97.9% |
+| Invoice | 14 | 97.4% |
+| Issuing | 20 | 96.3% |
+| Account | 27 | 95.0% |
+| Customer | 44 | 91.8% |
+| Platform | 182 | 66.0% |
+
+Of 66 source types in the graph, 52 reach fewer than 10 tools (99%+ pruned). Even Customer — the second most connected type — prunes 91.8% of the catalog. Platform is the outlier at 182 tools, but it still eliminates a third of the search space.
+
+The pruning ratio explains why type prediction is the bottleneck, not graph search. For most queries, a correct source type prediction reduces 536 tools to single digits. The graph search that follows is trivial — it simply walks the edges from the predicted source to target type.
+
 ## Usage
 
 ```bash
