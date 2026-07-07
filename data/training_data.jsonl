@@ -3386,3 +3386,402 @@
 {"query": "Retrieve the bank accounts for a specific customer", "source_type": "Customer", "target_type": "BankAccount", "style": "template"}
 {"query": "Retrieve the invoiceitem information", "source_type": "Invoiceitem", "target_type": "Invoiceitem", "style": "template"}
 {"query": "Get items on this quote", "source_type": "Quote", "target_type": "Item", "style": "template"}
+{"query": "Show me the card readers", "source_type": "Platform", "target_type": "TerminalReader", "style": "synonym"}
+{"query": "List POS terminals", "source_type": "Platform", "target_type": "TerminalReader", "style": "synonym"}
+{"query": "What POS devices do we have", "source_type": "Platform", "target_type": "TerminalReader", "style": "synonym"}
+{"query": "Show me terminal devices", "source_type": "Platform", "target_type": "TerminalReader", "style": "synonym"}
+{"query": "List the in-store readers", "source_type": "Platform", "target_type": "TerminalReader", "style": "synonym"}
+{"query": "Show me our issued cards", "source_type": "Platform", "target_type": "IssuingCard", "style": "synonym"}
+{"query": "List virtual cards", "source_type": "Platform", "target_type": "IssuingCard", "style": "synonym"}
+{"query": "What cards have we issued", "source_type": "Platform", "target_type": "IssuingCard", "style": "synonym"}
+{"query": "Show the card program", "source_type": "Platform", "target_type": "IssuingCard", "style": "synonym"}
+{"query": "Show me credit memos", "source_type": "Platform", "target_type": "CreditNote", "style": "synonym"}
+{"query": "List credit adjustments", "source_type": "Platform", "target_type": "CreditNote", "style": "synonym"}
+{"query": "What credits have been issued", "source_type": "Platform", "target_type": "CreditNote", "style": "synonym"}
+{"query": "Show me credit notes issued", "source_type": "Platform", "target_type": "CreditNote", "style": "synonym"}
+{"query": "List FX rates", "source_type": "Platform", "target_type": "ExchangeRate", "style": "synonym"}
+{"query": "Show me currency rates", "source_type": "Platform", "target_type": "ExchangeRate", "style": "synonym"}
+{"query": "What are the conversion rates", "source_type": "Platform", "target_type": "ExchangeRate", "style": "synonym"}
+{"query": "Show me foreign exchange rates", "source_type": "Platform", "target_type": "ExchangeRate", "style": "synonym"}
+{"query": "Show me promo codes", "source_type": "Platform", "target_type": "PromotionCode", "style": "synonym"}
+{"query": "List discount codes", "source_type": "Platform", "target_type": "PromotionCode", "style": "synonym"}
+{"query": "What promotional offers are active", "source_type": "Platform", "target_type": "PromotionCode", "style": "synonym"}
+{"query": "Show me active promos", "source_type": "Platform", "target_type": "PromotionCode", "style": "synonym"}
+{"query": "List promo offers", "source_type": "Platform", "target_type": "PromotionCode", "style": "synonym"}
+{"query": "Show me shipping fees", "source_type": "Platform", "target_type": "ShippingRate", "style": "synonym"}
+{"query": "List delivery costs", "source_type": "Platform", "target_type": "ShippingRate", "style": "synonym"}
+{"query": "What are our shipping options", "source_type": "Platform", "target_type": "ShippingRate", "style": "synonym"}
+{"query": "Show me delivery rates", "source_type": "Platform", "target_type": "ShippingRate", "style": "synonym"}
+{"query": "Show me buy links", "source_type": "Platform", "target_type": "PaymentLink", "style": "synonym"}
+{"query": "List checkout links", "source_type": "Platform", "target_type": "PaymentLink", "style": "synonym"}
+{"query": "What purchase links do we have", "source_type": "Platform", "target_type": "PaymentLink", "style": "synonym"}
+{"query": "Show me shareable payment URLs", "source_type": "Platform", "target_type": "PaymentLink", "style": "synonym"}
+{"query": "Show me subscription tiers", "source_type": "Platform", "target_type": "Plan", "style": "synonym"}
+{"query": "List pricing plans", "source_type": "Platform", "target_type": "Plan", "style": "synonym"}
+{"query": "What recurring plans are configured", "source_type": "Platform", "target_type": "Plan", "style": "synonym"}
+{"query": "Show me billing plans", "source_type": "Platform", "target_type": "Plan", "style": "synonym"}
+{"query": "Show me customer credits", "source_type": "Customer", "target_type": "CashBalance", "style": "synonym"}
+{"query": "What is the customer's stored balance", "source_type": "Customer", "target_type": "CashBalance", "style": "synonym"}
+{"query": "Show me the cash on account", "source_type": "Customer", "target_type": "CashBalance", "style": "synonym"}
+{"query": "Check the customer's prepaid balance", "source_type": "Customer", "target_type": "CashBalance", "style": "synonym"}
+{"query": "Show me fraud warnings", "source_type": "Platform", "target_type": "RadarEarlyFraudWarning", "style": "synonym"}
+{"query": "List fraud alerts", "source_type": "Platform", "target_type": "RadarEarlyFraudWarning", "style": "synonym"}
+{"query": "What early fraud warnings are there", "source_type": "Platform", "target_type": "RadarEarlyFraudWarning", "style": "synonym"}
+{"query": "Show me suspicious activity alerts", "source_type": "Platform", "target_type": "RadarEarlyFraudWarning", "style": "synonym"}
+{"query": "Show me the block lists", "source_type": "Platform", "target_type": "RadarValueList", "style": "synonym"}
+{"query": "List radar rules", "source_type": "Platform", "target_type": "RadarValueList", "style": "synonym"}
+{"query": "What fraud prevention lists do we have", "source_type": "Platform", "target_type": "RadarValueList", "style": "synonym"}
+{"query": "Show me usage meters", "source_type": "Platform", "target_type": "BillingMeter", "style": "synonym"}
+{"query": "List metered billing events", "source_type": "Platform", "target_type": "BillingMeter", "style": "synonym"}
+{"query": "What usage tracking is configured", "source_type": "Platform", "target_type": "BillingMeter", "style": "synonym"}
+{"query": "Show me consumption meters", "source_type": "Platform", "target_type": "BillingMeter", "style": "synonym"}
+{"query": "Show me wire transfers", "source_type": "Platform", "target_type": "Transfer", "style": "synonym"}
+{"query": "List fund transfers", "source_type": "Platform", "target_type": "Transfer", "style": "synonym"}
+{"query": "What money has been sent to connected accounts", "source_type": "Platform", "target_type": "Transfer", "style": "synonym"}
+{"query": "Show me platform transfers", "source_type": "Platform", "target_type": "Transfer", "style": "synonym"}
+{"query": "Show me webhook URLs", "source_type": "Platform", "target_type": "WebhookEndpoint", "style": "synonym"}
+{"query": "List event destinations", "source_type": "Platform", "target_type": "WebhookEndpoint", "style": "synonym"}
+{"query": "What webhook listeners are configured", "source_type": "Platform", "target_type": "WebhookEndpoint", "style": "synonym"}
+{"query": "Show me notification endpoints", "source_type": "Platform", "target_type": "WebhookEndpoint", "style": "synonym"}
+{"query": "Show me card setups", "source_type": "Platform", "target_type": "SetupIntent", "style": "synonym"}
+{"query": "List payment method setups", "source_type": "Platform", "target_type": "SetupIntent", "style": "synonym"}
+{"query": "What card registrations are in progress", "source_type": "Platform", "target_type": "SetupIntent", "style": "synonym"}
+{"query": "Show me saved card setups", "source_type": "Platform", "target_type": "SetupIntent", "style": "synonym"}
+{"query": "Show me billing schedules", "source_type": "Platform", "target_type": "SubscriptionSchedule", "style": "synonym"}
+{"query": "List renewal schedules", "source_type": "Platform", "target_type": "SubscriptionSchedule", "style": "synonym"}
+{"query": "What subscription transitions are planned", "source_type": "Platform", "target_type": "SubscriptionSchedule", "style": "synonym"}
+{"query": "Show me scheduled subscription changes", "source_type": "Platform", "target_type": "SubscriptionSchedule", "style": "synonym"}
+{"query": "Show me customer VAT numbers", "source_type": "Customer", "target_type": "TaxId", "style": "synonym"}
+{"query": "List tax identifiers for this customer", "source_type": "Customer", "target_type": "TaxId", "style": "synonym"}
+{"query": "What tax registration numbers does this customer have", "source_type": "Customer", "target_type": "TaxId", "style": "synonym"}
+{"query": "Show me the customer's tax info", "source_type": "Customer", "target_type": "TaxId", "style": "synonym"}
+{"query": "List all tax identifiers", "source_type": "Platform", "target_type": "TaxId", "style": "synonym"}
+{"query": "Show me VAT numbers on file", "source_type": "Platform", "target_type": "TaxId", "style": "synonym"}
+{"query": "Show me VAT rates", "source_type": "Platform", "target_type": "TaxRate", "style": "synonym"}
+{"query": "List sales tax rates", "source_type": "Platform", "target_type": "TaxRate", "style": "synonym"}
+{"query": "What tax percentages are configured", "source_type": "Platform", "target_type": "TaxRate", "style": "synonym"}
+{"query": "Show me tax configurations", "source_type": "Platform", "target_type": "TaxRate", "style": "synonym"}
+{"query": "Show me balance top-ups", "source_type": "Platform", "target_type": "Topup", "style": "synonym"}
+{"query": "List account funding transactions", "source_type": "Platform", "target_type": "Topup", "style": "synonym"}
+{"query": "What top-ups have been made", "source_type": "Platform", "target_type": "Topup", "style": "synonym"}
+{"query": "Show me reversed transfers", "source_type": "Platform", "target_type": "TransferReversal", "style": "synonym"}
+{"query": "List transfer clawbacks", "source_type": "Platform", "target_type": "TransferReversal", "style": "synonym"}
+{"query": "What transfers were reversed", "source_type": "Platform", "target_type": "TransferReversal", "style": "synonym"}
+{"query": "Show me store locations", "source_type": "Platform", "target_type": "TerminalLocation", "style": "synonym"}
+{"query": "List POS locations", "source_type": "Platform", "target_type": "TerminalLocation", "style": "synonym"}
+{"query": "What physical locations are configured", "source_type": "Platform", "target_type": "TerminalLocation", "style": "synonym"}
+{"query": "Show me checkout sessions", "source_type": "Platform", "target_type": "CheckoutSession", "style": "synonym"}
+{"query": "List payment pages", "source_type": "Platform", "target_type": "CheckoutSession", "style": "synonym"}
+{"query": "What checkout flows are active", "source_type": "Platform", "target_type": "CheckoutSession", "style": "synonym"}
+{"query": "Show me uploaded documents", "source_type": "Platform", "target_type": "File", "style": "synonym"}
+{"query": "List stored files", "source_type": "Platform", "target_type": "File", "style": "synonym"}
+{"query": "What files have been uploaded", "source_type": "Platform", "target_type": "File", "style": "synonym"}
+{"query": "Show me invoice line items", "source_type": "Platform", "target_type": "Invoiceitem", "style": "synonym"}
+{"query": "List billing items", "source_type": "Platform", "target_type": "Invoiceitem", "style": "synonym"}
+{"query": "What individual charges are pending on invoices", "source_type": "Platform", "target_type": "Invoiceitem", "style": "synonym"}
+{"query": "Show me app fees", "source_type": "Platform", "target_type": "ApplicationFee", "style": "synonym"}
+{"query": "List platform fees collected", "source_type": "Platform", "target_type": "ApplicationFee", "style": "synonym"}
+{"query": "What application charges have been made", "source_type": "Platform", "target_type": "ApplicationFee", "style": "synonym"}
+{"query": "Show me subscription add-ons", "source_type": "Platform", "target_type": "SubscriptionItem", "style": "synonym"}
+{"query": "List recurring line items", "source_type": "Platform", "target_type": "SubscriptionItem", "style": "synonym"}
+{"query": "What items are on the subscription", "source_type": "Platform", "target_type": "SubscriptionItem", "style": "synonym"}
+{"query": "Show me webhook events", "source_type": "Platform", "target_type": "Event", "style": "synonym"}
+{"query": "List platform events", "source_type": "Platform", "target_type": "Event", "style": "synonym"}
+{"query": "What notifications were triggered", "source_type": "Platform", "target_type": "Event", "style": "synonym"}
+{"query": "Show me price quotes", "source_type": "Platform", "target_type": "Quote", "style": "synonym"}
+{"query": "List proposals sent", "source_type": "Platform", "target_type": "Quote", "style": "synonym"}
+{"query": "What quotes are outstanding", "source_type": "Platform", "target_type": "Quote", "style": "synonym"}
+{"query": "Show me cards on file for this customer", "source_type": "Customer", "target_type": "PaymentMethod", "style": "synonym"}
+{"query": "List saved payment cards", "source_type": "Customer", "target_type": "PaymentMethod", "style": "synonym"}
+{"query": "What payment instruments does this customer have", "source_type": "Customer", "target_type": "PaymentMethod", "style": "synonym"}
+{"query": "Show me the customer's stored cards", "source_type": "Customer", "target_type": "PaymentMethod", "style": "synonym"}
+{"query": "Show me the customer's active deals", "source_type": "Customer", "target_type": "Discount", "style": "synonym"}
+{"query": "What discounts apply to this customer", "source_type": "Customer", "target_type": "Discount", "style": "synonym"}
+{"query": "List customer promotions", "source_type": "Customer", "target_type": "Discount", "style": "synonym"}
+{"query": "Show me the customer's balance history", "source_type": "Customer", "target_type": "CustomerBalanceTransaction", "style": "synonym"}
+{"query": "List ledger entries for this customer", "source_type": "Customer", "target_type": "CustomerBalanceTransaction", "style": "synonym"}
+{"query": "What balance adjustments has this customer had", "source_type": "Customer", "target_type": "CustomerBalanceTransaction", "style": "synonym"}
+{"query": "Show me customer balance movements", "source_type": "Customer", "target_type": "CustomerBalanceTransaction", "style": "synonym"}
+{"query": "Show me the customer's cash transactions", "source_type": "Customer", "target_type": "CustomerCashBalanceTransaction", "style": "synonym"}
+{"query": "List cash balance entries", "source_type": "Customer", "target_type": "CustomerCashBalanceTransaction", "style": "synonym"}
+{"query": "What cash movements does this customer have", "source_type": "Customer", "target_type": "CustomerCashBalanceTransaction", "style": "synonym"}
+{"query": "Show me account capabilities", "source_type": "Account", "target_type": "Capability", "style": "synonym"}
+{"query": "What verifications does this account need", "source_type": "Account", "target_type": "Capability", "style": "synonym"}
+{"query": "List account features and status", "source_type": "Account", "target_type": "Capability", "style": "synonym"}
+{"query": "Check what this account can do", "source_type": "Account", "target_type": "Capability", "style": "synonym"}
+{"query": "Show me payout destinations for this account", "source_type": "Account", "target_type": "ExternalAccount", "style": "synonym"}
+{"query": "List bank accounts on this connected account", "source_type": "Account", "target_type": "ExternalAccount", "style": "synonym"}
+{"query": "What external accounts are linked", "source_type": "Account", "target_type": "ExternalAccount", "style": "synonym"}
+{"query": "Show me account representatives", "source_type": "Account", "target_type": "Person", "style": "synonym"}
+{"query": "List business contacts on this account", "source_type": "Account", "target_type": "Person", "style": "synonym"}
+{"query": "Who are the people on this connected account", "source_type": "Account", "target_type": "Person", "style": "synonym"}
+{"query": "Show me product entitlements", "source_type": "Product", "target_type": "ProductFeature", "style": "synonym"}
+{"query": "List features for this product", "source_type": "Product", "target_type": "ProductFeature", "style": "synonym"}
+{"query": "What feature flags are set on this product", "source_type": "Product", "target_type": "ProductFeature", "style": "synonym"}
+{"query": "Show me the invoice breakdown", "source_type": "Invoice", "target_type": "LineItem", "style": "synonym"}
+{"query": "List line items on this invoice", "source_type": "Invoice", "target_type": "LineItem", "style": "synonym"}
+{"query": "What charges are on this bill", "source_type": "Invoice", "target_type": "LineItem", "style": "synonym"}
+{"query": "Show me refunds on this charge", "source_type": "Charge", "target_type": "Refund", "style": "synonym"}
+{"query": "List charge refunds", "source_type": "Charge", "target_type": "Refund", "style": "synonym"}
+{"query": "What money was returned on this charge", "source_type": "Charge", "target_type": "Refund", "style": "synonym"}
+{"query": "Show me transfer reversals for this transfer", "source_type": "Transfer", "target_type": "TransferReversal", "style": "synonym"}
+{"query": "What reversals happened on this transfer", "source_type": "Transfer", "target_type": "TransferReversal", "style": "synonym"}
+{"query": "List clawbacks on this transfer", "source_type": "Transfer", "target_type": "TransferReversal", "style": "synonym"}
+{"query": "Show me fee refunds", "source_type": "Platform", "target_type": "FeeRefund", "style": "synonym"}
+{"query": "List refunded application fees", "source_type": "Platform", "target_type": "FeeRefund", "style": "synonym"}
+{"query": "What platform fees were refunded", "source_type": "Platform", "target_type": "FeeRefund", "style": "synonym"}
+{"query": "Show me the account login link", "source_type": "Account", "target_type": "LoginLink", "style": "synonym"}
+{"query": "Generate a dashboard access link", "source_type": "Account", "target_type": "LoginLink", "style": "synonym"}
+{"query": "Get a login URL for this connected account", "source_type": "Account", "target_type": "LoginLink", "style": "synonym"}
+{"query": "Show me payment link items", "source_type": "PaymentLink", "target_type": "Item", "style": "synonym"}
+{"query": "What products are on this checkout link", "source_type": "PaymentLink", "target_type": "Item", "style": "synonym"}
+{"query": "List items on this buy link", "source_type": "PaymentLink", "target_type": "Item", "style": "synonym"}
+{"query": "Download the quote PDF", "source_type": "Quote", "target_type": "Pdf", "style": "synonym"}
+{"query": "Get the proposal document", "source_type": "Quote", "target_type": "Pdf", "style": "synonym"}
+{"query": "Show me the quote as a PDF", "source_type": "Quote", "target_type": "Pdf", "style": "synonym"}
+{"query": "Show me legacy payment sources", "source_type": "Customer", "target_type": "PaymentSource", "style": "synonym"}
+{"query": "List old payment methods for this customer", "source_type": "Customer", "target_type": "PaymentSource", "style": "synonym"}
+{"query": "What sources are saved on this customer", "source_type": "Customer", "target_type": "PaymentSource", "style": "synonym"}
+{"query": "Where is our money going", "source_type": "Platform", "target_type": "Payout", "style": "ambiguous"}
+{"query": "Show me what we owe", "source_type": "Platform", "target_type": "Payout", "style": "ambiguous"}
+{"query": "What are we making", "source_type": "Platform", "target_type": "Balance", "style": "ambiguous"}
+{"query": "How much have we collected", "source_type": "Platform", "target_type": "BalanceTransaction", "style": "ambiguous"}
+{"query": "What payments came in today", "source_type": "Platform", "target_type": "BalanceTransaction", "style": "ambiguous"}
+{"query": "Show me what failed recently", "source_type": "Platform", "target_type": "PaymentIntent", "style": "ambiguous"}
+{"query": "What is still pending", "source_type": "Platform", "target_type": "PaymentIntent", "style": "ambiguous"}
+{"query": "Show me complaints from customers", "source_type": "Platform", "target_type": "Dispute", "style": "ambiguous"}
+{"query": "What issues are open", "source_type": "Platform", "target_type": "Dispute", "style": "ambiguous"}
+{"query": "What did this customer buy", "source_type": "Customer", "target_type": "Subscription", "style": "ambiguous"}
+{"query": "What does this customer owe", "source_type": "Customer", "target_type": "CustomerBalanceTransaction", "style": "ambiguous"}
+{"query": "How does the customer pay us", "source_type": "Customer", "target_type": "PaymentMethod", "style": "ambiguous"}
+{"query": "What deal does this customer have", "source_type": "Customer", "target_type": "Discount", "style": "ambiguous"}
+{"query": "Show me the customer's stored funds", "source_type": "Customer", "target_type": "CashBalance", "style": "ambiguous"}
+{"query": "What is the tax situation", "source_type": "Platform", "target_type": "TaxRate", "style": "ambiguous"}
+{"query": "How are things priced", "source_type": "Platform", "target_type": "Price", "style": "ambiguous"}
+{"query": "What are we selling", "source_type": "Platform", "target_type": "Product", "style": "ambiguous"}
+{"query": "Show me upcoming renewals", "source_type": "Platform", "target_type": "SubscriptionSchedule", "style": "ambiguous"}
+{"query": "What verification does this account need", "source_type": "Account", "target_type": "Capability", "style": "ambiguous"}
+{"query": "Who are the contacts on this account", "source_type": "Account", "target_type": "Person", "style": "ambiguous"}
+{"query": "What bank info is on this account", "source_type": "Account", "target_type": "ExternalAccount", "style": "ambiguous"}
+{"query": "Show me recent system activity", "source_type": "Platform", "target_type": "Event", "style": "ambiguous"}
+{"query": "What happened recently", "source_type": "Platform", "target_type": "Event", "style": "ambiguous"}
+{"query": "Show me recent problems", "source_type": "Platform", "target_type": "Dispute", "style": "ambiguous"}
+{"query": "What is being metered", "source_type": "Platform", "target_type": "BillingMeter", "style": "ambiguous"}
+{"query": "What integrations are set up", "source_type": "Platform", "target_type": "WebhookEndpoint", "style": "ambiguous"}
+{"query": "Show me suspicious transactions", "source_type": "Platform", "target_type": "RadarEarlyFraudWarning", "style": "ambiguous"}
+{"query": "Where can customers pay online", "source_type": "Platform", "target_type": "PaymentLink", "style": "ambiguous"}
+{"query": "What deals are running", "source_type": "Platform", "target_type": "PromotionCode", "style": "ambiguous"}
+{"query": "Show me delivery options", "source_type": "Platform", "target_type": "ShippingRate", "style": "ambiguous"}
+{"query": "What credits were given back", "source_type": "Platform", "target_type": "CreditNote", "style": "ambiguous"}
+{"query": "What card programs are active", "source_type": "Platform", "target_type": "IssuingCard", "style": "ambiguous"}
+{"query": "Where are the physical devices", "source_type": "Platform", "target_type": "TerminalReader", "style": "ambiguous"}
+{"query": "How do we fund the account", "source_type": "Platform", "target_type": "Topup", "style": "ambiguous"}
+{"query": "What features does this product have", "source_type": "Product", "target_type": "ProductFeature", "style": "ambiguous"}
+{"query": "What is on this invoice", "source_type": "Invoice", "target_type": "LineItem", "style": "ambiguous"}
+{"query": "What can this account do", "source_type": "Account", "target_type": "Capability", "style": "ambiguous"}
+{"query": "Show me what the customer has been charged", "source_type": "Customer", "target_type": "CustomerBalanceTransaction", "style": "ambiguous"}
+{"query": "What customer activity is there", "source_type": "Customer", "target_type": "CustomerBalanceTransaction", "style": "ambiguous"}
+{"query": "Where is revenue coming from", "source_type": "Platform", "target_type": "BalanceTransaction", "style": "ambiguous"}
+{"query": "The boss wants to see the chargebacks, something about a deadline", "source_type": "Platform", "target_type": "Dispute", "style": "noisy"}
+{"query": "Finance team is asking about bank transfers, can you pull them up", "source_type": "Platform", "target_type": "Payout", "style": "noisy"}
+{"query": "We had a complaint about a charge, need to check the refunds", "source_type": "Platform", "target_type": "Refund", "style": "noisy"}
+{"query": "Something is wrong with the webhooks, can you list them", "source_type": "Platform", "target_type": "WebhookEndpoint", "style": "noisy"}
+{"query": "Before the quarterly review, show me all the coupons", "source_type": "Platform", "target_type": "Coupon", "style": "noisy"}
+{"query": "I think there is an issue with the card readers, list them please", "source_type": "Platform", "target_type": "TerminalReader", "style": "noisy"}
+{"query": "Customer called about their VAT number, can you look it up", "source_type": "Customer", "target_type": "TaxId", "style": "noisy"}
+{"query": "The setup intent failed last night, need to check all of them", "source_type": "Platform", "target_type": "SetupIntent", "style": "noisy"}
+{"query": "Someone noticed the invoice items look wrong, pull them", "source_type": "Platform", "target_type": "Invoiceitem", "style": "noisy"}
+{"query": "Client is complaining about features on their product, need to verify", "source_type": "Product", "target_type": "ProductFeature", "style": "noisy"}
+{"query": "A promo code is being shared publicly, list all active ones", "source_type": "Platform", "target_type": "PromotionCode", "style": "noisy"}
+{"query": "Ops team says a transfer is missing, show me all transfers", "source_type": "Platform", "target_type": "Transfer", "style": "noisy"}
+{"query": "There was an alert about fraud, show the warnings", "source_type": "Platform", "target_type": "RadarEarlyFraudWarning", "style": "noisy"}
+{"query": "The balance seems off, can you show me the top-ups", "source_type": "Platform", "target_type": "Topup", "style": "noisy"}
+{"query": "Someone reported the POS terminal is offline, check the devices", "source_type": "Platform", "target_type": "TerminalReader", "style": "noisy"}
+{"query": "Accounting wants the credit memos for reconciliation", "source_type": "Platform", "target_type": "CreditNote", "style": "noisy"}
+{"query": "We need to audit the connected account representatives", "source_type": "Account", "target_type": "Person", "style": "noisy"}
+{"query": "The exchange rates look stale, can you pull current ones", "source_type": "Platform", "target_type": "ExchangeRate", "style": "noisy"}
+{"query": "Customer says their balance is wrong, check the transactions", "source_type": "Customer", "target_type": "CustomerBalanceTransaction", "style": "noisy"}
+{"query": "Not sure why the subscription schedule changed, show them", "source_type": "Platform", "target_type": "SubscriptionSchedule", "style": "noisy"}
+{"query": "Show all terminal readers across the platform", "source_type": "Platform", "target_type": "TerminalReader", "style": "template"}
+{"query": "What terminal readers do we have registered", "source_type": "Platform", "target_type": "TerminalReader", "style": "template"}
+{"query": "List every terminal reader in our account", "source_type": "Platform", "target_type": "TerminalReader", "style": "template"}
+{"query": "Pull up all the card readers we have set up", "source_type": "Platform", "target_type": "TerminalReader", "style": "template"}
+{"query": "How many terminal readers are registered on our account", "source_type": "Platform", "target_type": "TerminalReader", "style": "template"}
+{"query": "What POS devices do we have", "source_type": "Platform", "target_type": "TerminalReader", "style": "synonym"}
+{"query": "List all card reader devices on our account", "source_type": "Platform", "target_type": "TerminalReader", "style": "synonym"}
+{"query": "Show me every point-of-sale terminal we have", "source_type": "Platform", "target_type": "TerminalReader", "style": "synonym"}
+{"query": "The store manager says a reader is missing, can you list all terminal readers we have", "source_type": "Platform", "target_type": "TerminalReader", "style": "noisy"}
+{"query": "We're doing an inventory of POS hardware, show me all terminal readers", "source_type": "Platform", "target_type": "TerminalReader", "style": "noisy"}
+{"query": "Show all terminal locations on our account", "source_type": "Platform", "target_type": "TerminalLocation", "style": "template"}
+{"query": "List every terminal location we have configured", "source_type": "Platform", "target_type": "TerminalLocation", "style": "template"}
+{"query": "What terminal locations are set up on the platform", "source_type": "Platform", "target_type": "TerminalLocation", "style": "template"}
+{"query": "Pull up all terminal locations across our account", "source_type": "Platform", "target_type": "TerminalLocation", "style": "template"}
+{"query": "Display all configured terminal locations", "source_type": "Platform", "target_type": "TerminalLocation", "style": "template"}
+{"query": "What store locations do we have set up for terminals", "source_type": "Platform", "target_type": "TerminalLocation", "style": "synonym"}
+{"query": "List all our POS locations", "source_type": "Platform", "target_type": "TerminalLocation", "style": "synonym"}
+{"query": "Show me all in-person payment sites", "source_type": "Platform", "target_type": "TerminalLocation", "style": "synonym"}
+{"query": "We need to verify all our terminal locations are correct, can you list them", "source_type": "Platform", "target_type": "TerminalLocation", "style": "noisy"}
+{"query": "A new store opened but I can't find its terminal location, show me all of them", "source_type": "Platform", "target_type": "TerminalLocation", "style": "noisy"}
+{"query": "Show all checkout sessions on the platform", "source_type": "Platform", "target_type": "CheckoutSession", "style": "template"}
+{"query": "List every checkout session that's been created", "source_type": "Platform", "target_type": "CheckoutSession", "style": "template"}
+{"query": "What checkout sessions have we had", "source_type": "Platform", "target_type": "CheckoutSession", "style": "template"}
+{"query": "Pull up all checkout sessions across our account", "source_type": "Platform", "target_type": "CheckoutSession", "style": "template"}
+{"query": "Display all checkout sessions we have", "source_type": "Platform", "target_type": "CheckoutSession", "style": "template"}
+{"query": "Show me all active checkout pages", "source_type": "Platform", "target_type": "CheckoutSession", "style": "synonym"}
+{"query": "List all payment pages created", "source_type": "Platform", "target_type": "CheckoutSession", "style": "synonym"}
+{"query": "What hosted payment sessions exist", "source_type": "Platform", "target_type": "CheckoutSession", "style": "synonym"}
+{"query": "A customer says they got stuck on checkout, can you pull up all checkout sessions", "source_type": "Platform", "target_type": "CheckoutSession", "style": "noisy"}
+{"query": "We need to audit checkout sessions for a potential fraud case", "source_type": "Platform", "target_type": "CheckoutSession", "style": "noisy"}
+{"query": "Show all billing meters on the platform", "source_type": "Platform", "target_type": "BillingMeter", "style": "template"}
+{"query": "List every billing meter we have configured", "source_type": "Platform", "target_type": "BillingMeter", "style": "template"}
+{"query": "What billing meters are set up on our account", "source_type": "Platform", "target_type": "BillingMeter", "style": "template"}
+{"query": "Pull up all billing meters", "source_type": "Platform", "target_type": "BillingMeter", "style": "template"}
+{"query": "Display all our billing meters", "source_type": "Platform", "target_type": "BillingMeter", "style": "template"}
+{"query": "Show me all usage meters configured", "source_type": "Platform", "target_type": "BillingMeter", "style": "synonym"}
+{"query": "List our metered billing configurations", "source_type": "Platform", "target_type": "BillingMeter", "style": "synonym"}
+{"query": "What usage tracking meters do we have", "source_type": "Platform", "target_type": "BillingMeter", "style": "synonym"}
+{"query": "Usage billing seems off for some customers, show me all billing meters", "source_type": "Platform", "target_type": "BillingMeter", "style": "noisy"}
+{"query": "We're setting up a new meter but want to see existing billing meters first", "source_type": "Platform", "target_type": "BillingMeter", "style": "noisy"}
+{"query": "Show all radar value lists on the platform", "source_type": "Platform", "target_type": "RadarValueList", "style": "template"}
+{"query": "List every radar value list we have", "source_type": "Platform", "target_type": "RadarValueList", "style": "template"}
+{"query": "What radar value lists are configured", "source_type": "Platform", "target_type": "RadarValueList", "style": "template"}
+{"query": "Pull up all value lists in our radar configuration", "source_type": "Platform", "target_type": "RadarValueList", "style": "template"}
+{"query": "Display all radar value lists on our account", "source_type": "Platform", "target_type": "RadarValueList", "style": "template"}
+{"query": "Show me all fraud rule lists", "source_type": "Platform", "target_type": "RadarValueList", "style": "synonym"}
+{"query": "List our block lists and allow lists", "source_type": "Platform", "target_type": "RadarValueList", "style": "synonym"}
+{"query": "What fraud screening lists do we have", "source_type": "Platform", "target_type": "RadarValueList", "style": "synonym"}
+{"query": "Fraud team wants to review all radar value lists, can you pull them up", "source_type": "Platform", "target_type": "RadarValueList", "style": "noisy"}
+{"query": "We might need to add a card to a block list, show me all radar value lists", "source_type": "Platform", "target_type": "RadarValueList", "style": "noisy"}
+{"query": "Show all invoice items on the platform", "source_type": "Platform", "target_type": "Invoiceitem", "style": "template"}
+{"query": "List every invoice item across our account", "source_type": "Platform", "target_type": "Invoiceitem", "style": "template"}
+{"query": "What invoice items do we have pending", "source_type": "Platform", "target_type": "Invoiceitem", "style": "template"}
+{"query": "Pull up all invoice items", "source_type": "Platform", "target_type": "Invoiceitem", "style": "template"}
+{"query": "Display all invoice items created", "source_type": "Platform", "target_type": "Invoiceitem", "style": "template"}
+{"query": "Show me all billable items across invoices", "source_type": "Platform", "target_type": "Invoiceitem", "style": "synonym"}
+{"query": "List all pending line items on the platform", "source_type": "Platform", "target_type": "Invoiceitem", "style": "synonym"}
+{"query": "What upcoming invoice charges are there", "source_type": "Platform", "target_type": "Invoiceitem", "style": "synonym"}
+{"query": "A customer says they have extra items on their bill, can you list all invoice items", "source_type": "Platform", "target_type": "Invoiceitem", "style": "noisy"}
+{"query": "We need to audit all invoice items for the month", "source_type": "Platform", "target_type": "Invoiceitem", "style": "noisy"}
+{"query": "Show all quotes on the platform", "source_type": "Platform", "target_type": "Quote", "style": "template"}
+{"query": "List every quote that's been created", "source_type": "Platform", "target_type": "Quote", "style": "template"}
+{"query": "What quotes do we have", "source_type": "Platform", "target_type": "Quote", "style": "template"}
+{"query": "Pull up all quotes on our account", "source_type": "Platform", "target_type": "Quote", "style": "template"}
+{"query": "Display all our quotes", "source_type": "Platform", "target_type": "Quote", "style": "template"}
+{"query": "Show me all price quotes we've sent", "source_type": "Platform", "target_type": "Quote", "style": "synonym"}
+{"query": "List all proposals and estimates", "source_type": "Platform", "target_type": "Quote", "style": "synonym"}
+{"query": "What sales quotes are outstanding", "source_type": "Platform", "target_type": "Quote", "style": "synonym"}
+{"query": "The sales team needs to review open quotes, can you list them all", "source_type": "Platform", "target_type": "Quote", "style": "noisy"}
+{"query": "A customer says they never got their quote, show me all quotes", "source_type": "Platform", "target_type": "Quote", "style": "noisy"}
+{"query": "Show all application fees on the platform", "source_type": "Platform", "target_type": "ApplicationFee", "style": "template"}
+{"query": "List every application fee collected", "source_type": "Platform", "target_type": "ApplicationFee", "style": "template"}
+{"query": "What application fees do we have", "source_type": "Platform", "target_type": "ApplicationFee", "style": "template"}
+{"query": "Pull up all application fees across our account", "source_type": "Platform", "target_type": "ApplicationFee", "style": "template"}
+{"query": "Display all application fees", "source_type": "Platform", "target_type": "ApplicationFee", "style": "template"}
+{"query": "Show me all platform fees earned", "source_type": "Platform", "target_type": "ApplicationFee", "style": "synonym"}
+{"query": "List all connect fees collected from sellers", "source_type": "Platform", "target_type": "ApplicationFee", "style": "synonym"}
+{"query": "What marketplace fees have we earned", "source_type": "Platform", "target_type": "ApplicationFee", "style": "synonym"}
+{"query": "We need to reconcile application fees for the quarter, list them all", "source_type": "Platform", "target_type": "ApplicationFee", "style": "noisy"}
+{"query": "A connected account is asking about their fees, show me all application fees", "source_type": "Platform", "target_type": "ApplicationFee", "style": "noisy"}
+{"query": "Show all balance transactions on the platform", "source_type": "Platform", "target_type": "BalanceTransaction", "style": "template"}
+{"query": "List every balance transaction in our account", "source_type": "Platform", "target_type": "BalanceTransaction", "style": "template"}
+{"query": "What balance transactions do we have", "source_type": "Platform", "target_type": "BalanceTransaction", "style": "template"}
+{"query": "Pull up all balance transactions across the platform", "source_type": "Platform", "target_type": "BalanceTransaction", "style": "template"}
+{"query": "Display all our balance transactions", "source_type": "Platform", "target_type": "BalanceTransaction", "style": "template"}
+{"query": "Show me all ledger entries on our account", "source_type": "Platform", "target_type": "BalanceTransaction", "style": "synonym"}
+{"query": "List all financial movements in our balance", "source_type": "Platform", "target_type": "BalanceTransaction", "style": "synonym"}
+{"query": "What transactions have hit our Stripe balance", "source_type": "Platform", "target_type": "BalanceTransaction", "style": "synonym"}
+{"query": "The accountant needs all balance transactions for the reconciliation", "source_type": "Platform", "target_type": "BalanceTransaction", "style": "noisy"}
+{"query": "Something doesn't add up in our balance, show me all balance transactions", "source_type": "Platform", "target_type": "BalanceTransaction", "style": "noisy"}
+{"query": "Show all customers on the platform", "source_type": "Platform", "target_type": "Customer", "style": "template"}
+{"query": "List every customer in our Stripe account", "source_type": "Platform", "target_type": "Customer", "style": "template"}
+{"query": "What customers do we have registered", "source_type": "Platform", "target_type": "Customer", "style": "template"}
+{"query": "Pull up all customers across our account", "source_type": "Platform", "target_type": "Customer", "style": "template"}
+{"query": "Display all our customers", "source_type": "Platform", "target_type": "Customer", "style": "template"}
+{"query": "Show me all our buyers and clients", "source_type": "Platform", "target_type": "Customer", "style": "synonym"}
+{"query": "List everyone who has a customer profile", "source_type": "Platform", "target_type": "Customer", "style": "synonym"}
+{"query": "Who are our registered customers on the platform", "source_type": "Platform", "target_type": "Customer", "style": "synonym"}
+{"query": "Marketing wants a list of all customers for a campaign, can you pull them", "source_type": "Platform", "target_type": "Customer", "style": "noisy"}
+{"query": "We need to find a specific customer, show me all customers", "source_type": "Platform", "target_type": "Customer", "style": "noisy"}
+{"query": "Show all setup intents on the platform", "source_type": "Platform", "target_type": "SetupIntent", "style": "template"}
+{"query": "List every setup intent that's been created", "source_type": "Platform", "target_type": "SetupIntent", "style": "template"}
+{"query": "What setup intents do we have", "source_type": "Platform", "target_type": "SetupIntent", "style": "template"}
+{"query": "Pull up all setup intents across our account", "source_type": "Platform", "target_type": "SetupIntent", "style": "template"}
+{"query": "Display all setup intents on the platform", "source_type": "Platform", "target_type": "SetupIntent", "style": "template"}
+{"query": "Show me all card setup requests", "source_type": "Platform", "target_type": "SetupIntent", "style": "synonym"}
+{"query": "List all payment method setup flows", "source_type": "Platform", "target_type": "SetupIntent", "style": "synonym"}
+{"query": "What card saves are in progress on our account", "source_type": "Platform", "target_type": "SetupIntent", "style": "synonym"}
+{"query": "A customer's card setup keeps failing, can you list all setup intents", "source_type": "Platform", "target_type": "SetupIntent", "style": "noisy"}
+{"query": "We need to clean up old setup intents, show me all of them", "source_type": "Platform", "target_type": "SetupIntent", "style": "noisy"}
+{"query": "Show all plans on the platform", "source_type": "Platform", "target_type": "Plan", "style": "template"}
+{"query": "List every pricing plan we have configured", "source_type": "Platform", "target_type": "Plan", "style": "template"}
+{"query": "What plans are available on our account", "source_type": "Platform", "target_type": "Plan", "style": "template"}
+{"query": "Pull up all plans across the platform", "source_type": "Platform", "target_type": "Plan", "style": "template"}
+{"query": "Display all our subscription plans", "source_type": "Platform", "target_type": "Plan", "style": "template"}
+{"query": "Show me all billing plans we offer", "source_type": "Platform", "target_type": "Plan", "style": "synonym"}
+{"query": "List our pricing tiers", "source_type": "Platform", "target_type": "Plan", "style": "synonym"}
+{"query": "What subscription levels do we have defined", "source_type": "Platform", "target_type": "Plan", "style": "synonym"}
+{"query": "We're restructuring pricing, show me all plans we currently have", "source_type": "Platform", "target_type": "Plan", "style": "noisy"}
+{"query": "A customer was charged under the wrong plan, list all plans", "source_type": "Platform", "target_type": "Plan", "style": "noisy"}
+{"query": "Show me the money flow", "source_type": "Platform", "target_type": "BalanceTransaction", "style": "ambiguous"}
+{"query": "What financial activity do we have", "source_type": "Platform", "target_type": "BalanceTransaction", "style": "ambiguous"}
+{"query": "How is money moving through our account", "source_type": "Platform", "target_type": "BalanceTransaction", "style": "ambiguous"}
+{"query": "Show me recent transactions on our account", "source_type": "Platform", "target_type": "BalanceTransaction", "style": "ambiguous"}
+{"query": "How much do we have right now", "source_type": "Platform", "target_type": "Balance", "style": "ambiguous"}
+{"query": "What's our financial position", "source_type": "Platform", "target_type": "Balance", "style": "ambiguous"}
+{"query": "Check our available funds", "source_type": "Platform", "target_type": "Balance", "style": "ambiguous"}
+{"query": "When are we getting paid next", "source_type": "Platform", "target_type": "Payout", "style": "ambiguous"}
+{"query": "Show me our bank withdrawals", "source_type": "Platform", "target_type": "Payout", "style": "ambiguous"}
+{"query": "What's going out to our bank account", "source_type": "Platform", "target_type": "Payout", "style": "ambiguous"}
+{"query": "What payments are coming in", "source_type": "Platform", "target_type": "PaymentIntent", "style": "ambiguous"}
+{"query": "Show me recent payment activity", "source_type": "Platform", "target_type": "PaymentIntent", "style": "ambiguous"}
+{"query": "Any pending payments right now", "source_type": "Platform", "target_type": "PaymentIntent", "style": "ambiguous"}
+{"query": "What has this customer been up to", "source_type": "Customer", "target_type": "CustomerBalanceTransaction", "style": "ambiguous"}
+{"query": "Show me this customer's recent activity", "source_type": "Customer", "target_type": "CustomerBalanceTransaction", "style": "ambiguous"}
+{"query": "What cards does this customer have saved", "source_type": "Customer", "target_type": "PaymentMethod", "style": "ambiguous"}
+{"query": "How does this customer pay us", "source_type": "Customer", "target_type": "PaymentMethod", "style": "ambiguous"}
+{"query": "Show me this customer's saved payment info", "source_type": "Customer", "target_type": "PaymentMethod", "style": "ambiguous"}
+{"query": "Are there any complaints right now", "source_type": "Platform", "target_type": "Dispute", "style": "ambiguous"}
+{"query": "What payment issues have come up lately", "source_type": "Platform", "target_type": "Dispute", "style": "ambiguous"}
+{"query": "Any contested charges we need to handle", "source_type": "Platform", "target_type": "Dispute", "style": "ambiguous"}
+{"query": "What taxes do we apply to charges", "source_type": "Platform", "target_type": "TaxRate", "style": "ambiguous"}
+{"query": "Show me our tax configuration", "source_type": "Platform", "target_type": "TaxRate", "style": "ambiguous"}
+{"query": "How are we handling sales tax", "source_type": "Platform", "target_type": "TaxRate", "style": "ambiguous"}
+{"query": "What recurring charges do we have", "source_type": "Platform", "target_type": "Subscription", "style": "ambiguous"}
+{"query": "Show me ongoing automatic billing", "source_type": "Platform", "target_type": "Subscription", "style": "ambiguous"}
+{"query": "What do we sell on the platform", "source_type": "Platform", "target_type": "Product", "style": "ambiguous"}
+{"query": "Show me our product catalog", "source_type": "Platform", "target_type": "Product", "style": "ambiguous"}
+{"query": "What bills have we sent out", "source_type": "Platform", "target_type": "Invoice", "style": "ambiguous"}
+{"query": "Show me what customers owe us", "source_type": "Platform", "target_type": "Invoice", "style": "ambiguous"}
+{"query": "What money have we given back", "source_type": "Platform", "target_type": "Refund", "style": "ambiguous"}
+{"query": "Show me returns and refunds", "source_type": "Platform", "target_type": "Refund", "style": "ambiguous"}
+{"query": "What subscription changes are planned", "source_type": "Platform", "target_type": "SubscriptionSchedule", "style": "ambiguous"}
+{"query": "Show me upcoming billing changes", "source_type": "Platform", "target_type": "SubscriptionSchedule", "style": "ambiguous"}
+{"query": "Show me our connected businesses", "source_type": "Platform", "target_type": "Account", "style": "ambiguous"}
+{"query": "Who else is on our platform", "source_type": "Platform", "target_type": "Account", "style": "ambiguous"}
+{"query": "What deals do we have available", "source_type": "Platform", "target_type": "Coupon", "style": "ambiguous"}
+{"query": "What credits have we issued to customers", "source_type": "Platform", "target_type": "CreditNote", "style": "ambiguous"}
+{"query": "Show me adjustments we've made to invoices", "source_type": "Platform", "target_type": "CreditNote", "style": "ambiguous"}
+{"query": "Where are we sending event notifications", "source_type": "Platform", "target_type": "WebhookEndpoint", "style": "ambiguous"}
+{"query": "What integrations are receiving events", "source_type": "Platform", "target_type": "WebhookEndpoint", "style": "ambiguous"}
+{"query": "How do we price things", "source_type": "Platform", "target_type": "Price", "style": "ambiguous"}
+{"query": "What are our current rates", "source_type": "Platform", "target_type": "Price", "style": "ambiguous"}
+{"query": "The billing team flagged some weird invoice items, can you check all of them", "source_type": "Platform", "target_type": "Invoiceitem", "style": "noisy"}
+{"query": "A customer disputes a line item on their bill, list all invoice items", "source_type": "Platform", "target_type": "Invoiceitem", "style": "noisy"}
+{"query": "Someone shared a promo code on social media, we need to check all promo codes", "source_type": "Platform", "target_type": "PromotionCode", "style": "noisy"}
+{"query": "The marketing team wants to disable old promotions, list all promotion codes", "source_type": "Platform", "target_type": "PromotionCode", "style": "noisy"}
+{"query": "The payment team says card setups are failing for some reason, show me all setup intents", "source_type": "Platform", "target_type": "SetupIntent", "style": "noisy"}
+{"query": "We're debugging a card save issue with a customer, need to see all setup intents", "source_type": "Platform", "target_type": "SetupIntent", "style": "noisy"}
+{"query": "A bunch of readers went offline during the firmware update, list all terminal readers", "source_type": "Platform", "target_type": "TerminalReader", "style": "noisy"}
+{"query": "We're deploying new software to the readers, need a list of all terminal readers", "source_type": "Platform", "target_type": "TerminalReader", "style": "noisy"}
+{"query": "The finance team needs to reconcile connect fees, pull up all application fees", "source_type": "Platform", "target_type": "ApplicationFee", "style": "noisy"}
+{"query": "A marketplace seller is complaining about fees, show me all application fees", "source_type": "Platform", "target_type": "ApplicationFee", "style": "noisy"}
+{"query": "Sales is following up on proposals, can you list all quotes we've sent", "source_type": "Platform", "target_type": "Quote", "style": "noisy"}
+{"query": "A client says they accepted a quote but it wasn't processed, show me all quotes", "source_type": "Platform", "target_type": "Quote", "style": "noisy"}
+{"query": "A customer says their subscription change didn't go through, check all subscription schedules", "source_type": "Platform", "target_type": "SubscriptionSchedule", "style": "noisy"}
+{"query": "We're migrating subscription plans and need to review all subscription schedules", "source_type": "Platform", "target_type": "SubscriptionSchedule", "style": "noisy"}
+{"query": "The bank reconciliation doesn't match, show me all balance transactions", "source_type": "Platform", "target_type": "BalanceTransaction", "style": "noisy"}
+{"query": "Our accountant found discrepancies, need to review all balance transactions", "source_type": "Platform", "target_type": "BalanceTransaction", "style": "noisy"}
+{"query": "Customers are reporting errors on the payment page, list all checkout sessions", "source_type": "Platform", "target_type": "CheckoutSession", "style": "noisy"}
+{"query": "We had a spike in abandoned carts, show me recent checkout sessions", "source_type": "Platform", "target_type": "CheckoutSession", "style": "noisy"}
+{"query": "We're sunsetting some old pricing, show me all plans we have", "source_type": "Platform", "target_type": "Plan", "style": "noisy"}
+{"query": "A customer was charged under the wrong plan, I need to see all plans", "source_type": "Platform", "target_type": "Plan", "style": "noisy"}

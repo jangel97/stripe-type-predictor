@@ -1,11 +1,11 @@
 {
   "model": "gemini-2.5-pro",
-  "strategy": "zero_shot_tcr",
+  "strategy": "few_shot_tcr",
   "n_tools": 536,
   "n_queries": 120,
-  "precision": 0.39166666666666666,
-  "recall": 0.35,
-  "f1": 0.3638888888888889,
+  "precision": 0.85,
+  "recall": 0.8291666666666667,
+  "f1": 0.836111111111111,
   "hallucinated_total": 0,
   "per_query": [
     {
@@ -15,17 +15,17 @@
         "GetCustomers"
       ],
       "predicted": [
-        "GetCustomersCustomer"
+        "GetCustomers"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Customer",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Customer",
       "exp_src": "Platform",
       "exp_tgt": "Customer",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -55,17 +55,17 @@
         "GetPaymentIntents"
       ],
       "predicted": [
-        "GetPaymentIntentsIntent"
+        "GetPaymentIntents"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "PaymentIntent",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "PaymentIntent",
       "exp_src": "Platform",
       "exp_tgt": "PaymentIntent",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -74,16 +74,18 @@
       "expected": [
         "GetSubscriptions"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetSubscriptions"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Account",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Subscription",
       "exp_src": "Platform",
       "exp_tgt": "Subscription",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -113,17 +115,17 @@
         "GetProducts"
       ],
       "predicted": [
-        "GetProductsId"
+        "GetProducts"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Product",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Product",
       "exp_src": "Platform",
       "exp_tgt": "Product",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -132,16 +134,18 @@
       "expected": [
         "GetPrices"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetPrices"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Account",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Price",
       "exp_src": "Platform",
       "exp_tgt": "Price",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -169,17 +173,17 @@
         "GetRefunds"
       ],
       "predicted": [
-        "GetRefundsRefund"
+        "GetRefunds"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Refund",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Refund",
       "exp_src": "Platform",
       "exp_tgt": "Refund",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -188,16 +192,18 @@
       "expected": [
         "GetDisputes"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetDisputes"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Account",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Dispute",
       "exp_src": "Platform",
       "exp_tgt": "Dispute",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -207,17 +213,17 @@
         "GetCoupons"
       ],
       "predicted": [
-        "GetCouponsCoupon"
+        "GetCoupons"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Coupon",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Coupon",
       "exp_src": "Platform",
       "exp_tgt": "Coupon",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -247,17 +253,17 @@
         "GetBalanceHistory"
       ],
       "predicted": [
-        "GetBalanceHistoryId"
+        "GetBalanceHistory"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Balance",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "BalanceTransaction",
       "exp_src": "Platform",
       "exp_tgt": "BalanceTransaction",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -267,17 +273,17 @@
         "GetWebhookEndpoints"
       ],
       "predicted": [
-        "GetWebhookEndpointsWebhookEndpoint"
+        "GetWebhookEndpoints"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "WebhookEndpoint",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "WebhookEndpoint",
       "exp_src": "Platform",
       "exp_tgt": "WebhookEndpoint",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -287,17 +293,17 @@
         "GetEvents"
       ],
       "predicted": [
-        "GetEventsId"
+        "GetEvents"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Event",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Event",
       "exp_src": "Platform",
       "exp_tgt": "Event",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -465,17 +471,17 @@
         "GetQuotes"
       ],
       "predicted": [
-        "GetQuotesQuote"
+        "GetQuotes"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Quote",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Quote",
       "exp_src": "Platform",
       "exp_tgt": "Quote",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -485,17 +491,17 @@
         "GetPromotionCodes"
       ],
       "predicted": [
-        "GetPromotionCodesPromotionCode"
+        "GetPromotionCodes"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "PromotionCode",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "PromotionCode",
       "exp_src": "Platform",
       "exp_tgt": "PromotionCode",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -505,17 +511,17 @@
         "GetShippingRates"
       ],
       "predicted": [
-        "GetShippingRatesShippingRateToken"
+        "GetShippingRates"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "ShippingRate",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "ShippingRate",
       "exp_src": "Platform",
       "exp_tgt": "ShippingRate",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -565,17 +571,17 @@
         "GetInvoiceitems"
       ],
       "predicted": [
-        "GetInvoiceitemsInvoiceitem"
+        "GetInvoiceitems"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Invoiceitem",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Invoiceitem",
       "exp_src": "Platform",
       "exp_tgt": "Invoiceitem",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -585,17 +591,17 @@
         "GetApplicationFees"
       ],
       "predicted": [
-        "GetApplicationFeesId"
+        "GetApplicationFees"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "ApplicationFee",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "ApplicationFee",
       "exp_src": "Platform",
       "exp_tgt": "ApplicationFee",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -624,16 +630,18 @@
       "expected": [
         "GetTopups"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetTopups"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Balance",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Topup",
       "exp_src": "Platform",
       "exp_tgt": "Topup",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -643,17 +651,17 @@
         "GetCreditNotes"
       ],
       "predicted": [
-        "GetCreditNotesId"
+        "GetCreditNotes"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "CreditNote",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "CreditNote",
       "exp_src": "Platform",
       "exp_tgt": "CreditNote",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -663,17 +671,17 @@
         "GetTaxRates"
       ],
       "predicted": [
-        "GetTaxRatesTaxRate"
+        "GetTaxRates"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "TaxRate",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "TaxRate",
       "exp_src": "Platform",
       "exp_tgt": "TaxRate",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -683,17 +691,17 @@
         "GetTerminalReaders"
       ],
       "predicted": [
-        "PostTerminalReadersReaderCancelAction"
+        "GetTerminalReaders"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Terminal",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "TerminalReader",
       "exp_src": "Platform",
       "exp_tgt": "TerminalReader",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -702,16 +710,18 @@
       "expected": [
         "GetTerminalLocations"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetTerminalLocations"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Terminal",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "TerminalLocation",
       "exp_src": "Platform",
       "exp_tgt": "TerminalLocation",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -721,17 +731,17 @@
         "GetIssuingCards"
       ],
       "predicted": [
-        "GetIssuingCardsCard"
+        "GetIssuingCards"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Issuing",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "IssuingCard",
       "exp_src": "Platform",
       "exp_tgt": "IssuingCard",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -760,16 +770,18 @@
       "expected": [
         "GetBillingMeters"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetBillingMeters"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "BillingMeter",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "BillingMeter",
       "exp_src": "Platform",
       "exp_tgt": "BillingMeter",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -779,17 +791,17 @@
         "GetExchangeRates"
       ],
       "predicted": [
-        "GetExchangeRatesRateId"
+        "GetExchangeRates"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "ExchangeRate",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "ExchangeRate",
       "exp_src": "Platform",
       "exp_tgt": "ExchangeRate",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -839,17 +851,17 @@
         "GetCheckoutSessions"
       ],
       "predicted": [
-        "GetCheckoutSessionsSession"
+        "GetCheckoutSessions"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Checkout",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "CheckoutSession",
       "exp_src": "Platform",
       "exp_tgt": "CheckoutSession",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -878,16 +890,18 @@
       "expected": [
         "GetSubscriptionItems"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetSubscriptionItems"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Subscription",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "SubscriptionItem",
       "exp_src": "Platform",
       "exp_tgt": "SubscriptionItem",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1123,17 +1137,18 @@
         "GetProductsProductFeatures"
       ],
       "predicted": [
+        "GetProducts",
         "GetProductsProductFeatures"
       ],
       "hallucinated": [],
       "precision": 1.0,
-      "recall": 0.5,
-      "f1": 0.6666666666666666,
-      "pred_src": "Product",
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "ProductFeature",
       "exp_src": "Platform",
       "exp_tgt": "ProductFeature",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1144,17 +1159,18 @@
         "GetInvoicesInvoiceLines"
       ],
       "predicted": [
+        "GetInvoices",
         "GetInvoicesInvoiceLines"
       ],
       "hallucinated": [],
       "precision": 1.0,
-      "recall": 0.5,
-      "f1": 0.6666666666666666,
-      "pred_src": "Invoice",
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "LineItem",
       "exp_src": "Platform",
       "exp_tgt": "LineItem",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1164,16 +1180,19 @@
         "GetCustomers",
         "GetCustomersCustomerBalanceTransactions"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetCustomers",
+        "GetCustomersCustomerBalanceTransactions"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Account",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "CustomerBalanceTransaction",
       "exp_src": "Platform",
       "exp_tgt": "CustomerBalanceTransaction",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1184,17 +1203,18 @@
         "GetAccountsAccountBankAccountsId"
       ],
       "predicted": [
+        "GetAccount",
         "GetAccountsAccountBankAccountsId"
       ],
       "hallucinated": [],
       "precision": 1.0,
-      "recall": 0.5,
-      "f1": 0.6666666666666666,
-      "pred_src": "Account",
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "ExternalAccount",
       "exp_src": "Platform",
       "exp_tgt": "ExternalAccount",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1284,16 +1304,18 @@
       "expected": [
         "GetPaymentIntents"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetCharges"
+      ],
       "hallucinated": [],
-      "precision": 0,
+      "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
-      "pred_src": "Account",
+      "pred_src": "Platform",
       "pred_tgt": "Charge",
       "exp_src": "Platform",
       "exp_tgt": "PaymentIntent",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": false
     },
     {
@@ -1303,17 +1325,17 @@
         "GetInvoices"
       ],
       "predicted": [
-        "GetInvoicesInvoice"
+        "GetInvoices"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Invoice",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Invoice",
       "exp_src": "Platform",
       "exp_tgt": "Invoice",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1323,17 +1345,17 @@
         "GetDisputes"
       ],
       "predicted": [
-        "GetDisputesDispute"
+        "GetDisputes"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Dispute",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Dispute",
       "exp_src": "Platform",
       "exp_tgt": "Dispute",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1342,17 +1364,19 @@
       "expected": [
         "GetPayouts"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetTransfers"
+      ],
       "hallucinated": [],
-      "precision": 0,
+      "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
-      "pred_src": "Account",
-      "pred_tgt": "Payout",
+      "pred_src": "Platform",
+      "pred_tgt": "Transfer",
       "exp_src": "Platform",
       "exp_tgt": "Payout",
-      "src_ok": false,
-      "tgt_ok": true
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "synonym_cards_on_file",
@@ -1421,17 +1445,17 @@
         "GetBalanceHistory"
       ],
       "predicted": [
-        "GetBalanceHistoryId"
+        "GetBalanceHistory"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Balance",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "BalanceTransaction",
       "exp_src": "Platform",
       "exp_tgt": "BalanceTransaction",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1441,17 +1465,17 @@
         "GetCoupons"
       ],
       "predicted": [
-        "GetPromotionCodesPromotionCode"
+        "GetPromotionCodes"
       ],
       "hallucinated": [],
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
-      "pred_src": "PromotionCode",
+      "pred_src": "Platform",
       "pred_tgt": "PromotionCode",
       "exp_src": "Platform",
       "exp_tgt": "Coupon",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": false
     },
     {
@@ -1460,16 +1484,18 @@
       "expected": [
         "GetPromotionCodes"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetPromotionCodes"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Account",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "PromotionCode",
       "exp_src": "Platform",
       "exp_tgt": "PromotionCode",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1479,17 +1505,17 @@
         "GetShippingRates"
       ],
       "predicted": [
-        "GetShippingRatesShippingRateToken"
+        "GetShippingRates"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "ShippingRate",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "ShippingRate",
       "exp_src": "Platform",
       "exp_tgt": "ShippingRate",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1498,16 +1524,18 @@
       "expected": [
         "GetPaymentLinks"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetPaymentLinks"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Account",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "PaymentLink",
       "exp_src": "Platform",
       "exp_tgt": "PaymentLink",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1516,16 +1544,18 @@
       "expected": [
         "GetTransfers"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetTransfers"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Account",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Transfer",
       "exp_src": "Platform",
       "exp_tgt": "Transfer",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1535,17 +1565,17 @@
         "GetTerminalReaders"
       ],
       "predicted": [
-        "PostTerminalReadersReaderCancelAction"
+        "GetTerminalReaders"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Terminal",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "TerminalReader",
       "exp_src": "Platform",
       "exp_tgt": "TerminalReader",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1555,17 +1585,17 @@
         "GetIssuingCards"
       ],
       "predicted": [
-        "GetIssuingCardsCard"
+        "GetIssuingCards"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Issuing",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "IssuingCard",
       "exp_src": "Platform",
       "exp_tgt": "IssuingCard",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1574,16 +1604,18 @@
       "expected": [
         "GetRadarEarlyFraudWarnings"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetRadarEarlyFraudWarnings"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "RadarEarlyFraudWarning",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "RadarEarlyFraudWarning",
       "exp_src": "Platform",
       "exp_tgt": "RadarEarlyFraudWarning",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1592,19 +1624,17 @@
       "expected": [
         "GetBillingMeters"
       ],
-      "predicted": [
-        "GetBillingMetersId"
-      ],
+      "predicted": [],
       "hallucinated": [],
-      "precision": 0.0,
+      "precision": 0,
       "recall": 0.0,
       "f1": 0,
-      "pred_src": "Billing",
-      "pred_tgt": "BillingMeter",
+      "pred_src": "BillingMeter",
+      "pred_tgt": "BillingMeterEvent",
       "exp_src": "Platform",
       "exp_tgt": "BillingMeter",
       "src_ok": false,
-      "tgt_ok": true
+      "tgt_ok": false
     },
     {
       "id": "synonym_credit_memos",
@@ -1612,16 +1642,18 @@
       "expected": [
         "GetCreditNotes"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetCreditNotes"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Customer",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "CreditNote",
       "exp_src": "Platform",
       "exp_tgt": "CreditNote",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1650,13 +1682,15 @@
       "expected": [
         "GetCustomersCustomerCashBalance"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetCustomersCustomerBalanceTransactions"
+      ],
       "hallucinated": [],
-      "precision": 0,
+      "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
       "pred_src": "Customer",
-      "pred_tgt": "CreditNote",
+      "pred_tgt": "CustomerBalanceTransaction",
       "exp_src": "Customer",
       "exp_tgt": "CashBalance",
       "src_ok": true,
@@ -1669,17 +1703,17 @@
         "GetExchangeRates"
       ],
       "predicted": [
-        "GetExchangeRatesRateId"
+        "GetExchangeRates"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "ExchangeRate",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "ExchangeRate",
       "exp_src": "Platform",
       "exp_tgt": "ExchangeRate",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1689,18 +1723,18 @@
         "GetBalanceHistory"
       ],
       "predicted": [
-        "GetBalanceHistoryId"
+        "GetCharges"
       ],
       "hallucinated": [],
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
-      "pred_src": "Balance",
-      "pred_tgt": "BalanceTransaction",
+      "pred_src": "Platform",
+      "pred_tgt": "Charge",
       "exp_src": "Platform",
       "exp_tgt": "BalanceTransaction",
-      "src_ok": false,
-      "tgt_ok": true
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "ambiguous_customer_activity",
@@ -1708,13 +1742,15 @@
       "expected": [
         "GetCustomersCustomerBalanceTransactions"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetCustomersCustomer"
+      ],
       "hallucinated": [],
-      "precision": 0,
+      "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
       "pred_src": "Customer",
-      "pred_tgt": "Event",
+      "pred_tgt": "Customer",
       "exp_src": "Customer",
       "exp_tgt": "CustomerBalanceTransaction",
       "src_ok": true,
@@ -1726,16 +1762,18 @@
       "expected": [
         "GetBalance"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetBalance"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Account",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Balance",
       "exp_src": "Platform",
       "exp_tgt": "Balance",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1744,16 +1782,18 @@
       "expected": [
         "GetProducts"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetProducts"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "CheckoutSession",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Product",
       "exp_src": "Platform",
       "exp_tgt": "Product",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1763,18 +1803,18 @@
         "GetCustomersCustomerBalanceTransactions"
       ],
       "predicted": [
-        "GetCustomersCustomerBalanceTransactions"
+        "GetCustomersCustomer"
       ],
       "hallucinated": [],
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
       "pred_src": "Customer",
-      "pred_tgt": "CustomerBalanceTransaction",
+      "pred_tgt": "Customer",
       "exp_src": "Customer",
       "exp_tgt": "CustomerBalanceTransaction",
       "src_ok": true,
-      "tgt_ok": true
+      "tgt_ok": false
     },
     {
       "id": "ambiguous_whats_pending",
@@ -1783,17 +1823,17 @@
         "GetPaymentIntents"
       ],
       "predicted": [
-        "GetBalanceHistoryId"
+        "GetBalanceHistory"
       ],
       "hallucinated": [],
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
-      "pred_src": "Balance",
+      "pred_src": "Platform",
       "pred_tgt": "BalanceTransaction",
       "exp_src": "Platform",
       "exp_tgt": "PaymentIntent",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": false
     },
     {
@@ -1802,16 +1842,18 @@
       "expected": [
         "GetPrices"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetPrices"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Product",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Price",
       "exp_src": "Platform",
       "exp_tgt": "Price",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1881,17 +1923,17 @@
         "GetDisputes"
       ],
       "predicted": [
-        "GetChargesChargeDispute"
+        "GetDisputes"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Charge",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Dispute",
       "exp_src": "Platform",
       "exp_tgt": "Dispute",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1900,16 +1942,18 @@
       "expected": [
         "GetPayouts"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetPayouts"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Account",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Payout",
       "exp_src": "Platform",
       "exp_tgt": "Payout",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1918,16 +1962,18 @@
       "expected": [
         "GetSubscriptionSchedules"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetSubscriptionSchedules"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Subscription",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "SubscriptionSchedule",
       "exp_src": "Platform",
       "exp_tgt": "SubscriptionSchedule",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1936,16 +1982,18 @@
       "expected": [
         "GetTaxRates"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetTaxSettings"
+      ],
       "hallucinated": [],
-      "precision": 0,
+      "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
-      "pred_src": "Account",
+      "pred_src": "Platform",
       "pred_tgt": "TaxSettings",
       "exp_src": "Platform",
       "exp_tgt": "TaxRate",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": false
     },
     {
@@ -1974,16 +2022,18 @@
       "expected": [
         "GetRefunds"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetRefunds"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Customer",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Refund",
       "exp_src": "Platform",
       "exp_tgt": "Refund",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -1992,16 +2042,18 @@
       "expected": [
         "GetPaymentIntents"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetPaymentIntents"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": null,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "PaymentIntent",
       "exp_src": "Platform",
       "exp_tgt": "PaymentIntent",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -2010,16 +2062,18 @@
       "expected": [
         "GetSubscriptions"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetCustomers"
+      ],
       "hallucinated": [],
-      "precision": 0,
+      "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
-      "pred_src": "Subscription",
+      "pred_src": "Platform",
       "pred_tgt": "Customer",
       "exp_src": "Platform",
       "exp_tgt": "Subscription",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": false
     },
     {
@@ -2029,17 +2083,17 @@
         "GetDisputes"
       ],
       "predicted": [
-        "GetDisputesDispute"
+        "GetDisputes"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Dispute",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Dispute",
       "exp_src": "Platform",
       "exp_tgt": "Dispute",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -2049,17 +2103,17 @@
         "GetPayouts"
       ],
       "predicted": [
-        "GetPayoutsPayout"
+        "GetPayouts"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Payout",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Payout",
       "exp_src": "Platform",
       "exp_tgt": "Payout",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -2068,16 +2122,18 @@
       "expected": [
         "GetWebhookEndpoints"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetWebhookEndpoints"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Account",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "WebhookEndpoint",
       "exp_src": "Platform",
       "exp_tgt": "WebhookEndpoint",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -2087,17 +2143,17 @@
         "GetCoupons"
       ],
       "predicted": [
-        "GetCouponsCoupon"
+        "GetCoupons"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Coupon",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Coupon",
       "exp_src": "Platform",
       "exp_tgt": "Coupon",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -2106,16 +2162,18 @@
       "expected": [
         "GetTransfers"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetTransfers"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Account",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Transfer",
       "exp_src": "Platform",
       "exp_tgt": "Transfer",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -2125,17 +2183,17 @@
         "GetTerminalReaders"
       ],
       "predicted": [
-        "PostTerminalReadersReaderCancelAction"
+        "GetTerminalReaders"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Terminal",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "TerminalReader",
       "exp_src": "Platform",
       "exp_tgt": "TerminalReader",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -2164,16 +2222,18 @@
       "expected": [
         "GetSetupIntents"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetSetupIntents"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "CheckoutSession",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "SetupIntent",
       "exp_src": "Platform",
       "exp_tgt": "SetupIntent",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -2182,16 +2242,18 @@
       "expected": [
         "GetBalance"
       ],
-      "predicted": [],
+      "predicted": [
+        "GetBalance"
+      ],
       "hallucinated": [],
-      "precision": 0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "Account",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Balance",
       "exp_src": "Platform",
       "exp_tgt": "Balance",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -2239,17 +2301,17 @@
         "GetPromotionCodes"
       ],
       "predicted": [
-        "GetPromotionCodesPromotionCode"
+        "GetPromotionCodes"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
-      "pred_src": "PromotionCode",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "PromotionCode",
       "exp_src": "Platform",
       "exp_tgt": "PromotionCode",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -2280,17 +2342,18 @@
         "GetCustomersCustomerDiscount"
       ],
       "predicted": [
+        "GetCustomers",
         "GetCustomersCustomerDiscount"
       ],
       "hallucinated": [],
       "precision": 1.0,
-      "recall": 0.5,
-      "f1": 0.6666666666666666,
-      "pred_src": "Customer",
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "Discount",
       "exp_src": "Platform",
       "exp_tgt": "Discount",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {
@@ -2301,17 +2364,18 @@
         "GetCustomersCustomerCashBalance"
       ],
       "predicted": [
+        "GetCustomers",
         "GetCustomersCustomerCashBalance"
       ],
       "hallucinated": [],
       "precision": 1.0,
-      "recall": 0.5,
-      "f1": 0.6666666666666666,
-      "pred_src": "Customer",
+      "recall": 1.0,
+      "f1": 1.0,
+      "pred_src": "Platform",
       "pred_tgt": "CashBalance",
       "exp_src": "Platform",
       "exp_tgt": "CashBalance",
-      "src_ok": false,
+      "src_ok": true,
       "tgt_ok": true
     },
     {

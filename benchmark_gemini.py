@@ -19,6 +19,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import random
 import sys
 import time
 from pathlib import Path
@@ -124,14 +125,25 @@ def run_text_baseline(client, model: str, query: str, tools: list[dict]) -> list
 def run_zero_shot_tcr(
     client, model: str, query: str,
     type_names: list[str], adj: dict,
+    examples: list[dict] | None = None,
 ) -> tuple[list[str], str, str]:
     type_list = ", ".join(type_names)
+    examples_block = ""
+    if examples:
+        lines = []
+        for ex in examples:
+            lines.append(
+                f'Query: "{ex["query"]}"\n'
+                f'Answer: {{"source_type": "{ex["source_type"]}", "target_type": "{ex["target_type"]}"}}'
+            )
+        examples_block = "\n\nHere are some examples:\n\n" + "\n\n".join(lines) + "\n"
     response = client.chat.completions.create(
         model=model,
         messages=[
             {"role": "system", "content": (
                 f"You are an entity type predictor for a typed API graph. "
-                f"The available entity types are:\n{type_list}\n\n"
+                f"The available entity types are:\n{type_list}\n"
+                f"{examples_block}\n"
                 f"Given a natural language query, predict the SOURCE entity type "
                 f"(where the query starts) and the TARGET entity type (what the query wants to retrieve). "
                 f"Respond ONLY with JSON: {{\"source_type\": \"...\", \"target_type\": \"...\"}}\n"
@@ -308,7 +320,7 @@ def main():
     parser = argparse.ArgumentParser(description="Benchmark Gemini on Stripe tool selection")
     parser.add_argument("--model", default="gemini-2.5-pro", help="Gemini model name")
     parser.add_argument("--strategy",
-                        choices=["function_calling", "text", "zero_shot_tcr", "all"],
+                        choices=["function_calling", "text", "zero_shot_tcr", "few_shot_tcr", "all"],
                         default="all")
     args = parser.parse_args()
 
@@ -351,6 +363,38 @@ def main():
         run_strategy(
             "zero_shot_tcr",
             lambda q: run_zero_shot_tcr(client, args.model, q, type_names, adj),
+            test_queries, valid_tool_names, args.model,
+            is_tcr=True,
+        )
+
+    if args.strategy in ("few_shot_tcr", "all"):
+        training_examples = []
+        with open(DATA_DIR / "training_data.jsonl") as f:
+            for line in f:
+                if line.strip():
+                    training_examples.append(json.loads(line))
+        test_pairs = {(q["source_type"], q["target_type"]) for q in test_queries}
+        candidates = [
+            ex for ex in training_examples
+            if (ex["source_type"], ex["target_type"]) not in test_pairs
+        ]
+        rng = random.Random(42)
+        rng.shuffle(candidates)
+        seen_sources = set()
+        few_shot = []
+        for ex in candidates:
+            if len(few_shot) >= 10:
+                break
+            if ex["source_type"] not in seen_sources or len(few_shot) < 5:
+                few_shot.append(ex)
+                seen_sources.add(ex["source_type"])
+        print(f"\nFew-shot examples ({len(few_shot)}):")
+        for ex in few_shot:
+            print(f"  {ex['source_type']}->{ex['target_type']}: {ex['query'][:60]}")
+
+        run_strategy(
+            "few_shot_tcr",
+            lambda q: run_zero_shot_tcr(client, args.model, q, type_names, adj, examples=few_shot),
             test_queries, valid_tool_names, args.model,
             is_tcr=True,
         )
