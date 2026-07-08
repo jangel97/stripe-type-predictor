@@ -1,0 +1,1728 @@
+{
+  "model": "gemini-2.5-flash",
+  "strategy": "few_shot_text",
+  "n_tools": 536,
+  "n_queries": 120,
+  "precision": 0.8095238095238095,
+  "recall": 0.8041666666666667,
+  "f1": 0.795138888888889,
+  "hallucinated_total": 1,
+  "per_query": [
+    {
+      "id": "list_customers",
+      "category": "clean",
+      "expected": [
+        "GetCustomers"
+      ],
+      "predicted": [
+        "GetCustomers"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "list_invoices",
+      "category": "clean",
+      "expected": [
+        "GetInvoices"
+      ],
+      "predicted": [
+        "GetInvoices"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "list_payment_intents",
+      "category": "clean",
+      "expected": [
+        "GetPaymentIntents"
+      ],
+      "predicted": [
+        "GetPaymentIntents"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "list_subscriptions",
+      "category": "clean",
+      "expected": [
+        "GetSubscriptions"
+      ],
+      "predicted": [
+        "GetSubscriptions"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "list_charges",
+      "category": "clean",
+      "expected": [
+        "GetCharges"
+      ],
+      "predicted": [
+        "GetCharges"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "list_products",
+      "category": "clean",
+      "expected": [
+        "GetProducts"
+      ],
+      "predicted": [
+        "GetProducts"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "list_prices",
+      "category": "clean",
+      "expected": [
+        "GetPrices"
+      ],
+      "predicted": [
+        "GetPrices"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "list_payouts",
+      "category": "clean",
+      "expected": [
+        "GetPayouts"
+      ],
+      "predicted": [
+        "GetPayouts"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "list_refunds",
+      "category": "clean",
+      "expected": [
+        "GetRefunds"
+      ],
+      "predicted": [
+        "GetRefunds"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "list_disputes",
+      "category": "clean",
+      "expected": [
+        "GetDisputes"
+      ],
+      "predicted": [
+        "GetDisputes"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "list_coupons",
+      "category": "clean",
+      "expected": [
+        "GetCoupons"
+      ],
+      "predicted": [
+        "GetCoupons"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "list_connected_accounts",
+      "category": "clean",
+      "expected": [
+        "GetAccount"
+      ],
+      "predicted": [
+        "GetAccounts"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "list_balance_transactions",
+      "category": "clean",
+      "expected": [
+        "GetBalanceHistory"
+      ],
+      "predicted": [
+        "GetBalanceHistory"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "list_webhook_endpoints",
+      "category": "clean",
+      "expected": [
+        "GetWebhookEndpoints"
+      ],
+      "predicted": [
+        "GetWebhookEndpoints"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "list_events",
+      "category": "clean",
+      "expected": [
+        "GetEvents"
+      ],
+      "predicted": [
+        "GetEvents"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "customer_payment_methods",
+      "category": "clean",
+      "expected": [
+        "GetCustomersCustomerPaymentMethods"
+      ],
+      "predicted": [
+        "GetCustomersCustomerPaymentMethods"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "customer_subscriptions",
+      "category": "clean",
+      "expected": [
+        "DeleteCustomersCustomerSubscriptionsSubscriptionExposedId"
+      ],
+      "predicted": [
+        "GetCustomersCustomerSubscriptions"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "customer_tax_ids",
+      "category": "clean",
+      "expected": [
+        "GetCustomersCustomerTaxIds"
+      ],
+      "predicted": [
+        "GetCustomersCustomerTaxIds"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "invoice_lines",
+      "category": "clean",
+      "expected": [
+        "GetInvoicesInvoiceLines"
+      ],
+      "predicted": [
+        "GetInvoicesInvoiceLines"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "charge_refunds",
+      "category": "clean",
+      "expected": [
+        "GetChargesChargeRefunds"
+      ],
+      "predicted": [
+        "GetChargesChargeRefunds"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_transfers",
+      "category": "clean",
+      "expected": [
+        "GetTransfers"
+      ],
+      "predicted": [
+        "GetTransfers"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_subscription_schedules",
+      "category": "clean",
+      "expected": [
+        "GetSubscriptionSchedules"
+      ],
+      "predicted": [
+        "GetSubscriptionSchedules"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_setup_intents",
+      "category": "clean",
+      "expected": [
+        "GetSetupIntents"
+      ],
+      "predicted": [
+        "GetSetupIntents"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_quotes",
+      "category": "clean",
+      "expected": [
+        "GetQuotes"
+      ],
+      "predicted": [
+        "GetQuotes"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_promotion_codes",
+      "category": "clean",
+      "expected": [
+        "GetPromotionCodes"
+      ],
+      "predicted": [
+        "GetPromotionCodes"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_shipping_rates",
+      "category": "clean",
+      "expected": [
+        "GetShippingRates"
+      ],
+      "predicted": [
+        "GetShippingRates"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_payment_links",
+      "category": "clean",
+      "expected": [
+        "GetPaymentLinks"
+      ],
+      "predicted": [
+        "GetPaymentLinks"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_plans",
+      "category": "clean",
+      "expected": [
+        "GetPlans"
+      ],
+      "predicted": [
+        "GetPlans"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_invoice_items",
+      "category": "clean",
+      "expected": [
+        "GetInvoiceitems"
+      ],
+      "predicted": [
+        "GetInvoiceitems"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_app_fees",
+      "category": "clean",
+      "expected": [
+        "GetApplicationFees"
+      ],
+      "predicted": [
+        "GetApplicationFees"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_tax_ids",
+      "category": "clean",
+      "expected": [
+        "GetTaxIds"
+      ],
+      "predicted": [
+        "GetTaxIds"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_topups",
+      "category": "clean",
+      "expected": [
+        "GetTopups"
+      ],
+      "predicted": [
+        "GetTopups"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_credit_notes",
+      "category": "clean",
+      "expected": [
+        "GetCreditNotes"
+      ],
+      "predicted": [
+        "GetCreditNotes"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_tax_rates",
+      "category": "clean",
+      "expected": [
+        "GetTaxRates"
+      ],
+      "predicted": [
+        "GetTaxRates"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_terminal_readers",
+      "category": "clean",
+      "expected": [
+        "GetTerminalReaders"
+      ],
+      "predicted": [
+        "GetTerminalReaders"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_terminal_locations",
+      "category": "clean",
+      "expected": [
+        "GetTerminalLocations"
+      ],
+      "predicted": [
+        "GetTerminalLocations"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_issuing_cards",
+      "category": "clean",
+      "expected": [
+        "GetIssuingCards"
+      ],
+      "predicted": [
+        "GetIssuingCards"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_radar_value_lists",
+      "category": "clean",
+      "expected": [
+        "GetRadarValueLists"
+      ],
+      "predicted": [
+        "GetRadarValueLists"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_billing_meters",
+      "category": "clean",
+      "expected": [
+        "GetBillingMeters"
+      ],
+      "predicted": [
+        "GetBillingMeters"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_exchange_rates",
+      "category": "clean",
+      "expected": [
+        "GetExchangeRates"
+      ],
+      "predicted": [
+        "GetExchangeRates"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_customer_cash_balance",
+      "category": "clean",
+      "expected": [
+        "GetCustomersCustomerCashBalance"
+      ],
+      "predicted": [
+        "GetCustomersCustomerCashBalance"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_customer_discount",
+      "category": "clean",
+      "expected": [
+        "GetCustomersCustomerDiscount"
+      ],
+      "predicted": [
+        "GetCustomersCustomerDiscount"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_checkout_sessions",
+      "category": "clean",
+      "expected": [
+        "GetCheckoutSessions"
+      ],
+      "predicted": [
+        "GetCheckoutSessions"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_files",
+      "category": "clean",
+      "expected": [
+        "GetFiles"
+      ],
+      "predicted": [
+        "GetFiles"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "clean_list_subscription_items",
+      "category": "clean",
+      "expected": [
+        "GetSubscriptionItems"
+      ],
+      "predicted": [
+        "GetSubscriptionItems"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "customer_cash_balance_txns",
+      "category": "multihop",
+      "expected": [
+        "GetCustomersCustomerCashBalanceTransactions"
+      ],
+      "predicted": [
+        "GetCustomersCustomerCashBalanceTransactions"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "charge_dispute_details",
+      "category": "multihop",
+      "expected": [
+        "GetChargesChargeDispute"
+      ],
+      "predicted": [
+        "GetChargesChargeDispute"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "account_capabilities",
+      "category": "multihop",
+      "expected": [
+        "GetAccountsAccountCapabilities"
+      ],
+      "predicted": [
+        "GetAccountsAccountCapabilities"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "account_external_accounts",
+      "category": "multihop",
+      "expected": [
+        "GetAccountsAccountBankAccountsId"
+      ],
+      "predicted": [
+        "GetAccountsAccountBankAccounts"
+      ],
+      "hallucinated": [
+        "GetAccountsAccountBankAccounts"
+      ],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "product_features",
+      "category": "multihop",
+      "expected": [
+        "GetProductsProductFeatures"
+      ],
+      "predicted": [
+        "GetProductsProductFeatures"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "customer_balance_transactions",
+      "category": "multihop",
+      "expected": [
+        "GetCustomersCustomerBalanceTransactions"
+      ],
+      "predicted": [
+        "GetCustomersCustomerBalanceTransactions"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "transfer_reversals",
+      "category": "multihop",
+      "expected": [
+        "GetTransfersIdReversals"
+      ],
+      "predicted": [
+        "GetTransfersIdReversals"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "multihop_platform_capabilities",
+      "category": "multihop",
+      "expected": [
+        "GetAccount",
+        "GetAccountsAccountCapabilities"
+      ],
+      "predicted": [
+        "GetAccount"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "multihop_platform_people",
+      "category": "multihop",
+      "expected": [
+        "GetAccount",
+        "GetAccountsAccountPeople"
+      ],
+      "predicted": [
+        "GetAccount",
+        "GetAccountsAccountPeople"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "multihop_platform_transfer_reversals",
+      "category": "multihop",
+      "expected": [
+        "GetTransfers",
+        "GetTransfersIdReversals"
+      ],
+      "predicted": [
+        "GetTransfers",
+        "GetTransfersIdReversals"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "multihop_platform_fee_refunds",
+      "category": "multihop",
+      "expected": [
+        "GetApplicationFees",
+        "GetApplicationFeesFeeRefundsId"
+      ],
+      "predicted": [
+        "GetApplicationFeesIdRefunds"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "multihop_platform_product_features",
+      "category": "multihop",
+      "expected": [
+        "GetProducts",
+        "GetProductsProductFeatures"
+      ],
+      "predicted": [
+        "GetProductsProductFeatures"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "multihop_platform_invoice_lines",
+      "category": "multihop",
+      "expected": [
+        "GetInvoices",
+        "GetInvoicesInvoiceLines"
+      ],
+      "predicted": [
+        "GetInvoices",
+        "GetInvoicesInvoiceLines"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "multihop_platform_customer_balances",
+      "category": "multihop",
+      "expected": [
+        "GetCustomers",
+        "GetCustomersCustomerBalanceTransactions"
+      ],
+      "predicted": [
+        "GetCustomersCustomerBalanceTransactions"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "multihop_platform_external_accounts",
+      "category": "multihop",
+      "expected": [
+        "GetAccount",
+        "GetAccountsAccountBankAccountsId"
+      ],
+      "predicted": [
+        "GetAccount",
+        "GetAccountsAccountExternalAccounts"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    },
+    {
+      "id": "multihop_platform_login_link",
+      "category": "multihop",
+      "expected": [
+        "GetAccount",
+        "PostAccountsAccountLoginLinks"
+      ],
+      "predicted": [
+        "PostAccountsAccountLoginLinks"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "multihop_platform_payment_link_items",
+      "category": "multihop",
+      "expected": [
+        "GetPaymentLinks",
+        "GetPaymentLinksPaymentLinkLineItems"
+      ],
+      "predicted": [
+        "GetPaymentLinksPaymentLinkLineItems"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "multihop_platform_quote_pdf",
+      "category": "multihop",
+      "expected": [
+        "GetQuotes",
+        "GetQuotesQuotePdf"
+      ],
+      "predicted": [
+        "GetQuotesQuotePdf"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "multihop_customer_payment_sources",
+      "category": "multihop",
+      "expected": [
+        "GetCustomersCustomerSourcesId"
+      ],
+      "predicted": [
+        "GetCustomersCustomerSources"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "synonym_payments",
+      "category": "synonym",
+      "expected": [
+        "GetPaymentIntents"
+      ],
+      "predicted": [
+        "GetCharges"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "synonym_bills",
+      "category": "synonym",
+      "expected": [
+        "GetInvoices"
+      ],
+      "predicted": [
+        "GetInvoices"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "synonym_chargebacks",
+      "category": "synonym",
+      "expected": [
+        "GetDisputes"
+      ],
+      "predicted": [
+        "GetDisputes"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "synonym_bank_transfers",
+      "category": "synonym",
+      "expected": [
+        "GetPayouts"
+      ],
+      "predicted": [
+        "GetTreasuryOutboundTransfers"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "synonym_cards_on_file",
+      "category": "synonym",
+      "expected": [
+        "GetCustomersCustomerPaymentMethods"
+      ],
+      "predicted": [
+        "GetCustomersCustomerCards"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "synonym_recurring_plans",
+      "category": "synonym",
+      "expected": [
+        "DeleteCustomersCustomerSubscriptionsSubscriptionExposedId"
+      ],
+      "predicted": [
+        "GetCustomersCustomerSubscriptions"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "synonym_marketplace_accounts",
+      "category": "synonym",
+      "expected": [
+        "GetAccount"
+      ],
+      "predicted": [
+        "GetAccounts"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "synonym_transactions",
+      "category": "synonym",
+      "expected": [
+        "GetBalanceHistory"
+      ],
+      "predicted": [
+        "GetBalanceHistory"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "synonym_discounts",
+      "category": "synonym",
+      "expected": [
+        "GetCoupons"
+      ],
+      "predicted": [
+        "GetPromotionCodes"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "synonym_promo_offers",
+      "category": "synonym",
+      "expected": [
+        "GetPromotionCodes"
+      ],
+      "predicted": [
+        "GetPromotionCodes"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "synonym_delivery_costs",
+      "category": "synonym",
+      "expected": [
+        "GetShippingRates"
+      ],
+      "predicted": [
+        "GetShippingRates"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "synonym_buy_links",
+      "category": "synonym",
+      "expected": [
+        "GetPaymentLinks"
+      ],
+      "predicted": [
+        "GetCheckoutSessions",
+        "GetPaymentLinks"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "synonym_wire_transfers",
+      "category": "synonym",
+      "expected": [
+        "GetTransfers"
+      ],
+      "predicted": [
+        "GetTransfers"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "synonym_card_readers",
+      "category": "synonym",
+      "expected": [
+        "GetTerminalReaders"
+      ],
+      "predicted": [
+        "GetTerminalReaders"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "synonym_issued_cards",
+      "category": "synonym",
+      "expected": [
+        "GetIssuingCards"
+      ],
+      "predicted": [
+        "GetIssuingCards"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "synonym_fraud_warnings",
+      "category": "synonym",
+      "expected": [
+        "GetRadarEarlyFraudWarnings"
+      ],
+      "predicted": [
+        "GetRadarEarlyFraudWarnings"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "synonym_usage_meters",
+      "category": "synonym",
+      "expected": [
+        "GetBillingMeters"
+      ],
+      "predicted": [
+        "GetBillingMeters"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "synonym_credit_memos",
+      "category": "synonym",
+      "expected": [
+        "GetCreditNotes"
+      ],
+      "predicted": [
+        "GetCreditNotes"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "synonym_subscription_tiers",
+      "category": "synonym",
+      "expected": [
+        "GetPlans"
+      ],
+      "predicted": [
+        "GetPrices",
+        "GetPlans"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "synonym_customer_credits",
+      "category": "synonym",
+      "expected": [
+        "GetCustomersCustomerCashBalance"
+      ],
+      "predicted": [
+        "GetCustomersCustomerCashBalance",
+        "GetCustomersCustomerBalanceTransactions"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "synonym_fx_rates",
+      "category": "synonym",
+      "expected": [
+        "GetExchangeRates"
+      ],
+      "predicted": [
+        "GetExchangeRates"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "ambiguous_money_in",
+      "category": "ambiguous",
+      "expected": [
+        "GetBalanceHistory"
+      ],
+      "predicted": [
+        "GetBalanceTransactions",
+        "GetCharges",
+        "GetTopups"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "ambiguous_customer_activity",
+      "category": "ambiguous",
+      "expected": [
+        "GetCustomersCustomerBalanceTransactions"
+      ],
+      "predicted": [
+        "GetCustomersCustomer"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "ambiguous_revenue",
+      "category": "ambiguous",
+      "expected": [
+        "GetBalance"
+      ],
+      "predicted": [
+        "GetBalance"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "ambiguous_whats_selling",
+      "category": "ambiguous",
+      "expected": [
+        "GetProducts"
+      ],
+      "predicted": [
+        "GetCharges"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "ambiguous_customer_owes",
+      "category": "ambiguous",
+      "expected": [
+        "GetCustomersCustomerBalanceTransactions"
+      ],
+      "predicted": [
+        "GetCustomersCustomer",
+        "GetInvoices"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "ambiguous_whats_pending",
+      "category": "ambiguous",
+      "expected": [
+        "GetPaymentIntents"
+      ],
+      "predicted": [
+        "GetBalance"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "ambiguous_how_do_we_charge",
+      "category": "ambiguous",
+      "expected": [
+        "GetPrices"
+      ],
+      "predicted": [
+        "GetPrices"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "ambiguous_customer_deal",
+      "category": "ambiguous",
+      "expected": [
+        "GetCustomersCustomerDiscount"
+      ],
+      "predicted": [
+        "GetCustomersCustomerDiscount"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "ambiguous_account_status",
+      "category": "ambiguous",
+      "expected": [
+        "GetAccountsAccountCapabilities"
+      ],
+      "predicted": [
+        "GetAccountsAccountCapabilities"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "ambiguous_saved_methods",
+      "category": "ambiguous",
+      "expected": [
+        "GetCustomersCustomerPaymentMethods"
+      ],
+      "predicted": [
+        "GetCustomersCustomerPaymentMethods"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "ambiguous_recent_problems",
+      "category": "ambiguous",
+      "expected": [
+        "GetDisputes"
+      ],
+      "predicted": [
+        "GetCharges",
+        "GetChargesChargeDispute"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "ambiguous_where_money_goes",
+      "category": "ambiguous",
+      "expected": [
+        "GetPayouts"
+      ],
+      "predicted": [
+        "GetBalanceHistory",
+        "GetBalanceTransactions",
+        "GetPayouts",
+        "GetTransfers",
+        "GetRefunds",
+        "GetTreasuryOutboundPayments",
+        "GetTreasuryOutboundTransfers"
+      ],
+      "hallucinated": [],
+      "precision": 0.14285714285714285,
+      "recall": 1.0,
+      "f1": 0.25
+    },
+    {
+      "id": "ambiguous_subscription_future",
+      "category": "ambiguous",
+      "expected": [
+        "GetSubscriptionSchedules"
+      ],
+      "predicted": [
+        "GetSubscriptionSchedules"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "ambiguous_tax_compliance",
+      "category": "ambiguous",
+      "expected": [
+        "GetTaxRates"
+      ],
+      "predicted": [
+        "GetTaxSettings",
+        "GetTaxRegistrations"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "ambiguous_who_are_reps",
+      "category": "ambiguous",
+      "expected": [
+        "GetAccountsAccountPeople"
+      ],
+      "predicted": [
+        "GetAccountsAccountPeople",
+        "GetAccountsAccountPersons"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "noisy_refund_check",
+      "category": "noisy",
+      "expected": [
+        "GetRefunds"
+      ],
+      "predicted": [
+        "GetRefunds"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "noisy_failed_payment",
+      "category": "noisy",
+      "expected": [
+        "GetPaymentIntents"
+      ],
+      "predicted": [
+        "GetPaymentIntents"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "noisy_subscription_cancel",
+      "category": "noisy",
+      "expected": [
+        "GetSubscriptions"
+      ],
+      "predicted": [
+        "GetCustomers",
+        "GetCustomersCustomerSubscriptions"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    {
+      "id": "noisy_dispute_deadline",
+      "category": "noisy",
+      "expected": [
+        "GetDisputes"
+      ],
+      "predicted": [
+        "GetDisputes"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "noisy_payout_missing",
+      "category": "noisy",
+      "expected": [
+        "GetPayouts"
+      ],
+      "predicted": [
+        "GetPayouts"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "noisy_webhook_broken",
+      "category": "noisy",
+      "expected": [
+        "GetWebhookEndpoints"
+      ],
+      "predicted": [
+        "GetWebhookEndpoints"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "noisy_coupon_expired",
+      "category": "noisy",
+      "expected": [
+        "GetCoupons"
+      ],
+      "predicted": [
+        "GetCoupons"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "noisy_transfer_audit",
+      "category": "noisy",
+      "expected": [
+        "GetTransfers"
+      ],
+      "predicted": [
+        "GetTransfers"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "noisy_terminal_offline",
+      "category": "noisy",
+      "expected": [
+        "GetTerminalReaders"
+      ],
+      "predicted": [
+        "GetTerminalReaders"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "noisy_customer_vat",
+      "category": "noisy",
+      "expected": [
+        "GetCustomersCustomerTaxIds"
+      ],
+      "predicted": [
+        "GetCustomersCustomerTaxIds"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "noisy_setup_intent_fail",
+      "category": "noisy",
+      "expected": [
+        "GetSetupIntents"
+      ],
+      "predicted": [
+        "GetSetupIntents"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "noisy_balance_wrong",
+      "category": "noisy",
+      "expected": [
+        "GetBalance"
+      ],
+      "predicted": [
+        "GetBalance"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "noisy_invoice_items",
+      "category": "noisy",
+      "expected": [
+        "GetInvoiceitems"
+      ],
+      "predicted": [
+        "GetInvoiceitems"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "noisy_product_features_check",
+      "category": "noisy",
+      "expected": [
+        "GetProductsProductFeatures"
+      ],
+      "predicted": [
+        "GetProducts",
+        "GetProductsProductFeatures"
+      ],
+      "hallucinated": [],
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "noisy_promo_leak",
+      "category": "noisy",
+      "expected": [
+        "GetPromotionCodes"
+      ],
+      "predicted": [
+        "GetPromotionCodes"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "multipath_account_person",
+      "category": "multipath",
+      "expected": [
+        "GetAccountsAccountPeople"
+      ],
+      "predicted": [
+        "GetAccountsAccountPeople"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "multipath_platform_discount",
+      "category": "multipath",
+      "expected": [
+        "GetCustomers",
+        "GetCustomersCustomerDiscount"
+      ],
+      "predicted": [
+        "GetCustomersCustomerDiscount"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "multipath_platform_cash_balance",
+      "category": "multipath",
+      "expected": [
+        "GetCustomers",
+        "GetCustomersCustomerCashBalance"
+      ],
+      "predicted": [
+        "GetCustomersCustomerCashBalance"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "multipath_charge_refund_vs_platform",
+      "category": "multipath",
+      "expected": [
+        "GetChargesChargeRefunds"
+      ],
+      "predicted": [
+        "GetChargesChargeRefunds"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "id": "multipath_customer_balance_txn",
+      "category": "multipath",
+      "expected": [
+        "GetCustomersCustomerBalanceTransactions"
+      ],
+      "predicted": [
+        "GetCustomersCustomerBalanceTransactions"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  ]
+}

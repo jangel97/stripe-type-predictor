@@ -14,6 +14,7 @@ Five strategies are compared:
 
 - **Function calling** — All 536 tools are passed as structured function definitions. The model uses its native tool-calling mechanism to select which functions to invoke.
 - **Text baseline** — All 536 tools are listed as plain text in the system prompt (`- ToolName: (InputType) -> (OutputType)`). The model responds with a JSON array of tool names.
+- **Few-shot Text** — Same as text baseline, but with 10 in-context examples showing `(query, [tool_names])` mappings. Tool names are resolved from training examples via BFS. This tests whether adding examples to direct tool selection can match the TCR decomposition.
 - **Zero-shot TCR** — Instead of tools, the model receives the 163 entity type names and predicts a source and target type. BFS graph search then resolves the types to a tool chain.
 - **Few-shot TCR** — Same as zero-shot TCR, but with 10 in-context examples drawn from the training set (excluding test type pairs). This gives the LLM domain-specific demonstrations of how queries map to entity types.
 - **Encoder TCR** — Same type prediction + graph search pipeline, but type prediction is done by the trained 281K-parameter classifier instead of prompting an LLM.
@@ -25,8 +26,11 @@ For all strategies, precision, recall, and F1 are computed by comparing the pred
 | Function calling | Gemini 2.5 Pro | 0.358 | 0.350 | 0.353 |
 | Zero-shot TCR | Gemini 2.5 Pro | 0.392 | 0.350 | 0.364 |
 | Text baseline | Gemini 2.5 Pro | 0.775 | 0.821 | 0.781 |
+| Few-shot Text | Gemini 2.5 Flash | 0.810 | 0.804 | 0.795 |
 | Few-shot TCR | Gemini 2.5 Pro | 0.850 | 0.829 | 0.836 |
 | **Encoder TCR** | **281K params** | **0.867** | **0.829** | **0.842** |
+
+Adding 10 examples to the text baseline (few-shot text) improves F1 only marginally over zero-shot text (0.795 vs 0.781), even with a different model. In contrast, the same 10 examples under TCR decomposition (few-shot TCR) yield F1=0.836 — a much larger gain. This confirms that the decomposition into type prediction + graph search drives the improvement, not the in-context examples themselves.
 
 Per-category (encoder, best fold):
 
@@ -105,6 +109,8 @@ python evaluate.py --threshold-sweep
 # Benchmark Gemini 2.5 Pro (requires GEMINI_API_KEY)
 python benchmark_gemini.py
 python benchmark_gemini.py --strategy few_shot_tcr
+python benchmark_gemini.py --strategy few_shot_text
+python benchmark_gemini.py --strategy few_shot_text --model gemini-2.5-flash
 ```
 
 ## Data

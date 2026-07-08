@@ -98,15 +98,21 @@ def run_function_calling(client, model: str, query: str, tool_schemas: list[dict
     return [tc.function.name for tc in tool_calls]
 
 
-def run_text_baseline(client, model: str, query: str, tools: list[dict]) -> list[str]:
+def run_text_baseline(client, model: str, query: str, tools: list[dict], examples: list[dict] | None = None) -> list[str]:
     tool_list = "\n".join(
         f"- {t['name']}: ({', '.join(t['input_types'])}) -> ({', '.join(t['output_types'])})"
         for t in tools
     )
+    examples_block = ""
+    if examples:
+        lines = []
+        for ex in examples:
+            lines.append(f'Query: "{ex["query"]}"\nAnswer: {json.dumps(ex["expected_tools"])}')
+        examples_block = "\n\nHere are some examples:\n\n" + "\n\n".join(lines) + "\n"
     response = client.chat.completions.create(
         model=model,
         messages=[
-            {"role": "system", "content": f"Available tools:\n{tool_list}\n\nSelect the tool(s) needed to answer the user's query. Respond ONLY with a JSON array of tool names, e.g. [\"ToolA\", \"ToolB\"]. No explanation."},
+            {"role": "system", "content": f"Available tools:\n{tool_list}\n{examples_block}\nSelect the tool(s) needed to answer the user's query. Respond ONLY with a JSON array of tool names, e.g. [\"ToolA\", \"ToolB\"]. No explanation."},
             {"role": "user", "content": query},
         ],
         temperature=0,
@@ -320,7 +326,7 @@ def main():
     parser = argparse.ArgumentParser(description="Benchmark Gemini on Stripe tool selection")
     parser.add_argument("--model", default="gemini-2.5-pro", help="Gemini model name")
     parser.add_argument("--strategy",
-                        choices=["function_calling", "text", "zero_shot_tcr", "few_shot_tcr", "all"],
+                        choices=["function_calling", "text", "few_shot_text", "zero_shot_tcr", "few_shot_tcr", "all"],
                         default="all")
     args = parser.parse_args()
 
@@ -367,7 +373,7 @@ def main():
             is_tcr=True,
         )
 
-    if args.strategy in ("few_shot_tcr", "all"):
+    if args.strategy in ("few_shot_tcr", "few_shot_text", "all"):
         training_examples = []
         with open(DATA_DIR / "training_data.jsonl") as f:
             for line in f:
@@ -388,10 +394,23 @@ def main():
             if ex["source_type"] not in seen_sources or len(few_shot) < 5:
                 few_shot.append(ex)
                 seen_sources.add(ex["source_type"])
+        few_shot_with_tools = []
+        for ex in few_shot:
+            path = bfs_path(adj, ex["source_type"], ex["target_type"])
+            if path:
+                few_shot_with_tools.append({**ex, "expected_tools": path})
         print(f"\nFew-shot examples ({len(few_shot)}):")
         for ex in few_shot:
             print(f"  {ex['source_type']}->{ex['target_type']}: {ex['query'][:60]}")
 
+    if args.strategy in ("few_shot_text", "all"):
+        run_strategy(
+            "few_shot_text",
+            lambda q: run_text_baseline(client, args.model, q, tools, examples=few_shot_with_tools),
+            test_queries, valid_tool_names, args.model,
+        )
+
+    if args.strategy in ("few_shot_tcr", "all"):
         run_strategy(
             "few_shot_tcr",
             lambda q: run_zero_shot_tcr(client, args.model, q, type_names, adj, examples=few_shot),
