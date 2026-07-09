@@ -1,12 +1,12 @@
 {
   "model": "gemini-2.5-flash",
-  "strategy": "few_shot_text",
+  "strategy": "few_shot_tcr",
   "n_tools": 536,
   "n_queries": 120,
-  "precision": 0.8108333333333333,
-  "recall": 0.8083333333333333,
-  "f1": 0.795959595959596,
-  "hallucinated_total": 1,
+  "precision": 0.8,
+  "recall": 0.7833333333333333,
+  "f1": 0.788888888888889,
+  "hallucinated_total": 0,
   "per_query": [
     {
       "id": "list_customers",
@@ -22,7 +22,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Customer",
+      "exp_src": "Platform",
+      "exp_tgt": "Customer",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "list_invoices",
@@ -38,7 +44,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Invoice",
+      "exp_src": "Platform",
+      "exp_tgt": "Invoice",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "list_payment_intents",
@@ -54,7 +66,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "PaymentIntent",
+      "exp_src": "Platform",
+      "exp_tgt": "PaymentIntent",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "list_subscriptions",
@@ -70,7 +88,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Subscription",
+      "exp_src": "Platform",
+      "exp_tgt": "Subscription",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "list_charges",
@@ -86,7 +110,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Charge",
+      "exp_src": "Platform",
+      "exp_tgt": "Charge",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "list_products",
@@ -102,7 +132,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Product",
+      "exp_src": "Platform",
+      "exp_tgt": "Product",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "list_prices",
@@ -118,7 +154,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Price",
+      "exp_src": "Platform",
+      "exp_tgt": "Price",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "list_payouts",
@@ -126,15 +168,19 @@
       "expected": [
         "GetPayouts"
       ],
-      "predicted": [
-        "GetPayouts"
-      ],
+      "predicted": [],
       "hallucinated": [],
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "BankAccount",
+      "pred_tgt": "Payout",
+      "exp_src": "Platform",
+      "exp_tgt": "Payout",
+      "src_ok": false,
+      "tgt_ok": true
     },
     {
       "id": "list_refunds",
@@ -150,7 +196,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Refund",
+      "exp_src": "Platform",
+      "exp_tgt": "Refund",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "list_disputes",
@@ -166,7 +218,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Dispute",
+      "exp_src": "Platform",
+      "exp_tgt": "Dispute",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "list_coupons",
@@ -182,7 +240,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Coupon",
+      "exp_src": "Platform",
+      "exp_tgt": "Coupon",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "list_connected_accounts",
@@ -191,14 +255,20 @@
         "GetAccount"
       ],
       "predicted": [
-        "GetAccounts"
+        "GetAccount"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Account",
+      "exp_src": "Platform",
+      "exp_tgt": "Account",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "list_balance_transactions",
@@ -214,7 +284,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "BalanceTransaction",
+      "exp_src": "Platform",
+      "exp_tgt": "BalanceTransaction",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "list_webhook_endpoints",
@@ -230,7 +306,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "WebhookEndpoint",
+      "exp_src": "Platform",
+      "exp_tgt": "WebhookEndpoint",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "list_events",
@@ -246,7 +328,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Event",
+      "exp_src": "Platform",
+      "exp_tgt": "Event",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "customer_payment_methods",
@@ -262,7 +350,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "PaymentMethod",
+      "exp_src": "Customer",
+      "exp_tgt": "PaymentMethod",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "customer_subscriptions",
@@ -271,14 +365,20 @@
         "DeleteCustomersCustomerSubscriptionsSubscriptionExposedId"
       ],
       "predicted": [
-        "GetCustomersCustomerSubscriptions"
+        "DeleteCustomersCustomerSubscriptionsSubscriptionExposedId"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 5,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "Subscription",
+      "exp_src": "Customer",
+      "exp_tgt": "Subscription",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "customer_tax_ids",
@@ -294,7 +394,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "TaxId",
+      "exp_src": "Customer",
+      "exp_tgt": "TaxId",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "invoice_lines",
@@ -310,7 +416,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Invoice",
+      "pred_tgt": "LineItem",
+      "exp_src": "Invoice",
+      "exp_tgt": "LineItem",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "charge_refunds",
@@ -326,7 +438,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 4,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Charge",
+      "pred_tgt": "Refund",
+      "exp_src": "Charge",
+      "exp_tgt": "Refund",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_transfers",
@@ -342,7 +460,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Transfer",
+      "exp_src": "Platform",
+      "exp_tgt": "Transfer",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_subscription_schedules",
@@ -350,15 +474,19 @@
       "expected": [
         "GetSubscriptionSchedules"
       ],
-      "predicted": [
-        "GetSubscriptionSchedules"
-      ],
+      "predicted": [],
       "hallucinated": [],
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Account",
+      "pred_tgt": "SubscriptionSchedule",
+      "exp_src": "Platform",
+      "exp_tgt": "SubscriptionSchedule",
+      "src_ok": false,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_setup_intents",
@@ -374,7 +502,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "SetupIntent",
+      "exp_src": "Platform",
+      "exp_tgt": "SetupIntent",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_quotes",
@@ -390,7 +524,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Quote",
+      "exp_src": "Platform",
+      "exp_tgt": "Quote",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_promotion_codes",
@@ -406,7 +546,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "PromotionCode",
+      "exp_src": "Platform",
+      "exp_tgt": "PromotionCode",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_shipping_rates",
@@ -422,7 +568,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "ShippingRate",
+      "exp_src": "Platform",
+      "exp_tgt": "ShippingRate",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_payment_links",
@@ -438,7 +590,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "PaymentLink",
+      "exp_src": "Platform",
+      "exp_tgt": "PaymentLink",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_plans",
@@ -454,7 +612,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Plan",
+      "exp_src": "Platform",
+      "exp_tgt": "Plan",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_invoice_items",
@@ -470,7 +634,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Invoiceitem",
+      "exp_src": "Platform",
+      "exp_tgt": "Invoiceitem",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_app_fees",
@@ -486,7 +656,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "ApplicationFee",
+      "exp_src": "Platform",
+      "exp_tgt": "ApplicationFee",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_tax_ids",
@@ -502,7 +678,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "TaxId",
+      "exp_src": "Platform",
+      "exp_tgt": "TaxId",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_topups",
@@ -518,7 +700,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Topup",
+      "exp_src": "Platform",
+      "exp_tgt": "Topup",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_credit_notes",
@@ -534,7 +722,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "CreditNote",
+      "exp_src": "Platform",
+      "exp_tgt": "CreditNote",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_tax_rates",
@@ -550,7 +744,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "TaxRate",
+      "exp_src": "Platform",
+      "exp_tgt": "TaxRate",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_terminal_readers",
@@ -566,7 +766,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "TerminalReader",
+      "exp_src": "Platform",
+      "exp_tgt": "TerminalReader",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_terminal_locations",
@@ -582,7 +788,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "TerminalLocation",
+      "exp_src": "Platform",
+      "exp_tgt": "TerminalLocation",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_issuing_cards",
@@ -598,7 +810,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "IssuingCard",
+      "exp_src": "Platform",
+      "exp_tgt": "IssuingCard",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_radar_value_lists",
@@ -607,14 +825,20 @@
         "GetRadarValueLists"
       ],
       "predicted": [
-        "GetRadarValueLists"
+        "GetRadarValueListsValueList"
       ],
       "hallucinated": [],
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Radar",
+      "pred_tgt": "RadarValueList",
+      "exp_src": "Platform",
+      "exp_tgt": "RadarValueList",
+      "src_ok": false,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_billing_meters",
@@ -630,7 +854,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "BillingMeter",
+      "exp_src": "Platform",
+      "exp_tgt": "BillingMeter",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_exchange_rates",
@@ -646,7 +876,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "ExchangeRate",
+      "exp_src": "Platform",
+      "exp_tgt": "ExchangeRate",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_customer_cash_balance",
@@ -662,7 +898,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "CashBalance",
+      "exp_src": "Customer",
+      "exp_tgt": "CashBalance",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_customer_discount",
@@ -678,7 +920,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "Discount",
+      "exp_src": "Customer",
+      "exp_tgt": "Discount",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_checkout_sessions",
@@ -694,7 +942,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "CheckoutSession",
+      "exp_src": "Platform",
+      "exp_tgt": "CheckoutSession",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_files",
@@ -710,7 +964,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "File",
+      "exp_src": "Platform",
+      "exp_tgt": "File",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "clean_list_subscription_items",
@@ -726,7 +986,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "SubscriptionItem",
+      "exp_src": "Platform",
+      "exp_tgt": "SubscriptionItem",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "customer_cash_balance_txns",
@@ -742,7 +1008,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "CustomerCashBalanceTransaction",
+      "exp_src": "Customer",
+      "exp_tgt": "CustomerCashBalanceTransaction",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "charge_dispute_details",
@@ -758,7 +1030,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Charge",
+      "pred_tgt": "Dispute",
+      "exp_src": "Charge",
+      "exp_tgt": "Dispute",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "account_capabilities",
@@ -774,7 +1052,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Account",
+      "pred_tgt": "Capability",
+      "exp_src": "Account",
+      "exp_tgt": "Capability",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "account_external_accounts",
@@ -783,16 +1067,20 @@
         "GetAccountsAccountBankAccountsId"
       ],
       "predicted": [
-        "GetAccountsAccountBankAccounts"
+        "GetAccountsAccountBankAccountsId"
       ],
-      "hallucinated": [
-        "GetAccountsAccountBankAccounts"
-      ],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 7,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Account",
+      "pred_tgt": "ExternalAccount",
+      "exp_src": "Account",
+      "exp_tgt": "ExternalAccount",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "product_features",
@@ -808,7 +1096,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Product",
+      "pred_tgt": "ProductFeature",
+      "exp_src": "Product",
+      "exp_tgt": "ProductFeature",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "customer_balance_transactions",
@@ -816,15 +1110,19 @@
       "expected": [
         "GetCustomersCustomerBalanceTransactions"
       ],
-      "predicted": [
-        "GetCustomersCustomerBalanceTransactions"
-      ],
+      "predicted": [],
       "hallucinated": [],
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 4,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Customer",
+      "pred_tgt": "BalanceTransaction",
+      "exp_src": "Customer",
+      "exp_tgt": "CustomerBalanceTransaction",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "transfer_reversals",
@@ -840,7 +1138,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 4,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Transfer",
+      "pred_tgt": "TransferReversal",
+      "exp_src": "Transfer",
+      "exp_tgt": "TransferReversal",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multihop_platform_capabilities",
@@ -850,14 +1154,20 @@
         "GetAccountsAccountCapabilities"
       ],
       "predicted": [
-        "GetAccount"
+        "GetAccountsAccountCapabilities"
       ],
       "hallucinated": [],
       "precision": 1.0,
       "recall": 0.5,
       "f1": 0.6666666666666666,
       "candidates": 6,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Account",
+      "pred_tgt": "Capability",
+      "exp_src": "Platform",
+      "exp_tgt": "Capability",
+      "src_ok": false,
+      "tgt_ok": true
     },
     {
       "id": "multihop_platform_people",
@@ -867,14 +1177,21 @@
         "GetAccountsAccountPeople"
       ],
       "predicted": [
-        "GetAccount"
+        "GetAccount",
+        "GetAccountsAccountPeople"
       ],
       "hallucinated": [],
       "precision": 1.0,
-      "recall": 0.5,
-      "f1": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 11,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Person",
+      "exp_src": "Platform",
+      "exp_tgt": "Person",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multihop_platform_transfer_reversals",
@@ -892,7 +1209,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 6,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "TransferReversal",
+      "exp_src": "Platform",
+      "exp_tgt": "TransferReversal",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multihop_platform_fee_refunds",
@@ -901,16 +1224,19 @@
         "GetApplicationFees",
         "GetApplicationFeesFeeRefundsId"
       ],
-      "predicted": [
-        "GetApplicationFees",
-        "GetApplicationFeesIdRefunds"
-      ],
+      "predicted": [],
       "hallucinated": [],
-      "precision": 0.5,
-      "recall": 0.5,
-      "f1": 0.5,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 5,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "ApplicationFee",
+      "pred_tgt": "Refund",
+      "exp_src": "Platform",
+      "exp_tgt": "FeeRefund",
+      "src_ok": false,
+      "tgt_ok": false
     },
     {
       "id": "multihop_platform_product_features",
@@ -920,14 +1246,21 @@
         "GetProductsProductFeatures"
       ],
       "predicted": [
+        "GetProducts",
         "GetProductsProductFeatures"
       ],
       "hallucinated": [],
       "precision": 1.0,
-      "recall": 0.5,
-      "f1": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 5,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "ProductFeature",
+      "exp_src": "Platform",
+      "exp_tgt": "ProductFeature",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multihop_platform_invoice_lines",
@@ -945,7 +1278,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 5,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "LineItem",
+      "exp_src": "Platform",
+      "exp_tgt": "LineItem",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multihop_platform_customer_balances",
@@ -955,14 +1294,21 @@
         "GetCustomersCustomerBalanceTransactions"
       ],
       "predicted": [
+        "GetCustomers",
         "GetCustomersCustomerBalanceTransactions"
       ],
       "hallucinated": [],
       "precision": 1.0,
-      "recall": 0.5,
-      "f1": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 6,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "CustomerBalanceTransaction",
+      "exp_src": "Platform",
+      "exp_tgt": "CustomerBalanceTransaction",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multihop_platform_external_accounts",
@@ -973,14 +1319,20 @@
       ],
       "predicted": [
         "GetAccount",
-        "GetAccountsAccountExternalAccounts"
+        "GetAccountsAccountBankAccountsId"
       ],
       "hallucinated": [],
-      "precision": 0.5,
-      "recall": 0.5,
-      "f1": 0.5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 10,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "ExternalAccount",
+      "exp_src": "Platform",
+      "exp_tgt": "ExternalAccount",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multihop_platform_login_link",
@@ -997,7 +1349,13 @@
       "recall": 0.5,
       "f1": 0.6666666666666666,
       "candidates": 4,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Account",
+      "pred_tgt": "LoginLink",
+      "exp_src": "Platform",
+      "exp_tgt": "LoginLink",
+      "src_ok": false,
+      "tgt_ok": true
     },
     {
       "id": "multihop_platform_payment_link_items",
@@ -1014,7 +1372,13 @@
       "recall": 0.5,
       "f1": 0.6666666666666666,
       "candidates": 7,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "PaymentLink",
+      "pred_tgt": "Item",
+      "exp_src": "Platform",
+      "exp_tgt": "Item",
+      "src_ok": false,
+      "tgt_ok": true
     },
     {
       "id": "multihop_platform_quote_pdf",
@@ -1031,7 +1395,13 @@
       "recall": 0.5,
       "f1": 0.6666666666666666,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Quote",
+      "pred_tgt": "Pdf",
+      "exp_src": "Platform",
+      "exp_tgt": "Pdf",
+      "src_ok": false,
+      "tgt_ok": true
     },
     {
       "id": "multihop_customer_payment_sources",
@@ -1040,14 +1410,20 @@
         "GetCustomersCustomerSourcesId"
       ],
       "predicted": [
-        "GetCustomersCustomerSources"
+        "GetCustomersCustomerSourcesId"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 4,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "PaymentSource",
+      "exp_src": "Customer",
+      "exp_tgt": "PaymentSource",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_payments",
@@ -1056,14 +1432,20 @@
         "GetPaymentIntents"
       ],
       "predicted": [
-        "GetCharges"
+        "PostPaymentRecordsReportPayment"
       ],
       "hallucinated": [],
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
       "candidates": 2,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Platform",
+      "pred_tgt": "PaymentRecord",
+      "exp_src": "Platform",
+      "exp_tgt": "PaymentIntent",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "synonym_bills",
@@ -1079,7 +1461,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Invoice",
+      "exp_src": "Platform",
+      "exp_tgt": "Invoice",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_chargebacks",
@@ -1095,7 +1483,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Dispute",
+      "exp_src": "Platform",
+      "exp_tgt": "Dispute",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_bank_transfers",
@@ -1104,14 +1498,20 @@
         "GetPayouts"
       ],
       "predicted": [
-        "GetTreasuryOutboundTransfers"
+        "GetTransfers"
       ],
       "hallucinated": [],
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
       "candidates": 2,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Transfer",
+      "exp_src": "Platform",
+      "exp_tgt": "Payout",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "synonym_cards_on_file",
@@ -1120,14 +1520,20 @@
         "GetCustomersCustomerPaymentMethods"
       ],
       "predicted": [
-        "GetCustomersCustomerCards"
+        "DeleteCustomersCustomerCardsId"
       ],
       "hallucinated": [],
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
       "candidates": 2,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Customer",
+      "pred_tgt": "Card",
+      "exp_src": "Customer",
+      "exp_tgt": "PaymentMethod",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "synonym_recurring_plans",
@@ -1135,15 +1541,19 @@
       "expected": [
         "DeleteCustomersCustomerSubscriptionsSubscriptionExposedId"
       ],
-      "predicted": [
-        "GetCustomersCustomerSubscriptions"
-      ],
+      "predicted": [],
       "hallucinated": [],
-      "precision": 0.0,
+      "precision": 0,
       "recall": 0.0,
       "f1": 0,
       "candidates": 5,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Customer",
+      "pred_tgt": "Plan",
+      "exp_src": "Customer",
+      "exp_tgt": "Subscription",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "synonym_marketplace_accounts",
@@ -1152,14 +1562,20 @@
         "GetAccount"
       ],
       "predicted": [
-        "GetAccounts"
+        "GetAccount"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Account",
+      "exp_src": "Platform",
+      "exp_tgt": "Account",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_transactions",
@@ -1168,14 +1584,20 @@
         "GetBalanceHistory"
       ],
       "predicted": [
-        "GetBalanceTransactions"
+        "GetBalanceHistory"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "BalanceTransaction",
+      "exp_src": "Platform",
+      "exp_tgt": "BalanceTransaction",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_discounts",
@@ -1191,7 +1613,13 @@
       "recall": 0.0,
       "f1": 0,
       "candidates": 2,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Platform",
+      "pred_tgt": "PromotionCode",
+      "exp_src": "Platform",
+      "exp_tgt": "Coupon",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "synonym_promo_offers",
@@ -1207,7 +1635,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "PromotionCode",
+      "exp_src": "Platform",
+      "exp_tgt": "PromotionCode",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_delivery_costs",
@@ -1223,7 +1657,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "ShippingRate",
+      "exp_src": "Platform",
+      "exp_tgt": "ShippingRate",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_buy_links",
@@ -1232,15 +1672,20 @@
         "GetPaymentLinks"
       ],
       "predicted": [
-        "GetCheckoutSessions",
         "GetPaymentLinks"
       ],
       "hallucinated": [],
-      "precision": 0.5,
+      "precision": 1.0,
       "recall": 1.0,
-      "f1": 0.6666666666666666,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "PaymentLink",
+      "exp_src": "Platform",
+      "exp_tgt": "PaymentLink",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_wire_transfers",
@@ -1256,7 +1701,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Transfer",
+      "exp_src": "Platform",
+      "exp_tgt": "Transfer",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_card_readers",
@@ -1264,15 +1715,19 @@
       "expected": [
         "GetTerminalReaders"
       ],
-      "predicted": [
-        "GetTerminalReaders"
-      ],
+      "predicted": [],
       "hallucinated": [],
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Reader",
+      "exp_src": "Platform",
+      "exp_tgt": "TerminalReader",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "synonym_issued_cards",
@@ -1288,7 +1743,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "IssuingCard",
+      "exp_src": "Platform",
+      "exp_tgt": "IssuingCard",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_fraud_warnings",
@@ -1304,7 +1765,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "RadarEarlyFraudWarning",
+      "exp_src": "Platform",
+      "exp_tgt": "RadarEarlyFraudWarning",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_usage_meters",
@@ -1320,7 +1787,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "BillingMeter",
+      "exp_src": "Platform",
+      "exp_tgt": "BillingMeter",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "synonym_credit_memos",
@@ -1328,15 +1801,19 @@
       "expected": [
         "GetCreditNotes"
       ],
-      "predicted": [
-        "GetCreditNotes"
-      ],
+      "predicted": [],
       "hallucinated": [],
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Customer",
+      "pred_tgt": "CreditNote",
+      "exp_src": "Platform",
+      "exp_tgt": "CreditNote",
+      "src_ok": false,
+      "tgt_ok": true
     },
     {
       "id": "synonym_subscription_tiers",
@@ -1345,15 +1822,20 @@
         "GetPlans"
       ],
       "predicted": [
-        "GetPrices",
-        "GetPlans"
+        "GetPrices"
       ],
       "hallucinated": [],
-      "precision": 0.5,
-      "recall": 1.0,
-      "f1": 0.6666666666666666,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 2,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 0.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Price",
+      "exp_src": "Platform",
+      "exp_tgt": "Plan",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "synonym_customer_credits",
@@ -1361,15 +1843,19 @@
       "expected": [
         "GetCustomersCustomerCashBalance"
       ],
-      "predicted": [
-        "GetCustomersCustomerCashBalance"
-      ],
+      "predicted": [],
       "hallucinated": [],
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Customer",
+      "pred_tgt": "BillingCreditBalanceSummary",
+      "exp_src": "Customer",
+      "exp_tgt": "CashBalance",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "synonym_fx_rates",
@@ -1385,7 +1871,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "ExchangeRate",
+      "exp_src": "Platform",
+      "exp_tgt": "ExchangeRate",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "ambiguous_money_in",
@@ -1394,8 +1886,6 @@
         "GetBalanceHistory"
       ],
       "predicted": [
-        "GetBalanceTransactions",
-        "GetCharges",
         "GetTopups"
       ],
       "hallucinated": [],
@@ -1403,7 +1893,13 @@
       "recall": 0.0,
       "f1": 0,
       "candidates": 2,
-      "graph_valid_precision": 0.3333333333333333
+      "graph_valid_precision": 0.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Topup",
+      "exp_src": "Platform",
+      "exp_tgt": "BalanceTransaction",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "ambiguous_customer_activity",
@@ -1419,7 +1915,13 @@
       "recall": 0.0,
       "f1": 0,
       "candidates": 4,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Customer",
+      "pred_tgt": "Customer",
+      "exp_src": "Customer",
+      "exp_tgt": "CustomerBalanceTransaction",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "ambiguous_revenue",
@@ -1435,7 +1937,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Balance",
+      "exp_src": "Platform",
+      "exp_tgt": "Balance",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "ambiguous_whats_selling",
@@ -1444,14 +1952,20 @@
         "GetProducts"
       ],
       "predicted": [
-        "GetCharges"
+        "GetProducts"
       ],
       "hallucinated": [],
-      "precision": 0.0,
-      "recall": 0.0,
-      "f1": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Product",
+      "exp_src": "Platform",
+      "exp_tgt": "Product",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "ambiguous_customer_owes",
@@ -1459,16 +1973,19 @@
       "expected": [
         "GetCustomersCustomerBalanceTransactions"
       ],
-      "predicted": [
-        "GetCustomersCustomer",
-        "GetInvoices"
-      ],
+      "predicted": [],
       "hallucinated": [],
-      "precision": 0.0,
+      "precision": 0,
       "recall": 0.0,
       "f1": 0,
       "candidates": 4,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Customer",
+      "pred_tgt": "Invoice",
+      "exp_src": "Customer",
+      "exp_tgt": "CustomerBalanceTransaction",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "ambiguous_whats_pending",
@@ -1477,23 +1994,20 @@
         "GetPaymentIntents"
       ],
       "predicted": [
-        "GetBalance",
-        "GetPaymentIntents",
-        "GetPayouts",
-        "GetTransfers",
-        "GetCharges",
-        "GetRefunds",
-        "GetDisputes",
-        "GetReviews",
-        "GetAccounts",
-        "GetIdentityVerificationSessions"
+        "GetBalance"
       ],
       "hallucinated": [],
-      "precision": 0.1,
-      "recall": 1.0,
-      "f1": 0.18181818181818182,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 2,
-      "graph_valid_precision": 0.1
+      "graph_valid_precision": 0.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Balance",
+      "exp_src": "Platform",
+      "exp_tgt": "PaymentIntent",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "ambiguous_how_do_we_charge",
@@ -1509,7 +2023,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Price",
+      "exp_src": "Platform",
+      "exp_tgt": "Price",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "ambiguous_customer_deal",
@@ -1517,15 +2037,19 @@
       "expected": [
         "GetCustomersCustomerDiscount"
       ],
-      "predicted": [
-        "GetCustomersCustomerDiscount"
-      ],
+      "predicted": [],
       "hallucinated": [],
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Customer",
+      "pred_tgt": "PromotionCode",
+      "exp_src": "Customer",
+      "exp_tgt": "Discount",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "ambiguous_account_status",
@@ -1541,7 +2065,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Account",
+      "pred_tgt": "Capability",
+      "exp_src": "Account",
+      "exp_tgt": "Capability",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "ambiguous_saved_methods",
@@ -1557,7 +2087,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "PaymentMethod",
+      "exp_src": "Customer",
+      "exp_tgt": "PaymentMethod",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "ambiguous_recent_problems",
@@ -1573,7 +2109,13 @@
       "recall": 0.0,
       "f1": 0,
       "candidates": 1,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Charge",
+      "exp_src": "Platform",
+      "exp_tgt": "Dispute",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "ambiguous_where_money_goes",
@@ -1582,18 +2124,20 @@
         "GetPayouts"
       ],
       "predicted": [
-        "GetPayouts",
-        "GetRefunds",
-        "GetTransfers",
-        "GetTreasuryOutboundPayments",
-        "GetTreasuryOutboundTransfers"
+        "GetBalanceHistory"
       ],
       "hallucinated": [],
-      "precision": 0.2,
-      "recall": 1.0,
-      "f1": 0.33333333333333337,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 2,
-      "graph_valid_precision": 0.2
+      "graph_valid_precision": 0.0,
+      "pred_src": "Platform",
+      "pred_tgt": "BalanceTransaction",
+      "exp_src": "Platform",
+      "exp_tgt": "Payout",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "ambiguous_subscription_future",
@@ -1609,7 +2153,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "SubscriptionSchedule",
+      "exp_src": "Platform",
+      "exp_tgt": "SubscriptionSchedule",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "ambiguous_tax_compliance",
@@ -1617,16 +2167,19 @@
       "expected": [
         "GetTaxRates"
       ],
-      "predicted": [
-        "GetTaxSettings",
-        "GetTaxRegistrations"
-      ],
+      "predicted": [],
       "hallucinated": [],
-      "precision": 0.0,
+      "precision": 0,
       "recall": 0.0,
       "f1": 0,
       "candidates": 2,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Tax",
+      "exp_src": "Platform",
+      "exp_tgt": "TaxRate",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "ambiguous_who_are_reps",
@@ -1635,15 +2188,20 @@
         "GetAccountsAccountPeople"
       ],
       "predicted": [
-        "GetAccountsAccountPeople",
-        "GetAccountsAccountPersons"
+        "GetAccountsAccountPeople"
       ],
       "hallucinated": [],
-      "precision": 0.5,
+      "precision": 1.0,
       "recall": 1.0,
-      "f1": 0.6666666666666666,
+      "f1": 1.0,
       "candidates": 8,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Account",
+      "pred_tgt": "Person",
+      "exp_src": "Account",
+      "exp_tgt": "Person",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_refund_check",
@@ -1659,7 +2217,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Refund",
+      "exp_src": "Platform",
+      "exp_tgt": "Refund",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_failed_payment",
@@ -1675,7 +2239,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "PaymentIntent",
+      "exp_src": "Platform",
+      "exp_tgt": "PaymentIntent",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_subscription_cancel",
@@ -1684,15 +2254,20 @@
         "GetSubscriptions"
       ],
       "predicted": [
-        "GetCustomers",
-        "GetCustomersCustomerSubscriptions"
+        "GetCustomers"
       ],
       "hallucinated": [],
       "precision": 0.0,
       "recall": 0.0,
       "f1": 0,
       "candidates": 2,
-      "graph_valid_precision": 0.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Customer",
+      "exp_src": "Platform",
+      "exp_tgt": "Subscription",
+      "src_ok": true,
+      "tgt_ok": false
     },
     {
       "id": "noisy_dispute_deadline",
@@ -1708,7 +2283,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Dispute",
+      "exp_src": "Platform",
+      "exp_tgt": "Dispute",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_payout_missing",
@@ -1724,7 +2305,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Payout",
+      "exp_src": "Platform",
+      "exp_tgt": "Payout",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_webhook_broken",
@@ -1740,7 +2327,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "WebhookEndpoint",
+      "exp_src": "Platform",
+      "exp_tgt": "WebhookEndpoint",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_coupon_expired",
@@ -1756,7 +2349,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Coupon",
+      "exp_src": "Platform",
+      "exp_tgt": "Coupon",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_transfer_audit",
@@ -1772,7 +2371,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Transfer",
+      "exp_src": "Platform",
+      "exp_tgt": "Transfer",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_terminal_offline",
@@ -1781,14 +2386,20 @@
         "GetTerminalReaders"
       ],
       "predicted": [
-        "GetTerminalReaders"
+        "PostTerminalReadersReaderCancelAction"
       ],
       "hallucinated": [],
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1": 1.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 0.0,
+      "pred_src": "Terminal",
+      "pred_tgt": "TerminalReader",
+      "exp_src": "Platform",
+      "exp_tgt": "TerminalReader",
+      "src_ok": false,
+      "tgt_ok": true
     },
     {
       "id": "noisy_customer_vat",
@@ -1804,7 +2415,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "TaxId",
+      "exp_src": "Customer",
+      "exp_tgt": "TaxId",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_setup_intent_fail",
@@ -1820,7 +2437,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "SetupIntent",
+      "exp_src": "Platform",
+      "exp_tgt": "SetupIntent",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_balance_wrong",
@@ -1836,7 +2459,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 1,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Balance",
+      "exp_src": "Platform",
+      "exp_tgt": "Balance",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_invoice_items",
@@ -1852,7 +2481,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Invoiceitem",
+      "exp_src": "Platform",
+      "exp_tgt": "Invoiceitem",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_product_features_check",
@@ -1861,15 +2496,20 @@
         "GetProductsProductFeatures"
       ],
       "predicted": [
-        "GetProducts",
         "GetProductsProductFeatures"
       ],
       "hallucinated": [],
-      "precision": 0.5,
+      "precision": 1.0,
       "recall": 1.0,
-      "f1": 0.6666666666666666,
+      "f1": 1.0,
       "candidates": 3,
-      "graph_valid_precision": 0.5
+      "graph_valid_precision": 1.0,
+      "pred_src": "Product",
+      "pred_tgt": "ProductFeature",
+      "exp_src": "Product",
+      "exp_tgt": "ProductFeature",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "noisy_promo_leak",
@@ -1885,7 +2525,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 2,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "PromotionCode",
+      "exp_src": "Platform",
+      "exp_tgt": "PromotionCode",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multipath_account_person",
@@ -1901,7 +2547,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 8,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Account",
+      "pred_tgt": "Person",
+      "exp_src": "Account",
+      "exp_tgt": "Person",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multipath_platform_discount",
@@ -1911,14 +2563,21 @@
         "GetCustomersCustomerDiscount"
       ],
       "predicted": [
+        "GetCustomers",
         "GetCustomersCustomerDiscount"
       ],
       "hallucinated": [],
       "precision": 1.0,
-      "recall": 0.5,
-      "f1": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 1.0,
       "candidates": 4,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Discount",
+      "exp_src": "Platform",
+      "exp_tgt": "Discount",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multipath_platform_cash_balance",
@@ -1936,7 +2595,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 4,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "CashBalance",
+      "exp_src": "Platform",
+      "exp_tgt": "CashBalance",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multipath_charge_refund_vs_platform",
@@ -1952,7 +2617,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 4,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Charge",
+      "pred_tgt": "Refund",
+      "exp_src": "Charge",
+      "exp_tgt": "Refund",
+      "src_ok": true,
+      "tgt_ok": true
     },
     {
       "id": "multipath_customer_balance_txn",
@@ -1968,7 +2639,13 @@
       "recall": 1.0,
       "f1": 1.0,
       "candidates": 4,
-      "graph_valid_precision": 1.0
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "CustomerBalanceTransaction",
+      "exp_src": "Customer",
+      "exp_tgt": "CustomerBalanceTransaction",
+      "src_ok": true,
+      "tgt_ok": true
     }
   ]
 }

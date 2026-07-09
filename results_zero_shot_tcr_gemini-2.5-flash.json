@@ -1,0 +1,2597 @@
+{
+  "model": "gemini-2.5-flash",
+  "strategy": "zero_shot_tcr",
+  "n_tools": 536,
+  "n_queries": 120,
+  "precision": 0.3333333333333333,
+  "recall": 0.3,
+  "f1": 0.3111111111111111,
+  "hallucinated_total": 0,
+  "per_query": [
+    {
+      "id": "list_customers",
+      "category": "clean",
+      "expected": [
+        "GetCustomers"
+      ],
+      "predicted": [
+        "GetCustomersCustomer"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Customer",
+      "pred_tgt": "Customer",
+      "exp_src": "Platform",
+      "exp_tgt": "Customer",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "list_invoices",
+      "category": "clean",
+      "expected": [
+        "GetInvoices"
+      ],
+      "predicted": [
+        "GetInvoices"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 3,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Invoice",
+      "exp_src": "Platform",
+      "exp_tgt": "Invoice",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "list_payment_intents",
+      "category": "clean",
+      "expected": [
+        "GetPaymentIntents"
+      ],
+      "predicted": [
+        "GetPaymentIntentsIntent"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "PaymentIntent",
+      "pred_tgt": "PaymentIntent",
+      "exp_src": "Platform",
+      "exp_tgt": "PaymentIntent",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "list_subscriptions",
+      "category": "clean",
+      "expected": [
+        "GetSubscriptions"
+      ],
+      "predicted": [
+        "GetSubscriptionsSubscriptionExposedId"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Subscription",
+      "pred_tgt": "Subscription",
+      "exp_src": "Platform",
+      "exp_tgt": "Subscription",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "list_charges",
+      "category": "clean",
+      "expected": [
+        "GetCharges"
+      ],
+      "predicted": [
+        "GetChargesCharge"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Charge",
+      "pred_tgt": "Charge",
+      "exp_src": "Platform",
+      "exp_tgt": "Charge",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "list_products",
+      "category": "clean",
+      "expected": [
+        "GetProducts"
+      ],
+      "predicted": [
+        "GetProductsId"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Product",
+      "pred_tgt": "Product",
+      "exp_src": "Platform",
+      "exp_tgt": "Product",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "list_prices",
+      "category": "clean",
+      "expected": [
+        "GetPrices"
+      ],
+      "predicted": [
+        "GetPrices"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 2,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Price",
+      "exp_src": "Platform",
+      "exp_tgt": "Price",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "list_payouts",
+      "category": "clean",
+      "expected": [
+        "GetPayouts"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "BankAccount",
+      "pred_tgt": "Payout",
+      "exp_src": "Platform",
+      "exp_tgt": "Payout",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "list_refunds",
+      "category": "clean",
+      "expected": [
+        "GetRefunds"
+      ],
+      "predicted": [
+        "GetRefundsRefund"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Refund",
+      "pred_tgt": "Refund",
+      "exp_src": "Platform",
+      "exp_tgt": "Refund",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "list_disputes",
+      "category": "clean",
+      "expected": [
+        "GetDisputes"
+      ],
+      "predicted": [
+        "GetDisputesDispute"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 1,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Dispute",
+      "pred_tgt": "Dispute",
+      "exp_src": "Platform",
+      "exp_tgt": "Dispute",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "list_coupons",
+      "category": "clean",
+      "expected": [
+        "GetCoupons"
+      ],
+      "predicted": [
+        "GetCouponsCoupon"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Coupon",
+      "pred_tgt": "Coupon",
+      "exp_src": "Platform",
+      "exp_tgt": "Coupon",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "list_connected_accounts",
+      "category": "clean",
+      "expected": [
+        "GetAccount"
+      ],
+      "predicted": [
+        "GetAccount"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 3,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Account",
+      "exp_src": "Platform",
+      "exp_tgt": "Account",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "list_balance_transactions",
+      "category": "clean",
+      "expected": [
+        "GetBalanceHistory"
+      ],
+      "predicted": [
+        "GetBalanceHistoryId"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Balance",
+      "pred_tgt": "BalanceTransaction",
+      "exp_src": "Platform",
+      "exp_tgt": "BalanceTransaction",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "list_webhook_endpoints",
+      "category": "clean",
+      "expected": [
+        "GetWebhookEndpoints"
+      ],
+      "predicted": [
+        "GetWebhookEndpointsWebhookEndpoint"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "WebhookEndpoint",
+      "pred_tgt": "WebhookEndpoint",
+      "exp_src": "Platform",
+      "exp_tgt": "WebhookEndpoint",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "list_events",
+      "category": "clean",
+      "expected": [
+        "GetEvents"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 1,
+      "graph_valid_precision": 0.0,
+      "pred_src": "WebhookEndpoint",
+      "pred_tgt": "Event",
+      "exp_src": "Platform",
+      "exp_tgt": "Event",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "customer_payment_methods",
+      "category": "clean",
+      "expected": [
+        "GetCustomersCustomerPaymentMethods"
+      ],
+      "predicted": [
+        "GetCustomersCustomerPaymentMethods"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 2,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "PaymentMethod",
+      "exp_src": "Customer",
+      "exp_tgt": "PaymentMethod",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "customer_subscriptions",
+      "category": "clean",
+      "expected": [
+        "DeleteCustomersCustomerSubscriptionsSubscriptionExposedId"
+      ],
+      "predicted": [
+        "DeleteCustomersCustomerSubscriptionsSubscriptionExposedId"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 5,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "Subscription",
+      "exp_src": "Customer",
+      "exp_tgt": "Subscription",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "customer_tax_ids",
+      "category": "clean",
+      "expected": [
+        "GetCustomersCustomerTaxIds"
+      ],
+      "predicted": [
+        "GetCustomersCustomerTaxIds"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 3,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "TaxId",
+      "exp_src": "Customer",
+      "exp_tgt": "TaxId",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "invoice_lines",
+      "category": "clean",
+      "expected": [
+        "GetInvoicesInvoiceLines"
+      ],
+      "predicted": [
+        "GetInvoicesInvoiceLines"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 2,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Invoice",
+      "pred_tgt": "LineItem",
+      "exp_src": "Invoice",
+      "exp_tgt": "LineItem",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "charge_refunds",
+      "category": "clean",
+      "expected": [
+        "GetChargesChargeRefunds"
+      ],
+      "predicted": [
+        "GetChargesChargeRefunds"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 4,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Charge",
+      "pred_tgt": "Refund",
+      "exp_src": "Charge",
+      "exp_tgt": "Refund",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_list_transfers",
+      "category": "clean",
+      "expected": [
+        "GetTransfers"
+      ],
+      "predicted": [
+        "GetTransfers"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 2,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Transfer",
+      "exp_src": "Platform",
+      "exp_tgt": "Transfer",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_list_subscription_schedules",
+      "category": "clean",
+      "expected": [
+        "GetSubscriptionSchedules"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Account",
+      "pred_tgt": "SubscriptionSchedule",
+      "exp_src": "Platform",
+      "exp_tgt": "SubscriptionSchedule",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_list_setup_intents",
+      "category": "clean",
+      "expected": [
+        "GetSetupIntents"
+      ],
+      "predicted": [
+        "GetSetupIntents"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 2,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "SetupIntent",
+      "exp_src": "Platform",
+      "exp_tgt": "SetupIntent",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_list_quotes",
+      "category": "clean",
+      "expected": [
+        "GetQuotes"
+      ],
+      "predicted": [
+        "GetQuotesQuote"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Quote",
+      "pred_tgt": "Quote",
+      "exp_src": "Platform",
+      "exp_tgt": "Quote",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_list_promotion_codes",
+      "category": "clean",
+      "expected": [
+        "GetPromotionCodes"
+      ],
+      "predicted": [
+        "GetPromotionCodesPromotionCode"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "PromotionCode",
+      "pred_tgt": "PromotionCode",
+      "exp_src": "Platform",
+      "exp_tgt": "PromotionCode",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_list_shipping_rates",
+      "category": "clean",
+      "expected": [
+        "GetShippingRates"
+      ],
+      "predicted": [
+        "GetShippingRatesShippingRateToken"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "ShippingRate",
+      "pred_tgt": "ShippingRate",
+      "exp_src": "Platform",
+      "exp_tgt": "ShippingRate",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_list_payment_links",
+      "category": "clean",
+      "expected": [
+        "GetPaymentLinks"
+      ],
+      "predicted": [
+        "GetPaymentLinks"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 2,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "PaymentLink",
+      "exp_src": "Platform",
+      "exp_tgt": "PaymentLink",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_list_plans",
+      "category": "clean",
+      "expected": [
+        "GetPlans"
+      ],
+      "predicted": [
+        "GetPlans"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 2,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Plan",
+      "exp_src": "Platform",
+      "exp_tgt": "Plan",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_list_invoice_items",
+      "category": "clean",
+      "expected": [
+        "GetInvoiceitems"
+      ],
+      "predicted": [
+        "GetInvoiceitemsInvoiceitem"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Invoiceitem",
+      "pred_tgt": "Invoiceitem",
+      "exp_src": "Platform",
+      "exp_tgt": "Invoiceitem",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_list_app_fees",
+      "category": "clean",
+      "expected": [
+        "GetApplicationFees"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 1,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Account",
+      "pred_tgt": "ApplicationFee",
+      "exp_src": "Platform",
+      "exp_tgt": "ApplicationFee",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_list_tax_ids",
+      "category": "clean",
+      "expected": [
+        "GetTaxIds"
+      ],
+      "predicted": [
+        "GetTaxIdsId"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "TaxId",
+      "pred_tgt": "TaxId",
+      "exp_src": "Platform",
+      "exp_tgt": "TaxId",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_list_topups",
+      "category": "clean",
+      "expected": [
+        "GetTopups"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Topup",
+      "pred_tgt": "Balance",
+      "exp_src": "Platform",
+      "exp_tgt": "Topup",
+      "src_ok": false,
+      "tgt_ok": false
+    },
+    {
+      "id": "clean_list_credit_notes",
+      "category": "clean",
+      "expected": [
+        "GetCreditNotes"
+      ],
+      "predicted": [
+        "GetCreditNotesId"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 3,
+      "graph_valid_precision": 0.0,
+      "pred_src": "CreditNote",
+      "pred_tgt": "CreditNote",
+      "exp_src": "Platform",
+      "exp_tgt": "CreditNote",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_list_tax_rates",
+      "category": "clean",
+      "expected": [
+        "GetTaxRates"
+      ],
+      "predicted": [
+        "GetTaxRatesTaxRate"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "TaxRate",
+      "pred_tgt": "TaxRate",
+      "exp_src": "Platform",
+      "exp_tgt": "TaxRate",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_list_terminal_readers",
+      "category": "clean",
+      "expected": [
+        "GetTerminalReaders"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "TerminalReader",
+      "pred_tgt": "TerminalReader",
+      "exp_src": "Platform",
+      "exp_tgt": "TerminalReader",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_list_terminal_locations",
+      "category": "clean",
+      "expected": [
+        "GetTerminalLocations"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Terminal",
+      "pred_tgt": "TerminalLocation",
+      "exp_src": "Platform",
+      "exp_tgt": "TerminalLocation",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_list_issuing_cards",
+      "category": "clean",
+      "expected": [
+        "GetIssuingCards"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "IssuingCard",
+      "pred_tgt": "IssuingCard",
+      "exp_src": "Platform",
+      "exp_tgt": "IssuingCard",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_list_radar_value_lists",
+      "category": "clean",
+      "expected": [
+        "GetRadarValueLists"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "RadarValueList",
+      "pred_tgt": "RadarValueList",
+      "exp_src": "Platform",
+      "exp_tgt": "RadarValueList",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_list_billing_meters",
+      "category": "clean",
+      "expected": [
+        "GetBillingMeters"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "BillingMeter",
+      "pred_tgt": "BillingMeter",
+      "exp_src": "Platform",
+      "exp_tgt": "BillingMeter",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_list_exchange_rates",
+      "category": "clean",
+      "expected": [
+        "GetExchangeRates"
+      ],
+      "predicted": [
+        "GetExchangeRatesRateId"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 1,
+      "graph_valid_precision": 0.0,
+      "pred_src": "ExchangeRate",
+      "pred_tgt": "ExchangeRate",
+      "exp_src": "Platform",
+      "exp_tgt": "ExchangeRate",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_customer_cash_balance",
+      "category": "clean",
+      "expected": [
+        "GetCustomersCustomerCashBalance"
+      ],
+      "predicted": [
+        "GetCustomersCustomerCashBalance"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 2,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "CashBalance",
+      "exp_src": "Customer",
+      "exp_tgt": "CashBalance",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_customer_discount",
+      "category": "clean",
+      "expected": [
+        "GetCustomersCustomerDiscount"
+      ],
+      "predicted": [
+        "GetCustomersCustomerDiscount"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 2,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "Discount",
+      "exp_src": "Customer",
+      "exp_tgt": "Discount",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_list_checkout_sessions",
+      "category": "clean",
+      "expected": [
+        "GetCheckoutSessions"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "CheckoutSession",
+      "pred_tgt": "CheckoutSession",
+      "exp_src": "Platform",
+      "exp_tgt": "CheckoutSession",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_list_files",
+      "category": "clean",
+      "expected": [
+        "GetFiles"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Account",
+      "pred_tgt": "File",
+      "exp_src": "Platform",
+      "exp_tgt": "File",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "clean_list_subscription_items",
+      "category": "clean",
+      "expected": [
+        "GetSubscriptionItems"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Subscription",
+      "pred_tgt": "SubscriptionItem",
+      "exp_src": "Platform",
+      "exp_tgt": "SubscriptionItem",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "customer_cash_balance_txns",
+      "category": "multihop",
+      "expected": [
+        "GetCustomersCustomerCashBalanceTransactions"
+      ],
+      "predicted": [
+        "GetCustomersCustomerCashBalanceTransactions"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 2,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "CustomerCashBalanceTransaction",
+      "exp_src": "Customer",
+      "exp_tgt": "CustomerCashBalanceTransaction",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "charge_dispute_details",
+      "category": "multihop",
+      "expected": [
+        "GetChargesChargeDispute"
+      ],
+      "predicted": [
+        "GetChargesChargeDispute"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 3,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Charge",
+      "pred_tgt": "Dispute",
+      "exp_src": "Charge",
+      "exp_tgt": "Dispute",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "account_capabilities",
+      "category": "multihop",
+      "expected": [
+        "GetAccountsAccountCapabilities"
+      ],
+      "predicted": [
+        "GetAccountsAccountCapabilities"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 3,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Account",
+      "pred_tgt": "Capability",
+      "exp_src": "Account",
+      "exp_tgt": "Capability",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "account_external_accounts",
+      "category": "multihop",
+      "expected": [
+        "GetAccountsAccountBankAccountsId"
+      ],
+      "predicted": [
+        "GetAccountsAccountBankAccountsId"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 7,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Account",
+      "pred_tgt": "ExternalAccount",
+      "exp_src": "Account",
+      "exp_tgt": "ExternalAccount",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "product_features",
+      "category": "multihop",
+      "expected": [
+        "GetProductsProductFeatures"
+      ],
+      "predicted": [
+        "GetProductsProductFeatures"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 3,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Product",
+      "pred_tgt": "ProductFeature",
+      "exp_src": "Product",
+      "exp_tgt": "ProductFeature",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "customer_balance_transactions",
+      "category": "multihop",
+      "expected": [
+        "GetCustomersCustomerBalanceTransactions"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 4,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Customer",
+      "pred_tgt": "BalanceTransaction",
+      "exp_src": "Customer",
+      "exp_tgt": "CustomerBalanceTransaction",
+      "src_ok": true,
+      "tgt_ok": false
+    },
+    {
+      "id": "transfer_reversals",
+      "category": "multihop",
+      "expected": [
+        "GetTransfersIdReversals"
+      ],
+      "predicted": [
+        "GetTransfersIdReversals"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 4,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Transfer",
+      "pred_tgt": "TransferReversal",
+      "exp_src": "Transfer",
+      "exp_tgt": "TransferReversal",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "multihop_platform_capabilities",
+      "category": "multihop",
+      "expected": [
+        "GetAccount",
+        "GetAccountsAccountCapabilities"
+      ],
+      "predicted": [
+        "GetAccountsAccountCapabilities"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "candidates": 6,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Account",
+      "pred_tgt": "Capability",
+      "exp_src": "Platform",
+      "exp_tgt": "Capability",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "multihop_platform_people",
+      "category": "multihop",
+      "expected": [
+        "GetAccount",
+        "GetAccountsAccountPeople"
+      ],
+      "predicted": [
+        "GetAccountsAccountPeople"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "candidates": 11,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Account",
+      "pred_tgt": "Person",
+      "exp_src": "Platform",
+      "exp_tgt": "Person",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "multihop_platform_transfer_reversals",
+      "category": "multihop",
+      "expected": [
+        "GetTransfers",
+        "GetTransfersIdReversals"
+      ],
+      "predicted": [
+        "GetTransfers",
+        "GetTransfersIdReversals"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 6,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "TransferReversal",
+      "exp_src": "Platform",
+      "exp_tgt": "TransferReversal",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "multihop_platform_fee_refunds",
+      "category": "multihop",
+      "expected": [
+        "GetApplicationFees",
+        "GetApplicationFeesFeeRefundsId"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 5,
+      "graph_valid_precision": 0.0,
+      "pred_src": "ApplicationFee",
+      "pred_tgt": "Refund",
+      "exp_src": "Platform",
+      "exp_tgt": "FeeRefund",
+      "src_ok": false,
+      "tgt_ok": false
+    },
+    {
+      "id": "multihop_platform_product_features",
+      "category": "multihop",
+      "expected": [
+        "GetProducts",
+        "GetProductsProductFeatures"
+      ],
+      "predicted": [
+        "GetProductsProductFeatures"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "candidates": 5,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Product",
+      "pred_tgt": "ProductFeature",
+      "exp_src": "Platform",
+      "exp_tgt": "ProductFeature",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "multihop_platform_invoice_lines",
+      "category": "multihop",
+      "expected": [
+        "GetInvoices",
+        "GetInvoicesInvoiceLines"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 5,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Invoice",
+      "pred_tgt": "Invoiceitem",
+      "exp_src": "Platform",
+      "exp_tgt": "LineItem",
+      "src_ok": false,
+      "tgt_ok": false
+    },
+    {
+      "id": "multihop_platform_customer_balances",
+      "category": "multihop",
+      "expected": [
+        "GetCustomers",
+        "GetCustomersCustomerBalanceTransactions"
+      ],
+      "predicted": [
+        "GetCustomersCustomerBalanceTransactions"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "candidates": 6,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "CustomerBalanceTransaction",
+      "exp_src": "Platform",
+      "exp_tgt": "CustomerBalanceTransaction",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "multihop_platform_external_accounts",
+      "category": "multihop",
+      "expected": [
+        "GetAccount",
+        "GetAccountsAccountBankAccountsId"
+      ],
+      "predicted": [
+        "GetAccountsAccountBankAccountsId"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "candidates": 10,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Account",
+      "pred_tgt": "ExternalAccount",
+      "exp_src": "Platform",
+      "exp_tgt": "ExternalAccount",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "multihop_platform_login_link",
+      "category": "multihop",
+      "expected": [
+        "GetAccount",
+        "PostAccountsAccountLoginLinks"
+      ],
+      "predicted": [
+        "PostAccountsAccountLoginLinks"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "candidates": 4,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Account",
+      "pred_tgt": "LoginLink",
+      "exp_src": "Platform",
+      "exp_tgt": "LoginLink",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "multihop_platform_payment_link_items",
+      "category": "multihop",
+      "expected": [
+        "GetPaymentLinks",
+        "GetPaymentLinksPaymentLinkLineItems"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 7,
+      "graph_valid_precision": 0.0,
+      "pred_src": "PaymentLink",
+      "pred_tgt": "LineItem",
+      "exp_src": "Platform",
+      "exp_tgt": "Item",
+      "src_ok": false,
+      "tgt_ok": false
+    },
+    {
+      "id": "multihop_platform_quote_pdf",
+      "category": "multihop",
+      "expected": [
+        "GetQuotes",
+        "GetQuotesQuotePdf"
+      ],
+      "predicted": [
+        "GetQuotesQuotePdf"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "candidates": 3,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Quote",
+      "pred_tgt": "Pdf",
+      "exp_src": "Platform",
+      "exp_tgt": "Pdf",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "multihop_customer_payment_sources",
+      "category": "multihop",
+      "expected": [
+        "GetCustomersCustomerSourcesId"
+      ],
+      "predicted": [
+        "GetCustomersCustomerSourcesId"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 4,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "PaymentSource",
+      "exp_src": "Customer",
+      "exp_tgt": "PaymentSource",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "synonym_payments",
+      "category": "synonym",
+      "expected": [
+        "GetPaymentIntents"
+      ],
+      "predicted": [
+        "GetPaymentIntentsIntent"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "PaymentIntent",
+      "pred_tgt": "PaymentIntent",
+      "exp_src": "Platform",
+      "exp_tgt": "PaymentIntent",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "synonym_bills",
+      "category": "synonym",
+      "expected": [
+        "GetInvoices"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 3,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Customer",
+      "pred_tgt": "Invoice",
+      "exp_src": "Platform",
+      "exp_tgt": "Invoice",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "synonym_chargebacks",
+      "category": "synonym",
+      "expected": [
+        "GetDisputes"
+      ],
+      "predicted": [
+        "GetDisputesDispute"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 1,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Dispute",
+      "pred_tgt": "Dispute",
+      "exp_src": "Platform",
+      "exp_tgt": "Dispute",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "synonym_bank_transfers",
+      "category": "synonym",
+      "expected": [
+        "GetPayouts"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "TreasuryOutboundTransfer",
+      "pred_tgt": "TreasuryOutboundTransfer",
+      "exp_src": "Platform",
+      "exp_tgt": "Payout",
+      "src_ok": false,
+      "tgt_ok": false
+    },
+    {
+      "id": "synonym_cards_on_file",
+      "category": "synonym",
+      "expected": [
+        "GetCustomersCustomerPaymentMethods"
+      ],
+      "predicted": [
+        "DeleteCustomersCustomerCardsId"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Customer",
+      "pred_tgt": "Card",
+      "exp_src": "Customer",
+      "exp_tgt": "PaymentMethod",
+      "src_ok": true,
+      "tgt_ok": false
+    },
+    {
+      "id": "synonym_recurring_plans",
+      "category": "synonym",
+      "expected": [
+        "DeleteCustomersCustomerSubscriptionsSubscriptionExposedId"
+      ],
+      "predicted": [
+        "DeleteCustomersCustomerSubscriptionsSubscriptionExposedId"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 5,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "Subscription",
+      "exp_src": "Customer",
+      "exp_tgt": "Subscription",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "synonym_marketplace_accounts",
+      "category": "synonym",
+      "expected": [
+        "GetAccount"
+      ],
+      "predicted": [
+        "GetAccountsAccount"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 3,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Account",
+      "pred_tgt": "Account",
+      "exp_src": "Platform",
+      "exp_tgt": "Account",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "synonym_transactions",
+      "category": "synonym",
+      "expected": [
+        "GetBalanceHistory"
+      ],
+      "predicted": [
+        "GetBalanceTransactionsId"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "BalanceTransaction",
+      "pred_tgt": "BalanceTransaction",
+      "exp_src": "Platform",
+      "exp_tgt": "BalanceTransaction",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "synonym_discounts",
+      "category": "synonym",
+      "expected": [
+        "GetCoupons"
+      ],
+      "predicted": [
+        "GetPromotionCodesPromotionCode"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "PromotionCode",
+      "pred_tgt": "PromotionCode",
+      "exp_src": "Platform",
+      "exp_tgt": "Coupon",
+      "src_ok": false,
+      "tgt_ok": false
+    },
+    {
+      "id": "synonym_promo_offers",
+      "category": "synonym",
+      "expected": [
+        "GetPromotionCodes"
+      ],
+      "predicted": [
+        "GetPromotionCodesPromotionCode"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "PromotionCode",
+      "pred_tgt": "PromotionCode",
+      "exp_src": "Platform",
+      "exp_tgt": "PromotionCode",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "synonym_delivery_costs",
+      "category": "synonym",
+      "expected": [
+        "GetShippingRates"
+      ],
+      "predicted": [
+        "GetShippingRatesShippingRateToken"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "ShippingRate",
+      "pred_tgt": "ShippingRate",
+      "exp_src": "Platform",
+      "exp_tgt": "ShippingRate",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "synonym_buy_links",
+      "category": "synonym",
+      "expected": [
+        "GetPaymentLinks"
+      ],
+      "predicted": [
+        "GetPaymentLinksPaymentLink"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "PaymentLink",
+      "pred_tgt": "PaymentLink",
+      "exp_src": "Platform",
+      "exp_tgt": "PaymentLink",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "synonym_wire_transfers",
+      "category": "synonym",
+      "expected": [
+        "GetTransfers"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Transfer",
+      "pred_tgt": "Account",
+      "exp_src": "Platform",
+      "exp_tgt": "Transfer",
+      "src_ok": false,
+      "tgt_ok": false
+    },
+    {
+      "id": "synonym_card_readers",
+      "category": "synonym",
+      "expected": [
+        "GetTerminalReaders"
+      ],
+      "predicted": [
+        "PostTerminalReadersReaderCancelAction"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Terminal",
+      "pred_tgt": "TerminalReader",
+      "exp_src": "Platform",
+      "exp_tgt": "TerminalReader",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "synonym_issued_cards",
+      "category": "synonym",
+      "expected": [
+        "GetIssuingCards"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "IssuingCard",
+      "pred_tgt": "IssuingCard",
+      "exp_src": "Platform",
+      "exp_tgt": "IssuingCard",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "synonym_fraud_warnings",
+      "category": "synonym",
+      "expected": [
+        "GetRadarEarlyFraudWarnings"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 1,
+      "graph_valid_precision": 0.0,
+      "pred_src": "RadarEarlyFraudWarning",
+      "pred_tgt": "RadarEarlyFraudWarning",
+      "exp_src": "Platform",
+      "exp_tgt": "RadarEarlyFraudWarning",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "synonym_usage_meters",
+      "category": "synonym",
+      "expected": [
+        "GetBillingMeters"
+      ],
+      "predicted": [
+        "GetBillingMetersId"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Billing",
+      "pred_tgt": "BillingMeter",
+      "exp_src": "Platform",
+      "exp_tgt": "BillingMeter",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "synonym_credit_memos",
+      "category": "synonym",
+      "expected": [
+        "GetCreditNotes"
+      ],
+      "predicted": [
+        "GetCreditNotesId"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 3,
+      "graph_valid_precision": 0.0,
+      "pred_src": "CreditNote",
+      "pred_tgt": "CreditNote",
+      "exp_src": "Platform",
+      "exp_tgt": "CreditNote",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "synonym_subscription_tiers",
+      "category": "synonym",
+      "expected": [
+        "GetPlans"
+      ],
+      "predicted": [
+        "GetPricesPrice"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Price",
+      "pred_tgt": "Price",
+      "exp_src": "Platform",
+      "exp_tgt": "Plan",
+      "src_ok": false,
+      "tgt_ok": false
+    },
+    {
+      "id": "synonym_customer_credits",
+      "category": "synonym",
+      "expected": [
+        "GetCustomersCustomerCashBalance"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Customer",
+      "pred_tgt": "BillingCreditBalanceSummary",
+      "exp_src": "Customer",
+      "exp_tgt": "CashBalance",
+      "src_ok": true,
+      "tgt_ok": false
+    },
+    {
+      "id": "synonym_fx_rates",
+      "category": "synonym",
+      "expected": [
+        "GetExchangeRates"
+      ],
+      "predicted": [
+        "GetExchangeRatesRateId"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 1,
+      "graph_valid_precision": 0.0,
+      "pred_src": "ExchangeRate",
+      "pred_tgt": "ExchangeRate",
+      "exp_src": "Platform",
+      "exp_tgt": "ExchangeRate",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "ambiguous_money_in",
+      "category": "ambiguous",
+      "expected": [
+        "GetBalanceHistory"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Account",
+      "pred_tgt": "Charge",
+      "exp_src": "Platform",
+      "exp_tgt": "BalanceTransaction",
+      "src_ok": false,
+      "tgt_ok": false
+    },
+    {
+      "id": "ambiguous_customer_activity",
+      "category": "ambiguous",
+      "expected": [
+        "GetCustomersCustomerBalanceTransactions"
+      ],
+      "predicted": [
+        "GetCustomersCustomer"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 4,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Customer",
+      "pred_tgt": "Customer",
+      "exp_src": "Customer",
+      "exp_tgt": "CustomerBalanceTransaction",
+      "src_ok": true,
+      "tgt_ok": false
+    },
+    {
+      "id": "ambiguous_revenue",
+      "category": "ambiguous",
+      "expected": [
+        "GetBalance"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 1,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Charge",
+      "pred_tgt": "Balance",
+      "exp_src": "Platform",
+      "exp_tgt": "Balance",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "ambiguous_whats_selling",
+      "category": "ambiguous",
+      "expected": [
+        "GetProducts"
+      ],
+      "predicted": [
+        "GetProductsId"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Product",
+      "pred_tgt": "Product",
+      "exp_src": "Platform",
+      "exp_tgt": "Product",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "ambiguous_customer_owes",
+      "category": "ambiguous",
+      "expected": [
+        "GetCustomersCustomerBalanceTransactions"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 4,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Customer",
+      "pred_tgt": "Invoice",
+      "exp_src": "Customer",
+      "exp_tgt": "CustomerBalanceTransaction",
+      "src_ok": true,
+      "tgt_ok": false
+    },
+    {
+      "id": "ambiguous_whats_pending",
+      "category": "ambiguous",
+      "expected": [
+        "GetPaymentIntents"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Account",
+      "pred_tgt": "Balance",
+      "exp_src": "Platform",
+      "exp_tgt": "PaymentIntent",
+      "src_ok": false,
+      "tgt_ok": false
+    },
+    {
+      "id": "ambiguous_how_do_we_charge",
+      "category": "ambiguous",
+      "expected": [
+        "GetPrices"
+      ],
+      "predicted": [
+        "GetPricesPrice"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Price",
+      "pred_tgt": "Price",
+      "exp_src": "Platform",
+      "exp_tgt": "Price",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "ambiguous_customer_deal",
+      "category": "ambiguous",
+      "expected": [
+        "GetCustomersCustomerDiscount"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Customer",
+      "pred_tgt": "Coupon",
+      "exp_src": "Customer",
+      "exp_tgt": "Discount",
+      "src_ok": true,
+      "tgt_ok": false
+    },
+    {
+      "id": "ambiguous_account_status",
+      "category": "ambiguous",
+      "expected": [
+        "GetAccountsAccountCapabilities"
+      ],
+      "predicted": [
+        "GetAccountsAccountCapabilities"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 3,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Account",
+      "pred_tgt": "Capability",
+      "exp_src": "Account",
+      "exp_tgt": "Capability",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "ambiguous_saved_methods",
+      "category": "ambiguous",
+      "expected": [
+        "GetCustomersCustomerPaymentMethods"
+      ],
+      "predicted": [
+        "GetCustomersCustomerPaymentMethods"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 2,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "PaymentMethod",
+      "exp_src": "Customer",
+      "exp_tgt": "PaymentMethod",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "ambiguous_recent_problems",
+      "category": "ambiguous",
+      "expected": [
+        "GetDisputes"
+      ],
+      "predicted": [
+        "GetChargesChargeDispute"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 1,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Charge",
+      "pred_tgt": "Dispute",
+      "exp_src": "Platform",
+      "exp_tgt": "Dispute",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "ambiguous_where_money_goes",
+      "category": "ambiguous",
+      "expected": [
+        "GetPayouts"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Balance",
+      "pred_tgt": "Transfer",
+      "exp_src": "Platform",
+      "exp_tgt": "Payout",
+      "src_ok": false,
+      "tgt_ok": false
+    },
+    {
+      "id": "ambiguous_subscription_future",
+      "category": "ambiguous",
+      "expected": [
+        "GetSubscriptionSchedules"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Subscription",
+      "pred_tgt": "Event",
+      "exp_src": "Platform",
+      "exp_tgt": "SubscriptionSchedule",
+      "src_ok": false,
+      "tgt_ok": false
+    },
+    {
+      "id": "ambiguous_tax_compliance",
+      "category": "ambiguous",
+      "expected": [
+        "GetTaxRates"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Tax",
+      "pred_tgt": "Tax",
+      "exp_src": "Platform",
+      "exp_tgt": "TaxRate",
+      "src_ok": false,
+      "tgt_ok": false
+    },
+    {
+      "id": "ambiguous_who_are_reps",
+      "category": "ambiguous",
+      "expected": [
+        "GetAccountsAccountPeople"
+      ],
+      "predicted": [
+        "GetAccountsAccountPeople"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 8,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Account",
+      "pred_tgt": "Person",
+      "exp_src": "Account",
+      "exp_tgt": "Person",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "noisy_refund_check",
+      "category": "noisy",
+      "expected": [
+        "GetRefunds"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Customer",
+      "pred_tgt": "Refund",
+      "exp_src": "Platform",
+      "exp_tgt": "Refund",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "noisy_failed_payment",
+      "category": "noisy",
+      "expected": [
+        "GetPaymentIntents"
+      ],
+      "predicted": [
+        "GetPaymentIntentsIntent"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "PaymentIntent",
+      "pred_tgt": "PaymentIntent",
+      "exp_src": "Platform",
+      "exp_tgt": "PaymentIntent",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "noisy_subscription_cancel",
+      "category": "noisy",
+      "expected": [
+        "GetSubscriptions"
+      ],
+      "predicted": [
+        "DeleteCustomersCustomerSubscriptionsSubscriptionExposedId"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Customer",
+      "pred_tgt": "Subscription",
+      "exp_src": "Platform",
+      "exp_tgt": "Subscription",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "noisy_dispute_deadline",
+      "category": "noisy",
+      "expected": [
+        "GetDisputes"
+      ],
+      "predicted": [
+        "GetDisputesDispute"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 1,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Dispute",
+      "pred_tgt": "Dispute",
+      "exp_src": "Platform",
+      "exp_tgt": "Dispute",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "noisy_payout_missing",
+      "category": "noisy",
+      "expected": [
+        "GetPayouts"
+      ],
+      "predicted": [
+        "GetPayoutsPayout"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Payout",
+      "pred_tgt": "Payout",
+      "exp_src": "Platform",
+      "exp_tgt": "Payout",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "noisy_webhook_broken",
+      "category": "noisy",
+      "expected": [
+        "GetWebhookEndpoints"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Configuration",
+      "pred_tgt": "WebhookEndpoint",
+      "exp_src": "Platform",
+      "exp_tgt": "WebhookEndpoint",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "noisy_coupon_expired",
+      "category": "noisy",
+      "expected": [
+        "GetCoupons"
+      ],
+      "predicted": [
+        "GetCouponsCoupon"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Coupon",
+      "pred_tgt": "Coupon",
+      "exp_src": "Platform",
+      "exp_tgt": "Coupon",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "noisy_transfer_audit",
+      "category": "noisy",
+      "expected": [
+        "GetTransfers"
+      ],
+      "predicted": [
+        "GetTransfersTransfer"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Transfer",
+      "pred_tgt": "Transfer",
+      "exp_src": "Platform",
+      "exp_tgt": "Transfer",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "noisy_terminal_offline",
+      "category": "noisy",
+      "expected": [
+        "GetTerminalReaders"
+      ],
+      "predicted": [
+        "PostTerminalReadersReaderCancelAction"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Terminal",
+      "pred_tgt": "TerminalReader",
+      "exp_src": "Platform",
+      "exp_tgt": "TerminalReader",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "noisy_customer_vat",
+      "category": "noisy",
+      "expected": [
+        "GetCustomersCustomerTaxIds"
+      ],
+      "predicted": [
+        "GetCustomersCustomerTaxIds"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 3,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "TaxId",
+      "exp_src": "Customer",
+      "exp_tgt": "TaxId",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "noisy_setup_intent_fail",
+      "category": "noisy",
+      "expected": [
+        "GetSetupIntents"
+      ],
+      "predicted": [
+        "GetSetupIntentsIntent"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "SetupIntent",
+      "pred_tgt": "SetupIntent",
+      "exp_src": "Platform",
+      "exp_tgt": "SetupIntent",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "noisy_balance_wrong",
+      "category": "noisy",
+      "expected": [
+        "GetBalance"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 1,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Balance",
+      "pred_tgt": "Balance",
+      "exp_src": "Platform",
+      "exp_tgt": "Balance",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "noisy_invoice_items",
+      "category": "noisy",
+      "expected": [
+        "GetInvoiceitems"
+      ],
+      "predicted": [],
+      "hallucinated": [],
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "Invoice",
+      "pred_tgt": "Invoiceitem",
+      "exp_src": "Platform",
+      "exp_tgt": "Invoiceitem",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "noisy_product_features_check",
+      "category": "noisy",
+      "expected": [
+        "GetProductsProductFeatures"
+      ],
+      "predicted": [
+        "GetProductsProductFeatures"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 3,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Product",
+      "pred_tgt": "ProductFeature",
+      "exp_src": "Product",
+      "exp_tgt": "ProductFeature",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "noisy_promo_leak",
+      "category": "noisy",
+      "expected": [
+        "GetPromotionCodes"
+      ],
+      "predicted": [
+        "GetPromotionCodesPromotionCode"
+      ],
+      "hallucinated": [],
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "candidates": 2,
+      "graph_valid_precision": 0.0,
+      "pred_src": "PromotionCode",
+      "pred_tgt": "PromotionCode",
+      "exp_src": "Platform",
+      "exp_tgt": "PromotionCode",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "multipath_account_person",
+      "category": "multipath",
+      "expected": [
+        "GetAccountsAccountPeople"
+      ],
+      "predicted": [
+        "GetAccountsAccountPeople"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 8,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Account",
+      "pred_tgt": "Person",
+      "exp_src": "Account",
+      "exp_tgt": "Person",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "multipath_platform_discount",
+      "category": "multipath",
+      "expected": [
+        "GetCustomers",
+        "GetCustomersCustomerDiscount"
+      ],
+      "predicted": [
+        "GetCustomers",
+        "GetCustomersCustomerDiscount"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 4,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Platform",
+      "pred_tgt": "Discount",
+      "exp_src": "Platform",
+      "exp_tgt": "Discount",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "multipath_platform_cash_balance",
+      "category": "multipath",
+      "expected": [
+        "GetCustomers",
+        "GetCustomersCustomerCashBalance"
+      ],
+      "predicted": [
+        "GetCustomersCustomerCashBalance"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "candidates": 4,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "CashBalance",
+      "exp_src": "Platform",
+      "exp_tgt": "CashBalance",
+      "src_ok": false,
+      "tgt_ok": true
+    },
+    {
+      "id": "multipath_charge_refund_vs_platform",
+      "category": "multipath",
+      "expected": [
+        "GetChargesChargeRefunds"
+      ],
+      "predicted": [
+        "GetChargesChargeRefunds"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 4,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Charge",
+      "pred_tgt": "Refund",
+      "exp_src": "Charge",
+      "exp_tgt": "Refund",
+      "src_ok": true,
+      "tgt_ok": true
+    },
+    {
+      "id": "multipath_customer_balance_txn",
+      "category": "multipath",
+      "expected": [
+        "GetCustomersCustomerBalanceTransactions"
+      ],
+      "predicted": [
+        "GetCustomersCustomerBalanceTransactions"
+      ],
+      "hallucinated": [],
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "candidates": 4,
+      "graph_valid_precision": 1.0,
+      "pred_src": "Customer",
+      "pred_tgt": "CustomerBalanceTransaction",
+      "exp_src": "Customer",
+      "exp_tgt": "CustomerBalanceTransaction",
+      "src_ok": true,
+      "tgt_ok": true
+    }
+  ]
+}

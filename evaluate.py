@@ -78,6 +78,34 @@ def bfs_path(adj: dict, src: str, tgt: str) -> list[str] | None:
     return None
 
 
+def bfs_all_candidate_tools(adj: dict, src: str, tgt: str) -> set[str]:
+    if src == tgt:
+        return {name for out, name in adj.get(src, []) if out == tgt}
+    distances: dict[str, int] = {src: 0}
+    paths_to: dict[str, list[list[str]]] = {src: [[]]}
+    queue = [(src, 0)]
+    target_depth: int | None = None
+    while queue:
+        node, dist = queue.pop(0)
+        if target_depth is not None and dist >= target_depth:
+            continue
+        for next_type, tool_name in sorted(adj.get(node, []), key=lambda x: x[1]):
+            new_dist = dist + 1
+            if next_type not in distances:
+                distances[next_type] = new_dist
+                paths_to[next_type] = []
+                if next_type == tgt:
+                    target_depth = new_dist
+                else:
+                    queue.append((next_type, new_dist))
+            if distances[next_type] == new_dist:
+                for path_so_far in paths_to[node]:
+                    paths_to[next_type].append(path_so_far + [tool_name])
+    if tgt not in paths_to:
+        return set()
+    return {tool for path in paths_to[tgt] for tool in path}
+
+
 def predict_with_confidence(
     predictor: nn.Module,
     encoder: SentenceTransformer,
@@ -130,6 +158,9 @@ def evaluate(model_dir: str, threshold_sweep: bool = False):
         r = tp / len(expected) if expected else 0
         f1 = 2 * p * r / (p + r) if (p + r) > 0 else 0
 
+        candidates = bfs_all_candidate_tools(adj, q["source_type"], q["target_type"])
+        gv_prec = len(resolved & candidates) / len(resolved) if resolved else 0.0
+
         results.append({
             "id": q["id"],
             "category": q["category"],
@@ -145,6 +176,8 @@ def evaluate(model_dir: str, threshold_sweep: bool = False):
             "precision": p,
             "recall": r,
             "f1": f1,
+            "candidates": len(candidates),
+            "graph_valid_precision": gv_prec,
         })
 
     # ── Per-query results ───────────────────────────────────────────
@@ -176,10 +209,16 @@ def evaluate(model_dir: str, threshold_sweep: bool = False):
     avg_p = sum(r["precision"] for r in results) / n
     avg_r = sum(r["recall"] for r in results) / n
     avg_f1 = sum(r["f1"] for r in results) / n
-    print(f"\nTool Resolution:")
+    print(f"\nTool Resolution (intent-level):")
     print(f"  Precision:  {avg_p:.3f}")
     print(f"  Recall:     {avg_r:.3f}")
     print(f"  F1:         {avg_f1:.3f}")
+
+    avg_gv = sum(r["graph_valid_precision"] for r in results) / n
+    avg_cand = sum(r["candidates"] for r in results) / n
+    print(f"\nGraph-valid (entity-level):")
+    print(f"  Graph-valid precision:  {avg_gv:.3f}")
+    print(f"  Avg candidate set size: {avg_cand:.1f}")
 
     # ── Per-category ────────────────────────────────────────────────
     category_stats: dict[str, list[dict]] = {}

@@ -61,6 +61,34 @@ def build_adjacency(graph: dict) -> dict[str, list[tuple[str, str]]]:
     return adj
 
 
+def bfs_all_candidate_tools(adj: dict, src: str, tgt: str) -> set[str]:
+    if src == tgt:
+        return {name for out, name in adj.get(src, []) if out == tgt}
+    distances: dict[str, int] = {src: 0}
+    paths_to: dict[str, list[list[str]]] = {src: [[]]}
+    queue = [(src, 0)]
+    target_depth: int | None = None
+    while queue:
+        node, dist = queue.pop(0)
+        if target_depth is not None and dist >= target_depth:
+            continue
+        for next_type, tool_name in sorted(adj.get(node, []), key=lambda x: x[1]):
+            new_dist = dist + 1
+            if next_type not in distances:
+                distances[next_type] = new_dist
+                paths_to[next_type] = []
+                if next_type == tgt:
+                    target_depth = new_dist
+                else:
+                    queue.append((next_type, new_dist))
+            if distances[next_type] == new_dist:
+                for path_so_far in paths_to[node]:
+                    paths_to[next_type].append(path_so_far + [tool_name])
+    if tgt not in paths_to:
+        return set()
+    return {tool for path in paths_to[tgt] for tool in path}
+
+
 def bfs_path(adj: dict, src: str, tgt: str) -> list[str] | None:
     if src == tgt:
         for out, name in adj.get(src, []):
@@ -194,6 +222,7 @@ def run_strategy(
     test_queries: list[dict],
     valid_tool_names: set[str],
     model: str,
+    adj: dict | None = None,
     is_tcr: bool = False,
 ):
     print(f"\n{'='*60}")
@@ -234,6 +263,10 @@ def run_strategy(
         hallucinated = [t for t in predicted if t not in valid_tool_names]
         p, r, f1 = evaluate(predicted, q["expected_tools"])
 
+        candidates = bfs_all_candidate_tools(adj, q["source_type"], q["target_type"]) if adj else set()
+        pred_set = set(predicted)
+        gv_prec = len(pred_set & candidates) / len(pred_set) if pred_set else 0.0
+
         src_ok = pred_src == q["source_type"] if is_tcr else None
         tgt_ok = pred_tgt == q["target_type"] if is_tcr else None
         if is_tcr and src_ok and tgt_ok:
@@ -248,6 +281,8 @@ def run_strategy(
             "precision": p,
             "recall": r,
             "f1": f1,
+            "candidates": len(candidates),
+            "graph_valid_precision": gv_prec,
         }
         if is_tcr:
             res.update({
@@ -279,7 +314,7 @@ def run_strategy(
     avg_f1 = sum(r["f1"] for r in results) / n
     total_hall = sum(len(r["hallucinated"]) for r in results)
 
-    print(f"\nOverall ({n} queries):")
+    print(f"\nTool Resolution — intent-level ({n} queries):")
     print(f"  Precision:      {avg_p:.3f}")
     print(f"  Recall:         {avg_r:.3f}")
     print(f"  F1:             {avg_f1:.3f}")
@@ -287,6 +322,13 @@ def run_strategy(
         print(f"  Type exact:     {type_correct}/{n} ({type_correct/n:.0%})")
     else:
         print(f"  Hallucinated:   {total_hall} tool calls across {sum(1 for r in results if r['hallucinated'])} queries")
+
+    if adj:
+        avg_gv = sum(r["graph_valid_precision"] for r in results) / n
+        avg_cand = sum(r["candidates"] for r in results) / n
+        print(f"\nGraph-valid (entity-level):")
+        print(f"  Graph-valid precision:  {avg_gv:.3f}")
+        print(f"  Avg candidate set size: {avg_cand:.1f}")
 
     print(f"\nPer-category:")
     print(f"  {'Category':<12} {'N':>3}  {'Prec':>6}  {'Rec':>6}  {'F1':>6}")
@@ -355,21 +397,21 @@ def main():
         run_strategy(
             "function_calling",
             lambda q: run_function_calling(client, args.model, q, tool_schemas),
-            test_queries, valid_tool_names, args.model,
+            test_queries, valid_tool_names, args.model, adj=adj,
         )
 
     if args.strategy in ("text", "all"):
         run_strategy(
             "text_baseline",
             lambda q: run_text_baseline(client, args.model, q, tools),
-            test_queries, valid_tool_names, args.model,
+            test_queries, valid_tool_names, args.model, adj=adj,
         )
 
     if args.strategy in ("zero_shot_tcr", "all"):
         run_strategy(
             "zero_shot_tcr",
             lambda q: run_zero_shot_tcr(client, args.model, q, type_names, adj),
-            test_queries, valid_tool_names, args.model,
+            test_queries, valid_tool_names, args.model, adj=adj,
             is_tcr=True,
         )
 
@@ -407,14 +449,14 @@ def main():
         run_strategy(
             "few_shot_text",
             lambda q: run_text_baseline(client, args.model, q, tools, examples=few_shot_with_tools),
-            test_queries, valid_tool_names, args.model,
+            test_queries, valid_tool_names, args.model, adj=adj,
         )
 
     if args.strategy in ("few_shot_tcr", "all"):
         run_strategy(
             "few_shot_tcr",
             lambda q: run_zero_shot_tcr(client, args.model, q, type_names, adj, examples=few_shot),
-            test_queries, valid_tool_names, args.model,
+            test_queries, valid_tool_names, args.model, adj=adj,
             is_tcr=True,
         )
 
